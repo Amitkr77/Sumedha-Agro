@@ -7,44 +7,44 @@ import { IoSend } from "react-icons/io5"
 export default function Contact() {
   return (
     <main>
-      <section class="relative px-6 py-12 lg:px-10 lg:py-20 max-w[1280px] mx-auto w-full">
-        <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
-          <div class="flex flex-col gap-6 lg:w-1/2">
-            <h1 class="text-4xl font-black leading-tight tracking-tight lg:text-6xl text-slate-900 dark:text-white">
-              Let's Grow <span class="text-primary">Together</span>
+      <section className="relative px-6 py-12 lg:px-10 lg:py-20 max-w[1280px] mx-auto w-full">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
+          <div className="flex flex-col gap-6 lg:w-1/2">
+            <h1 className="text-4xl font-black leading-tight tracking-tight lg:text-6xl text-slate-900 dark:text-white">
+              Let's Grow <span className="text-primary">Together</span>
             </h1>
-            <p class="text-lg font-normal leading-relaxed text-slate-600 dark:text-slate-400 max-w[500px]">
+            <p className="text-lg font-normal leading-relaxed text-slate-600 dark:text-slate-400 max-w[500px]">
               Interested in our premium mushroom products or consulting
               services? Fill out the form below or visit our farm to start a
               conversation.
             </p>
-            <div class="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-2">
               <a
-                class="flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-slate-900 hover:bg-green-400 transition-colors shadow-lg shadow-green-500/20"
+                className="flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-slate-900 hover:bg-green-400 transition-colors shadow-lg shadow-green-500/20"
                 href="#contact-form"
               >
                 Start Conversation
               </a>
-              <button class="flex items-center justify-center rounded-lg bg-white dark:bg-white/10 border border-slate-200 dark:border-slate-700 px-6 py-3 text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/20 transition-colors">
+              <button className="flex items-center justify-center rounded-lg bg-white dark:bg-white/10 border border-slate-200 dark:border-slate-700 px-6 py-3 text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/20 transition-colors">
                 View Locations
               </button>
             </div>
           </div>
-          <div class="lg:w-1/2">
+          <div className="lg:w-1/2">
             <div
               style={{
                 backgroundImage:
                   "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8QJ8Y5YwPYBrLIffDh8CLPsd6PDKPhDZ8rWN3jlmO1OuqSjjhMooAG-t1dVRcGD5KbwgF6jywRqimHxcwlmGf_akKObYLWlk-PL6lZDBpC91EVtsFmZReZixrPaZCWpWQ33Deh5pYyljkCNiMe1NP7hXNaY-k6WDffixeTdxQxBHqsvrZeSo64a-GhGO0AuAzvRoCQIGcDPlTvXq7GxVnS25NtuY5TkvQooYzUGMg5_3g7Hstfami4jciKzOUgvMSVd1JvLXYU6E')",
               }}
-              class="aspect-[4/3] w-full rounded-2xl bg-cover bg-center shadow-2xl relative overflow-hidden group"
+              className="aspect-[4/3] w-full rounded-2xl bg-cover bg-center shadow-2xl relative overflow-hidden group"
               data-alt="Close up of fresh organic mushrooms growing in a farm environment"
             >
-              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              <div class="absolute bottom-6 left-6 text-white">
-                <p class="text-sm font-bold uppercase tracking-wider mb-1 text-primary">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <p className="text-sm font-bold uppercase tracking-wider mb-1 text-primary">
                   Our Farm
                 </p>
-                <p class="text-xl font-bold">Pune, Maharashtra</p>
+                <p className="text-xl font-bold">Pune, Maharashtra</p>
               </div>
             </div>
           </div>
