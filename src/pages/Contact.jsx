@@ -79,7 +79,14 @@ export default function Contact() {
                       className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
                       href="tel:+919876543210"
                     >
-                      +91 98765 43210
+                      +91 9473896285 
+                    </a>
+                    <a
+                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                      href="tel:+919876543210"
+                    >
+                     
+                     +91 9125591178
                     </a>
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       Mon-Fri, 9am - 6pm IST
@@ -102,7 +109,21 @@ export default function Contact() {
                       className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
                       href="mailto:hello@sumedhaagro.com"
                     >
-                      hello@sumedhaagro.com
+                    info@sumedhaagro.com
+                    </a>
+                     <a
+                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                      href="mailto:hello@sumedhaagro.com"
+                    >
+                    enespa@sumedhaagro.com
+                    prem@sumedhaagro.com
+                    </a>
+                     <a
+                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                      href="mailto:hello@sumedhaagro.com"
+                    >
+
+                    prem@sumedhaagro.com
                     </a>
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       We reply within 24 hours.
@@ -124,8 +145,8 @@ export default function Contact() {
                       Visit HQ
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400">
-                      Plot 45, Green Valley Agritech Park, Pune, Maharashtra,
-                      411045
+                     982 Village Andpurdev, Banthra, Sarojni Nagar Lucknow 226401, Uttar Pradesh,
+India
                     </p>
                   </div>
                 </div>

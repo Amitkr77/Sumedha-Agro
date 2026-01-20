@@ -6,10 +6,11 @@
 
 @theme{
     --color-background-light :#f6f8f6;
+    --color-background-dark : #102210;
     --color-text-side :#006400;
     --color-background-even :#7fff00;
     --color-text-icon :#7fff00;
     --color-primary :#13ec13;
     --color-border-active : #cfe7cf;
-        --color-border-light: #e7f3e7
+    --color-border-light: #e7f3e7
 }

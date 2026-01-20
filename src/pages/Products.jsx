@@ -174,6 +174,7 @@ export default function Products() {
                           <FaArrowRightLong />
                         </span>
                       </button>
+                      <a href="./products/${product.slug}"></a>
                     </div>
                   </div>
                 </div>
@@ -250,7 +251,7 @@ export default function Products() {
                       <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
                         Details
                         <span className="material-symbols-outlined text-lg">
-                            <FaArrowRightLong />
+                          <FaArrowRightLong />
                         </span>
                       </button>
                     </div>
@@ -307,7 +308,7 @@ export default function Products() {
                       <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
                         Details
                         <span className="material-symbols-outlined text-lg">
-                           <FaArrowRightLong />
+                          <FaArrowRightLong />
                         </span>
                       </button>
                     </div>

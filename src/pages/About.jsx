@@ -11,6 +11,27 @@ import { MdOutlineVisibility } from "react-icons/md";
 import { IoIosTrendingUp } from "react-icons/io";
 import { MdOutlinePublic } from "react-icons/md";
 
+const data = [
+  {
+    icon: <FaRegLightbulb />,
+    name: "Research and development",
+    content:
+      "The lab is involved in scientific studies on mushroom biodiversity, cultivation technologies, and nutrition enhancement; it has developed complete end-to-end cultivation system for Button mushroom (Agaricus bisporus), Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom (Volvariella volvacea), Milky mushroom (Calocybe indica), Reishi mushroom (Ganoderma lucidum), Shiitake mushroom (Lentinula edodes), Giant mushroom (Stropharia ruguso- annulata) and is actively researching other verities like Lion’s Mane Mushroom (Hericium erinaceus), King Oyster mushroom (Pleurotus eryngii), Beech mushroom (Hypsizygus tessulatus), and Black poplar Velvet Pioppino mushroom (Cyclocybe cylindracea).",
+  },
+  {
+    icon: <FaRegLightbulb />,
+    name: "Research and development",
+    content:
+      "The lab is involved in scientific studies on mushroom biodiversity, cultivation technologies, and nutrition enhancement; it has developed complete end-to-end cultivation system for Button mushroom (Agaricus bisporus), Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom (Volvariella volvacea), Milky mushroom (Calocybe indica), Reishi mushroom (Ganoderma lucidum), Shiitake mushroom (Lentinula edodes), Giant mushroom (Stropharia ruguso- annulata) and is actively researching other verities like Lion’s Mane Mushroom (Hericium erinaceus), King Oyster mushroom (Pleurotus eryngii), Beech mushroom (Hypsizygus tessulatus), and Black poplar Velvet Pioppino mushroom (Cyclocybe cylindracea).",
+  },
+  {
+    icon: <FaRegLightbulb />,
+    name: "Research and development",
+    content:
+      "The lab is involved in scientific studies on mushroom biodiversity, cultivation technologies, and nutrition enhancement; it has developed complete end-to-end cultivation system for Button mushroom (Agaricus bisporus), Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom (Volvariella volvacea), Milky mushroom (Calocybe indica), Reishi mushroom (Ganoderma lucidum), Shiitake mushroom (Lentinula edodes), Giant mushroom (Stropharia ruguso- annulata) and is actively researching other verities like Lion’s Mane Mushroom (Hericium erinaceus), King Oyster mushroom (Pleurotus eryngii), Beech mushroom (Hypsizygus tessulatus), and Black poplar Velvet Pioppino mushroom (Cyclocybe cylindracea).",
+  },
+];
+
 export default function About() {
   return (
     <main>
@@ -37,15 +58,10 @@ export default function About() {
               <p className="text-text-main/80 dark:text-slate-300 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Cultivating the future of nutrition with sustainable, high-tech
                 mushroom farming that blends nature's wisdom with AI precision.
+                “Edible mushrooms are a gift from nature with therapeutic
+                properties; don&#39;t ruin this gift by using chemicals. Growing
+                edible mushrooms protects both the environment and human health”
               </p>
-              <div className="flex gap-4 pt-2">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 transition-all text-[#0d1b0d] text-base font-bold shadow-lg shadow-primary/25">
-                  Explore Our Story
-                </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 border border-slate-200 dark:border-slate-700 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-text-main dark:text-white text-base font-medium">
-                  Watch Video
-                </button>
-              </div>
             </div>
             <div className="w-full md:w-1/2 aspect-4/3 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 relative group">
               <div className="absolute inset-0 bg-gradient-tot from-black/50 to-transparent z-10"></div>
@@ -72,25 +88,26 @@ export default function About() {
       {/* <!-- Stats Grid --> */}
       <section className="w-full bg-white dark:bg-surface-dark py-16 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-1280px mx-auto px-4 md:px-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
-            <div className="max-w-xl">
-              <h2 className="text-text-main dark:text-white text-3xl font-bold leading-tight mb-3">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 ">
+            <div className="max-w-6xl  flex-col text-center mx-auto">
+              <h2 className="text-text-main dark:text-white text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
                 Why Mushrooms?
               </h2>
-              <p className="text-text-main/70 dark:text-slate-400">
+
+              <p className="text-text-main/70 dark:text-slate-400 text-xl">
                 Our data-driven approach yields superior nutritional profiles
-                with minimal environmental footprint.
+                with minimal environmental footprint. For thousands of years,
+                mushrooms—one of nature&#39;s oldest and most varied organisms
+                have been valued for their gastronomic, medicinal, and even
+                cultural and spiritual qualities. We are striving to make
+                mushrooms generally available, economically feasible, and
+                socially acceptable through cutting-edge facilities,
+                community-based training, and knowledge-sharing programs. This
+                guarantees that they can make a significant contribution to
+                grassroots entrepreneurship as well as national and nutritional
+                goals.
               </p>
             </div>
-            <a
-              className="text-primary font-bold hover:underline flex items-center gap-1"
-              href="#"
-            >
-              View Full Report{" "}
-              <span className="material-symbols-outlined text-sm">
-                <IoMdArrowForward />
-              </span>
-            </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col gap-3 rounded-2xl p-8 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-colors group">
@@ -150,6 +167,72 @@ export default function About() {
                 <div className="bg-primary h-full rounded-full w-[70%]"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full bg-white dark:bg-surface-dark py-16 border-y border-slate-100 dark:border-slate-800">
+        <div className="max-w-1280px mx-auto px-4 md:px-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 ">
+            <div className="max-w-6xl  flex-col text-center mx-auto">
+              <h2 className="text-text-main dark:text-white text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
+                Our Focus Area?
+              </h2>
+              <p className="text-xl">
+                We focus on research; spawn production, training, conservation,
+                and sustainable technologies to promote mushrooms as a delicious
+                and nutritious food, income source and ecofriendly solution.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex flex-col gap-3 rounded-2xl p-8 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-colors group">
+              <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary text-primary group-hover:text-black transition-colors">
+                <span className="material-symbols-outlined">
+                  <FaNutritionix size={30} />
+                </span>
+              </div>
+              <p className="text-text-main dark:text-slate-300 text-base font-medium leading-normal">
+                Protein Content
+              </p>
+              <p className="text-text-main dark:text-white text-4xl font-black leading-tight tracking-tight">
+                3.5g{" "}
+                <span className="text-lg font-medium text-text-main/60 dark:text-slate-500">
+                  per 100g
+                </span>
+              </p>
+              <div className="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-2 overflow-hidden">
+                <div className="bg-primary h-full rounded-full w-[85%]"></div>
+              </div>
+            </div>
+          </div>
+          </div>
+          {/* Card */}
+          <div className="">
+            {data.map((d, index) => {
+              <div key={index} className="border w-72  p-4">
+                <div className="flex items-center gap-2 mb-5">
+                  icon{d.icon}
+                  <h1>Research and Development {d.name}</h1>
+                </div>
+                <div>
+                  <p>
+                    {/* The lab is involved in scientific studies on mushroom
+                    biodiversity, cultivation technologies, and nutrition
+                    enhancement; it has developed complete end-to-end
+                    cultivation system for Button mushroom (Agaricus bisporus),
+                    Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom
+                    (Volvariella volvacea), Milky mushroom (Calocybe indica),
+                    Reishi mushroom (Ganoderma lucidum), Shiitake mushroom
+                    (Lentinula edodes), Giant mushroom (Stropharia ruguso-
+                    annulata) and is actively researching other verities like
+                    Lion’s Mane Mushroom (Hericium erinaceus), King Oyster
+                    mushroom (Pleurotus eryngii), Beech mushroom (Hypsizygus
+                    tessulatus), and Black poplar Velvet Pioppino mushroom
+                    (Cyclocybe cylindracea). */}
+                    {d.content}
+                  </p>
+                </div>
+              </div>;
+            })}
           </div>
         </div>
       </section>
@@ -418,11 +501,11 @@ export default function About() {
               </p>
             </div>
             <div className="flex gap-4 shrink-0">
-             <a href="/contact">
-               <button className="flex items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-primary/90 transition-all text-[#0d1b0d] text-lg font-bold shadow-lg shadow-primary/25">
-                Partner with Us
-              </button>
-             </a>
+              <a href="/contact">
+                <button className="flex items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-primary/90 transition-all text-[#0d1b0d] text-lg font-bold shadow-lg shadow-primary/25">
+                  Partner with Us
+                </button>
+              </a>
             </div>
           </div>
         </div>

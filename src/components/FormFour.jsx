@@ -1,4 +1,8 @@
 import React from "react";
+import { MdConfirmationNumber } from "react-icons/md";
+import { MdSchedule } from "react-icons/md";
+import { MdHomeFilled } from "react-icons/md";
+import { MdInventory } from "react-icons/md";
 
 export default function FormFour() {
   return (
@@ -39,7 +43,7 @@ export default function FormFour() {
             <div className="flex flex-col items-center md:items-start md:pr-4">
               <div className="flex items-center gap-2 mb-2">
                 <span className="material-symbols-outlined text-primary text-sm">
-                  confirmation_number
+                 <MdConfirmationNumber size={20} />
                 </span>
                 <span className="text-[#101914]/60 dark:text-gray-400 text-xs font-bold uppercase tracking-widest">
                   Reference ID
@@ -53,7 +57,7 @@ export default function FormFour() {
             <div className="flex flex-col items-center md:items-start md:pl-8 pt-6 md:pt-0">
               <div className="flex items-center gap-2 mb-2">
                 <span className="material-symbols-outlined text-primary text-sm">
-                  schedule
+                  <MdSchedule size={20} />
                 </span>
                 <span className="text-[#101914]/60 dark:text-gray-400 text-xs font-bold uppercase tracking-widest">
                   Estimated Wait
@@ -81,7 +85,7 @@ export default function FormFour() {
             className="flex-1 bg-primary text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
             href="/"
           >
-            <span className="material-symbols-outlined text-lg">home</span>
+            <span className="material-symbols-outlined text-lg"><MdHomeFilled size={20} /></span>
             Return to Homepage
           </a>
           <a
@@ -89,7 +93,7 @@ export default function FormFour() {
             href="#"
           >
             <span className="material-symbols-outlined text-lg">
-              inventory_2
+              <MdInventory size={20} />
             </span>
             Browse More Products
           </a>
