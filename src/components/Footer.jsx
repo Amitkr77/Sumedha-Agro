@@ -29,19 +29,17 @@ export default function Footer() {
 <div>
 <h3 className="text-text-main dark:text-white font-bold mb-4">Company</h3>
 <ul className="flex flex-col gap-3 text-sm text-text-main/70 dark:text-slate-400">
-<li><a className="hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Press &amp; Media</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a className="hover:text-primary transition-colors" href="/About">About Us</a></li>
+<li><a className="hover:text-primary transition-colors" href="/Contact">Contact</a></li>
 </ul>
 </div>
 <div>
 <h3 className="text-text-main dark:text-white font-bold mb-4">Products</h3>
 <ul className="flex flex-col gap-3 text-sm text-text-main/70 dark:text-slate-400">
-<li><a className="hover:text-primary transition-colors" href="#">Fresh Mushrooms</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Functional Powders</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Mycelium Kits</a></li>
-<li><a className="hover:text-primary transition-colors" href="#">Wholesale</a></li>
+<li><a className="hover:text-primary transition-colors" href="/Products">Fresh Mushrooms</a></li>
+<li><a className="hover:text-primary transition-colors" href="/Products">Functional Powders</a></li>
+<li><a className="hover:text-primary transition-colors" href="/Products">Mycelium Kits</a></li>
+<li><a className="hover:text-primary transition-colors" href="/Products">Wholesale</a></li>
 </ul>
 </div>
 <div>

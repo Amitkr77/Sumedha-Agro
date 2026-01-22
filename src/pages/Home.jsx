@@ -14,6 +14,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosWater } from "react-icons/io";
+import CTA from "../components/CTA";
 export default function Home() {
   return (
     <main className="flex-grow flex flex-col">
@@ -64,115 +65,115 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section class="relative w-full py-12 md:py-24 px-4 md:px-10 lg:px-20 flex justify-center bg-background-dark overflow-hidden min-h-[700px] items-center">
-        <div class="absolute inset-0 z-0">
+      <section className="relative w-full py-12 md:py-24 px-4 md:px-10 lg:px-20 flex justify-center bg-background-dark overflow-hidden min-h-[700px] items-center">
+        <div className="absolute inset-0 z-0">
           <img
             alt="Mushroom farm environment"
-            class="w-full h-full object-cover opacity-50 dark:opacity-40"
+            className="w-full h-full object-cover opacity-50 dark:opacity-40"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-5YHGCsAag0gt_fkB-7SofmhSwjo2G_ZL92exxm8vjmoWsnX-cG0AaOfwQNfdL7-fO0UXTaJ6UfjSj-tCOLtpMNLxqxfuk4hcumkSGkNB7SYoD6u_5FMXsJmfwttZRyj-e9zoRfRpiBYyg3Uz51NrB0qo2Fhycvq63brhndNO1n_CHlmL5vAMiyNyvKHSDKgKk4h8Z4yseohErbDs-n-TXALWZsCBqzcFLg_mApONFM_04SK0_dbUIdUQcFNTnJciWIKisKLRrbE"
           />
-          <div class="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40"></div>
         </div>
-        <div class="relative z-10 max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          <div class="lg:col-span-7 flex flex-col gap-6 text-white order-2 lg:order-1 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit backdrop-blur-md mx-auto lg:mx-0">
-              <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#13ec13]"></span>
-              <span class="text-xs font-bold uppercase tracking-widest text-primary">
+        <div className="relative z-10 max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="lg:col-span-7 flex flex-col gap-6 text-white order-2 lg:order-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit backdrop-blur-md mx-auto lg:mx-0">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#13ec13]"></span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">
                 Agritech Innovation
               </span>
             </div>
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
               Cultivating the <br />
-              <span class="text-primary">Future of Food</span>
+              <span className="text-primary">Future of Food</span>
             </h1>
-            <p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Sumedha Agro is a pioneer in high-tech mushroom farming. We
               deliver premium organic produce and sustainable agricultural
               solutions to businesses worldwide.
             </p>
-            <div class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
-              <div class="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                <span class="material-symbols-outlined text-primary">
+            <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
+                <span className="material-symbols-outlined text-primary">
                   <MdOutlineVerified />
                 </span>
-                <span class="font-medium text-sm">Certified Organic</span>
+                <span className="font-medium text-sm">Certified Organic</span>
               </div>
-              <div class="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                <span class="material-symbols-outlined text-primary">
+              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
+                <span className="material-symbols-outlined text-primary">
                   <IoIosWater />
                 </span>
-                <span class="font-medium text-sm">Hydroponic Tech</span>
+                <span className="font-medium text-sm">Hydroponic Tech</span>
               </div>
             </div>
           </div>
           {/* <div
-              class="lg:col-span-5 order-1 lg:order-2 w-full"
+              className="lg:col-span-5 order-1 lg:order-2 w-full"
               id="quote-form"
             >
               <div
-                class="bg-white dark:bg-[#152615] p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-primary/30 relative overflow-hidden group hover:border-primary/60 transition-colors"
+                className="bg-white dark:bg-[#152615] p-6 md:p-8 rounded-2xl shadow-2xl border-2 border-primary/30 relative overflow-hidden group hover:border-primary/60 transition-colors"
               >
                 <div
-                  class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-green-600"
+                  className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-green-600"
                 ></div>
                 <h3
-                  class="text-2xl font-bold text-gray-900 dark:text-white mb-2"
+                  className="text-2xl font-bold text-gray-900 dark:text-white mb-2"
                 >
                   Partner With Us
                 </h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
                   Get a quote for bulk orders or contract farming inquiries.
                 </p>
-                <form class="flex flex-col gap-4">
-                  <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-1.5">
+                <form className="flex flex-col gap-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-1.5">
                       <label
-                        class="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+                        className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
                         for="hero-name"
                         >Name</label
                       >
                       <input
-                        class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
+                        className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
                         id="hero-name"
                         placeholder="John Doe"
                         type="text"
                       />
                     </div>
-                    <div class="flex flex-col gap-1.5">
+                    <div className="flex flex-col gap-1.5">
                       <label
-                        class="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+                        className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
                         for="hero-phone"
                         >Phone</label
                       >
                       <input
-                        class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
+                        className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
                         id="hero-phone"
                         placeholder="+1 234..."
                         type="tel"
                       />
                     </div>
                   </div>
-                  <div class="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-1.5">
                     <label
-                      class="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+                      className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
                       for="hero-email"
                       >Work Email</label
                     >
                     <input
-                      class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
+                      className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
                       id="hero-email"
                       placeholder="john@company.com"
                       type="email"
                     />
                   </div>
-                  <div class="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-1.5">
                     <label
-                      class="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
+                      className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide"
                       for="hero-interest"
                       >Interest</label
                     >
                     <select
-                      class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
+                      className="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2.5 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-gray-700 dark:bg-black/20 dark:text-white"
                       id="hero-interest"
                     >
                       <option>Fresh Mushrooms (Bulk Supply)</option>
@@ -182,12 +183,12 @@ export default function Home() {
                     </select>
                   </div>
                   <button
-                    class="mt-2 w-full rounded-lg bg-primary hover:bg-primary-dark text-black py-3.5 text-sm font-bold uppercase tracking-wider transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 transform active:scale-[0.98]"
+                    className="mt-2 w-full rounded-lg bg-primary hover:bg-primary-dark text-black py-3.5 text-sm font-bold uppercase tracking-wider transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 transform active:scale-[0.98]"
                     type="button"
                   >
                     Request Quote
                   </button>
-                  <p class="text-center text-xs text-gray-400 mt-2">
+                  <p className="text-center text-xs text-gray-400 mt-2">
                     We typically reply within 24 hours.
                   </p>
                 </form>
@@ -243,7 +244,7 @@ export default function Home() {
         <div className="max-w[1200px] mx-auto w-full">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <h2 className="text-text-main dark:text-white text-3xl md:text-4xl font-bold leading-tight max-w[500px]">
-              Why We Choose <h2 />
+              Why We Choose 
               Mushrooms?
             </h2>
             <p className="text-text-side dark:text-gray-400 max-w-sm text-right md:text-left">
@@ -433,171 +434,8 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- CTA / Lead Gen Section --> */}
-      <section
-        className="py-20 px-4 md:px-20 lg:px-40 flex justify-center bg-background-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800"
-        id="contact"
-      >
-        <div className="max-w[1000px] w-full bg-white dark:bg-background-dark rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-          {/* <!-- Left Side: Info --> */}
-          <div className="w-full md:w-2/5 bg-background-even p-10 flex flex-col justify-between text-black relative overflow-hidden">
-            <div className="absolute -right-10 -bottom-10 opacity-10">
-              <span
-                className="material-symbols-outlined text-[200px]"
-                // style="font-size: 200px"
-              >
-                agriculture
-              </span>
-            </div>
-            <div className="z-10">
-              <h2 className="text-3xl font-bold mb-4">
-                Partner with Sumedha Agro
-              </h2>
-              <p className="mb-8 font-medium opacity-90">
-                Interested in bulk orders or contract farming? Let's discuss how
-                we can grow together.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined">
-                    <IoMdCall size={20} />
-                    
-                  </span>
-                  <span className="font-bold">+91 9473896285
-</span>
-<span className="font-bold">
-+91 9125591178</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined">
-                   <MdEmail size={20}/>
-                  </span>
-                  <span className="font-bold">info@sumedhaagro.com</span>
-                  
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined">
-                    <FaLocationDot size={20} />
-                  </span>
-                  <span className="font-bold">
-                    982 Village Andpurdev, Banthra, Sarojni Nagar Lucknow 226401, Uttar Pradesh,
-India
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="mt-10 z-10">
-              <p className="text-sm font-medium opacity-80">Follow us</p>
-              <div className="flex gap-4 mt-2">
-                {/* <!-- Simple social icons using text for demo --> */}
-                <a
-                  className="hover:opacity-75 transition-opacity font-bold"
-                  href="#"
-                >
-                  LN
-                </a>
-                <a
-                  className="hover:opacity-75 transition-opacity font-bold"
-                  href="#"
-                >
-                  TW
-                </a>
-                <a
-                  className="hover:opacity-75 transition-opacity font-bold"
-                  href="#"
-                >
-                  IG
-                </a>
-              </div>
-            </div>
-          </div>
-          {/* <!-- Right Side: Form --> */}
-          <div className="w-full md:w-3/5 p-10">
-            <form className="flex flex-col gap-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-2">
-                  <label
-                    className="text-sm font-semibold text-text-main dark:text-gray-300"
-                    htmlFor="name"
-                  >
-                    Name
-                  </label>
-                  <input
-                    className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-surface-dark dark:text-white"
-                    id="name"
-                    placeholder="Your Name"
-                    type="text"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label
-                    className="text-sm font-semibold text-text-main dark:text-gray-300"
-                    htmlFor="company"
-                  >
-                    Company Name
-                  </label>
-                  <input
-                    className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-surface-dark dark:text-white"
-                    id="company"
-                    placeholder="Company Ltd."
-                    type="text"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <label
-                  className="text-sm font-semibold text-text-main dark:text-gray-300"
-                  htmlFor="email"
-                >
-                  Email Address
-                </label>
-                <input
-                  className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-surface-dark dark:text-white"
-                  id="email"
-                  placeholder="you@example.com"
-                  type="email"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label
-                  className="text-sm font-semibold text-text-main dark:text-gray-300"
-                  htmlFor="interest"
-                >
-                  I'm interested in
-                </label>
-                <select
-                  className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-surface-dark dark:text-white"
-                  id="interest"
-                >
-                  <option>Fresh Mushrooms (Bulk)</option>
-                  <option>Processed Products</option>
-                  <option>Contract Farming</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="flex flex-col gap-2">
-                <label
-                  className="text-sm font-semibold text-text-main dark:text-gray-300"
-                  htmlFor="message"
-                >
-                  Message
-                </label>
-                <textarea
-                  className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-surface-dark dark:text-white resize-none"
-                  id="message"
-                  placeholder="Tell us about your requirements..."
-                  rows="3"
-                ></textarea>
-              </div>
-              <button
-                className="mt-2 w-full rounded-lg bg-black text-white py-3 text-sm font-bold tracking-wide hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 dark:bg-white dark:text-black dark:hover:bg-gray-200"
-                type="button"
-              >
-                Send Inquiry
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+
+      <CTA />
     </main>
   );
 }

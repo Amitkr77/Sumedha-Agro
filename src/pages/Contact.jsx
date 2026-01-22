@@ -19,15 +19,6 @@ export default function Contact() {
               conversation.
             </p>
             <div className="flex gap-4 pt-2">
-              <a
-                className="flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-slate-900 hover:bg-green-400 transition-colors shadow-lg shadow-green-500/20"
-                href="#contact-form"
-              >
-                Start Conversation
-              </a>
-              <button className="flex items-center justify-center rounded-lg bg-white dark:bg-white/10 border border-slate-200 dark:border-slate-700 px-6 py-3 text-base font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-white/20 transition-colors">
-                View Locations
-              </button>
             </div>
           </div>
           <div className="lg:w-1/2">
@@ -81,13 +72,7 @@ export default function Contact() {
                     >
                       +91 9473896285 
                     </a>
-                    <a
-                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
-                      href="tel:+919876543210"
-                    >
-                     
-                     +91 9125591178
-                    </a>
+                    
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       Mon-Fri, 9am - 6pm IST
                     </p>
@@ -110,20 +95,6 @@ export default function Contact() {
                       href="mailto:hello@sumedhaagro.com"
                     >
                     info@sumedhaagro.com
-                    </a>
-                     <a
-                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
-                      href="mailto:hello@sumedhaagro.com"
-                    >
-                    enespa@sumedhaagro.com
-                    prem@sumedhaagro.com
-                    </a>
-                     <a
-                      className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
-                      href="mailto:hello@sumedhaagro.com"
-                    >
-
-                    prem@sumedhaagro.com
                     </a>
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       We reply within 24 hours.

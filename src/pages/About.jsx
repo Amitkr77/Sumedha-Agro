@@ -183,28 +183,8 @@ export default function About() {
                 and nutritious food, income source and ecofriendly solution.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex flex-col gap-3 rounded-2xl p-8 bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-colors group">
-              <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary text-primary group-hover:text-black transition-colors">
-                <span className="material-symbols-outlined">
-                  <FaNutritionix size={30} />
-                </span>
-              </div>
-              <p className="text-text-main dark:text-slate-300 text-base font-medium leading-normal">
-                Protein Content
-              </p>
-              <p className="text-text-main dark:text-white text-4xl font-black leading-tight tracking-tight">
-                3.5g{" "}
-                <span className="text-lg font-medium text-text-main/60 dark:text-slate-500">
-                  per 100g
-                </span>
-              </p>
-              <div className="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-2 overflow-hidden">
-                <div className="bg-primary h-full rounded-full w-[85%]"></div>
-              </div>
             </div>
-          </div>
-          </div>
+           
           {/* Card */}
           <div className="">
             {data.map((d, index) => {
