@@ -2,7 +2,8 @@ import React from "react";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoSend } from "react-icons/io5"
+import { IoSend } from "react-icons/io5";
+import { MdOutlineExpandMore } from "react-icons/md";
 
 export default function Contact() {
   return (
@@ -18,8 +19,7 @@ export default function Contact() {
               services? Fill out the form below or visit our farm to start a
               conversation.
             </p>
-            <div className="flex gap-4 pt-2">
-            </div>
+            <div className="flex gap-4 pt-2"></div>
           </div>
           <div className="lg:w-1/2">
             <div
@@ -60,7 +60,10 @@ export default function Contact() {
           */}
                 <div className="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-white/5 p-5 transition-all hover:border-primary/50">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/20">
-                    <span className="material-symbols-outlined"> <IoMdCall size={20} /></span>
+                    <span className="material-symbols-outlined">
+                      {" "}
+                      <IoMdCall size={20} />
+                    </span>
                   </div>
                   <div className="flex flex-col gap-1">
                     <h3 className="text-lg font-bold text-slate-900 dark:text-white">
@@ -70,9 +73,9 @@ export default function Contact() {
                       className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
                       href="tel:+919876543210"
                     >
-                      +91 9473896285 
+                      +91 9473896285
                     </a>
-                    
+
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       Mon-Fri, 9am - 6pm IST
                     </p>
@@ -83,7 +86,8 @@ export default function Contact() {
           */}
                 <div className="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-white/5 p-5 transition-all hover:border-primary/50">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/20">
-                    <span className="material-symbols-outlined"><MdEmail />
+                    <span className="material-symbols-outlined">
+                      <MdEmail />
                     </span>
                   </div>
                   <div className="flex flex-col gap-1">
@@ -94,7 +98,7 @@ export default function Contact() {
                       className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
                       href="mailto:hello@sumedhaagro.com"
                     >
-                    info@sumedhaagro.com
+                      info@sumedhaagro.com
                     </a>
                     <p className="text-xs text-slate-400 dark:text-slate-500">
                       We reply within 24 hours.
@@ -108,7 +112,6 @@ export default function Contact() {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/20">
                     <span className="material-symbols-outlined">
                       <FaLocationDot />
-
                     </span>
                   </div>
                   <div className="flex flex-col gap-1">
@@ -116,8 +119,8 @@ export default function Contact() {
                       Visit HQ
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400">
-                     982 Village Andpurdev, Banthra, Sarojni Nagar Lucknow 226401, Uttar Pradesh,
-India
+                      982 Village Andpurdev, Banthra, Sarojni Nagar Lucknow
+                      226401, Uttar Pradesh, India
                     </p>
                   </div>
                 </div>
@@ -235,9 +238,7 @@ India
                       <option>Other</option>
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
-                      <span className="material-symbols-outlined">
-                        expand_more
-                      </span>
+                        <MdOutlineExpandMore className="material-symbols-outlined"/>
                     </div>
                   </div>
                 </label>
