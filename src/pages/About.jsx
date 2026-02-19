@@ -199,7 +199,7 @@ export default function About() {
                     biodiversity, cultivation technologies, and nutrition
                     enhancement; it has developed complete end-to-end
                     cultivation system for Button mushroom (Agaricus bisporus),
-                    Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom
+                    Oyster mushrooms (Pleurotus sps.), Paddy straw mushroom
                     (Volvariella volvacea), Milky mushroom (Calocybe indica),
                     Reishi mushroom (Ganoderma lucidum), Shiitake mushroom
                     (Lentinula edodes), Giant mushroom (Stropharia ruguso-

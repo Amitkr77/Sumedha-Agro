@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { IoLocation } from "react-icons/io5";
 import { MdLocalShipping } from "react-icons/md";
 import { MdInventory } from "react-icons/md";
@@ -7,6 +7,8 @@ import { MdAcUnit } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 
 export default function FormSecond({ handlePrev, handleNext2 }) {
+  const [shippingMethod, setShippingMethod] = useState("cold");
+
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
       <div className="mb-10">
@@ -138,52 +140,81 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
           2. Preferred Shipping Method
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <label className="group relative bg-white dark:bg-[#25302c] border-2 border-primary rounded-xl overflow-hidden transition-all cursor-pointer p-6 flex items-start gap-4 shadow-md">
+          {/* Cold Storage */}
+          <label
+            onClick={() => setShippingMethod("cold")}
+            className={`relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-6 flex items-start gap-4
+              ${
+                shippingMethod === "cold"
+                  ? "border-primary shadow-md"
+                  : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
+              }`}
+          >
             <input
-              checked=""
-              className="hidden"
-              name="shipping_method"
               type="radio"
+              name="shipping_method"
+              checked={shippingMethod === "cold"}
+              onChange={() => setShippingMethod("cold")}
+              className="hidden"
             />
+
             <div className="bg-primary/10 rounded-lg p-3 text-primary shrink-0">
-              <span className="material-symbols-outlined text-3xl">
-                <MdAcUnit />
-              </span>
+              <MdAcUnit className="text-3xl" />
             </div>
+
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
-                <p className="text-lg font-bold text-[#101914] dark:text-white leading-tight">
+                <p className="text-lg font-bold text-[#101914] dark:text-white">
                   Cold Storage Transit
                 </p>
-                <span className="material-symbols-outlined text-primary">
-                  <AiFillCheckCircle />
-                </span>
+
+                {shippingMethod === "cold" && (
+                  <AiFillCheckCircle className="text-primary text-xl" />
+                )}
               </div>
+
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Essential for fresh mushrooms. Climate-controlled 2-4°C delivery
-                trucks.
+                Essential for fresh mushrooms. Climate-controlled 2-4°C delivery trucks.
               </p>
             </div>
           </label>
-          <label className="group relative bg-white dark:bg-[#25302c] border-2 border-[#e9f1ec] dark:border-gray-800 rounded-xl overflow-hidden hover:border-primary transition-all cursor-pointer p-6 flex items-start gap-4">
-            <input className="hidden" name="shipping_method" type="radio" />
+
+
+          {/* Standard Shipping */}
+          <label
+            onClick={() => setShippingMethod("standard")}
+            className={`relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-6 flex items-start gap-4
+              ${
+                shippingMethod === "standard"
+                  ? "border-primary shadow-md"
+                  : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
+              }`}
+          >
+            <input
+              type="radio"
+              name="shipping_method"
+              checked={shippingMethod === "standard"}
+              onChange={() => setShippingMethod("standard")}
+              className="hidden"
+            />
+
             <div className="bg-primary/10 rounded-lg p-3 text-primary shrink-0">
-              <span className="material-symbols-outlined text-3xl">
-                <MdInventory />
-              </span>
+              <MdInventory className="text-3xl" />
             </div>
+
             <div className="flex-1">
               <div className="flex justify-between items-center mb-1">
-                <p className="text-lg font-bold text-[#101914] dark:text-white leading-tight">
+                <p className="text-lg font-bold text-[#101914] dark:text-white">
                   Standard Shipping
                 </p>
-                <span className="material-symbols-outlined text-primary opacity-0 group-has-[:checked]:opacity-100 transition-opacity">
-                  <AiFillCheckCircle />
-                </span>
+
+                {shippingMethod === "standard" && (
+                  <AiFillCheckCircle className="text-primary text-xl" />
+                )}
               </div>
+
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Suitable for Spawn (Seeds) and Pickles. Standard freight
-                transportation.
+                Suitable for Spawn (Seeds) and Pickles. Standard freight transportation.
               </p>
             </div>
           </label>

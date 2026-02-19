@@ -397,9 +397,11 @@ export default function Showcase() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+            <a href="/contact">
             <button className="bg-primary hover:bg-[#0fd60f] text-[#0d1b0d] h-12 px-8 rounded-lg text-base font-bold transition-all shadow-lg flex items-center justify-center gap-2 whitespace-nowrap">
               Contact Sales
             </button>
+            </a>
             <button className="bg-transparent border-2 border-[#0d1b0d] dark:border-white text-[#0d1b0d] dark:text-white h-12 px-8 rounded-lg text-base font-bold transition-all hover:bg-[#0d1b0d] hover:text-white dark:hover:bg-white dark:hover:text-[#0d1b0d] flex items-center justify-center gap-2 whitespace-nowrap">
               View Pricing
             </button>

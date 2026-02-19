@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -6,6 +6,69 @@ import { IoSend } from "react-icons/io5";
 import { MdOutlineExpandMore } from "react-icons/md";
 
 export default function Contact() {
+  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState({
+    fullName: "",
+    company: "",
+    email: "",
+    phone: "",
+    interest: "Fresh Mushrooms (Wholesale)",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+const validate = () => {
+  let newErrors = {};
+
+  if (!formData.fullName.trim()) {
+  newErrors.fullName = "Name is required";
+}
+
+
+  if (!formData.email) {
+    newErrors.email = "Email is required";
+  } else if (!formData.email.includes("@")) {
+    newErrors.email = "Enter valid email";
+  }
+
+  if (!formData.message) {
+    newErrors.message = "Message is required";
+  }
+
+  setErrors(newErrors);
+
+  return Object.keys(newErrors).length === 0;
+};
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+if (!validate()) return;
+  try {
+    const response = await fetch("http://localhost:5000/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+});
+
+
+    const data = await response.json();
+    alert(data.message);
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong");
+  }
+};
+
+
+  
   return (
     <main>
       <section className="relative  bg-slate-50 px-6 py-12 lg:px-10 lg:py-20 max-w[1280px] mx-auto w-full">
@@ -165,7 +228,8 @@ export default function Contact() {
                   spawn, fresh produce, or consulting.
                 </p>
               </div>
-              <form className="flex flex-col gap-6">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/*
             <!-- Full Name -->
@@ -174,11 +238,18 @@ export default function Contact() {
                     <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
                       Full Name
                     </span>
-                    <input
-                      className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
+                    
+                  <input 
+                  name="fullName"
+                    value={formData.fullName}
+                      onChange={handleChange}
+                        className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
                       placeholder="John Doe"
-                      type="text"
-                    />
+                          type="text"
+                          />
+                           {errors.fullName && (
+                             <p className="text-red-500 text-sm">{errors.fullName}</p>
+                          )}
                   </label>
                   {/*
             <!-- Company Name -->
@@ -187,7 +258,10 @@ export default function Contact() {
                     <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
                       Company Name (Optional)
                     </span>
-                    <input
+                    <input 
+                    name="company"
+                     value={formData.company}
+                      onChange={handleChange}
                       className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
                       placeholder="Sumedha Farms Ltd."
                       type="text"
@@ -203,10 +277,16 @@ export default function Contact() {
                       Email Address
                     </span>
                     <input
+                    name="email"
+                     value={formData.email}
+                      onChange={handleChange}
                       className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
                       placeholder="john@example.com"
                       type="email"
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm">{errors.email}</p>
+                    )}
                   </label>
                   {/*
             <!-- Phone -->
@@ -216,6 +296,9 @@ export default function Contact() {
                       Phone Number
                     </span>
                     <input
+                    name="phone"
+                   value={formData.phone}
+                    onChange={handleChange}
                       className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
                       placeholder="+91 98765 43210"
                       type="tel"
@@ -230,7 +313,11 @@ export default function Contact() {
                     What are you interested in?
                   </span>
                   <div className="relative">
-                    <select className="w-full appearance-none rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white">
+                    <select 
+                     name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                    className="w-full appearance-none rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white">
                       <option>Fresh Mushrooms (Wholesale)</option>
                       <option>Mushroom Spawn</option>
                       <option>Consulting &amp; Training</option>
@@ -250,17 +337,23 @@ export default function Contact() {
                     Your Message
                   </span>
                   <textarea
+                  name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full resize-y rounded-lg border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-slate-900/50 dark:text-white dark:placeholder:text-slate-500"
                     placeholder="Tell us more about your requirements..."
                     rows="4"
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500 text-sm">{errors.message}</p>
+                  )}
                 </label>
                 {/*
           <!-- Submit Button -->
           */}
                 <button
                   className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-4 text-base font-bold text-slate-900 transition-transform hover:scale-[1.01] active:scale-[0.99] hover:bg-green-400 shadow-lg shadow-green-500/10"
-                  type="button"
+                  type="submit"
                 >
                   <span>Send Message</span>
                   <span className="material-symbols-outlined text-lg">

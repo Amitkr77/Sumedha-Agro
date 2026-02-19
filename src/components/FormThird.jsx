@@ -7,7 +7,8 @@ import { IoShieldCheckmark } from "react-icons/io5";
 import { BiArrowBack } from "react-icons/bi";
 import { IoSend } from "react-icons/io5";
 
-export default function FormThird({ handlePrevious, handleNext }) {
+export default function FormThird({handlePrevious, handleNext, goToStep}) {
+
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
       <div className="mb-10">
@@ -68,10 +69,13 @@ export default function FormThird({ handlePrevious, handleNext }) {
                 Product &amp; Order Details
               </h3>
             </div>
-            <button className="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+            <button
+              onClick={() => goToStep(0)}   // 🔥 go directly to FormOne
+              className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+            >
               <span className="material-symbols-outlined text-sm">
                 <MdEdit size={20} />
-              </span>{" "}
+              </span>
               Edit
             </button>
           </div>
@@ -134,10 +138,13 @@ export default function FormThird({ handlePrevious, handleNext }) {
                 Business Information
               </h3>
             </div>
-            <button className="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+            <button
+              onClick={() => goToStep(1)}   // 🔥 go directly to FormSecond
+              className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+            >
               <span className="material-symbols-outlined text-sm">
                 <MdEdit size={20} />
-              </span>{" "}
+              </span>
               Edit
             </button>
           </div>

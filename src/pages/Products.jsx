@@ -1,8 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import { IoFilter } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
-
+import { useNavigate } from "react-router-dom";
 export default function Products() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+const handleSubmit = () => {
+  if (email.trim() === "") {
+    setError("Email is required");
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    setError("Please enter a valid email address");
+    return;
+  }
+
+  setError(""); // clear error
+  navigate("/get-quote", { state: { email } });
+
+};
   return (
     <main>
       <main>
@@ -42,7 +64,6 @@ export default function Products() {
               <div className="flex flex-col gap-3">
                 <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors">
                   <input
-                    checked=""
                     className="h-5 w-5 border-2 border-border-active bg-transparent text-transparent checked:border-primary checked:bg-primary checked:focus:border-primary focus:ring-0 focus:ring-offset-0 radio-checked-bg"
                     name="category"
                     type="radio"
@@ -109,9 +130,11 @@ export default function Products() {
                 <p className="text-sm text-text-side mb-4">
                   We handle bulk requests for commercial farming.
                 </p>
+                <a href="/contact">
                 <button className="w-full py-2 px-4 bg-white border border-primary text-primary font-bold rounded-lg text-sm hover:bg-primary hover:text-text-main transition-colors">
                   Contact Sales
                 </button>
+                </a>
               </div>
             </div>
           </aside>
@@ -374,18 +397,28 @@ export default function Products() {
             </p>
             <form className="w-full max-w-lg bg-white dark:bg-white/5 p-2 rounded-xl shadow-lg border border-border-light dark:border-white/10 flex flex-col sm:flex-row gap-2">
               <input
+              type="email"
+               value={email}
+               onChange={(e) => {
+                setEmail(e.target.value);
+              setError("");
+                  }}
                 className="flex-1 bg-transparent border-none focus:ring-0 text-text-main dark:text-white placeholder:text-gray-400 px-4 py-3"
                 placeholder="Enter your email address"
-                required=""
-                type="email"
               />
               <button
-                className="bg-primary text-text-main font-bold rounded-lg px-6 py-3 hover:bg-primary/90 transition-colors whitespace-nowrap"
-                type="button"
+                 onClick={handleSubmit}
+                 type="button"
+                  className="bg-primary text-text-main font-bold rounded-lg px-6 py-3 hover:bg-primary/90 transition-colors whitespace-nowrap"
               >
                 Request Quote
               </button>
             </form>
+            {error && (
+           <p className="text-red-500 text-sm mt-2">
+             {error}
+             </p>
+               )}
             <p className="mt-4 text-l text-text-side">
               We respect your privacy. No spam.
             </p>

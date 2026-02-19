@@ -13,8 +13,6 @@ import Privacy from './pages/Privacy';
 import Termsofservices from './pages/Termsofservices';
 
 
-
-
 export default function App() {
   return (
     <Router>

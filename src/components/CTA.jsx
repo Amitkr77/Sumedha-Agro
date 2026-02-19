@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 
 export default function CTA() {
   const [formData, setFormData] = useState({
@@ -22,10 +25,35 @@ export default function CTA() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+try {
+    const response = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-    console.log(formData);
-  };
+    const data = await response.json();
 
+    if (response.ok) {
+      alert("Inquiry sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        interest: "",
+        message: "",
+      });
+    } else {
+      alert(data.error);
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("Server error");
+  }
+};
   return (
     <section
       className="py-20 px-4 md:px-20 lg:px-40 flex justify-center bg-background-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800"
@@ -79,22 +107,28 @@ export default function CTA() {
             <div className="flex gap-4 mt-2">
               {/* <!-- Simple social icons using text for demo --> */}
               <a
-                className="hover:opacity-75 transition-opacity font-bold"
-                href="#"
+                className="hover:opacity-75 transition-opacity font-bold text-xl"
+                href=" "
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                LN
+              <FaLinkedinIn />
               </a>
               <a
-                className="hover:opacity-75 transition-opacity font-bold"
-                href="#"
+                className="hover:opacity-75 transition-opacity font-bold text-xl"
+                href=" "
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                TW
+              <FaXTwitter />
               </a>
               <a
-                className="hover:opacity-75 transition-opacity font-bold"
-                href="#"
+                className="hover:opacity-75 transition-opacity font-bold text-xl"
+                href=" "
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                IG
+              <FaInstagram />
               </a>
             </div>
           </div>

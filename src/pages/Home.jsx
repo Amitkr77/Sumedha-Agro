@@ -14,8 +14,11 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosWater } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 import CTA from "../components/CTA";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <main className="flex-grow flex flex-col">
       {/* <section className="relative w-full py-12 md:py-24 px-4 md:px-10 lg:px-20 flex justify-center bg-background-dark overflow-hidden min-h-[700px] items-center">
@@ -369,6 +372,10 @@ export default function Home() {
               Our Products
             </h2>
             <a
+             onClick={() => {
+                  navigate("/products");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                 }}
               className="hidden md:flex items-center gap-2 text-green-500 dark:text-primary font-bold hover:underline"
               href="#"
             >
@@ -399,14 +406,20 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">
-                  Premium Button Mushrooms
+                Premium Button Mushrooms
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
-                  Farm-fresh, chemical-free white button mushrooms harvested
-                  daily for maximum flavor.
+                 Farm-fresh, chemical-free white button mushrooms harvested
+                 daily for maximum flavor.
                 </p>
-                <button className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors">
-                  View Details
+                <button
+                   onClick={() => {
+                   navigate("/products");
+                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                   className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                  >
+                   View Details
                 </button>
               </div>
             </div>
@@ -435,9 +448,15 @@ export default function Home() {
                   A nutrient-dense superfood powder perfect for soups,
                   smoothies, and baking.
                 </p>
-                <button className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors">
-                  View Details
-                </button>
+                <button
+                  onClick={() => {
+                  navigate("/products");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                 }}
+                 className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                >
+                View Details
+                </button>  
               </div>
             </div>
             {/* <!-- Product Card 3 --> */}
@@ -463,9 +482,15 @@ export default function Home() {
                   Spicy and tangy mushroom pickles made with traditional recipes
                   and organic oil.
                 </p>
-                <button className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors">
+                <button
+                  onClick={() => {
+                  navigate("/products");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                >
                   View Details
-                </button>
+                </button> 
               </div>
             </div>
           </div>
