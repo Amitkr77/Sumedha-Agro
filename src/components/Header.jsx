@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTractor } from "react-icons/fa6";
-import logo from "../assets/logo.png"; 
+import logo from "../assets/Logo.png"; 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap shadow-sm  dark:border-b-surface-dark bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md px-10 py-3 ">
