@@ -7,6 +7,7 @@ export default function Products() {
 
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
 const handleSubmit = () => {
   if (email.trim() === "") {
@@ -67,6 +68,9 @@ const handleSubmit = () => {
                     className="h-5 w-5 border-2 border-border-active bg-transparent text-transparent checked:border-primary checked:bg-primary checked:focus:border-primary focus:ring-0 focus:ring-offset-0 radio-checked-bg"
                     name="category"
                     type="radio"
+                    value="all"
+                    checked={selectedCategory === "all"}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
                   />
                   <div className="flex grow flex-col">
                     <p className="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">
@@ -77,11 +81,18 @@ const handleSubmit = () => {
                     </p>
                   </div>
                 </label>
-                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors">
+                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors"
+                   onClick={() => {
+                   navigate("/products");
+                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>
                   <input
                     className="h-5 w-5 border-2 border-border-active bg-transparent text-transparent checked:border-primary checked:bg-primary checked:focus:border-primary focus:ring-0 focus:ring-offset-0 radio-checked-bg"
                     name="category"
                     type="radio"
+                    value="seeds"
+                    checked={selectedCategory === "seeds"}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
                   />
                   <div className="flex grow flex-col">
                     <p className="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">
@@ -92,11 +103,18 @@ const handleSubmit = () => {
                     </p>
                   </div>
                 </label>
-                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors">
+                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors"
+                   onClick={() => {
+                   navigate("/products");
+                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>
                   <input
                     className="h-5 w-5 border-2 border-border-active bg-transparent text-transparent checked:border-primary checked:bg-primary checked:focus:border-primary focus:ring-0 focus:ring-offset-0 radio-checked-bg"
                     name="category"
                     type="radio"
+                    value="value"
+                    checked={selectedCategory === "value"}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
                   />
                   <div className="flex grow flex-col">
                     <p className="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">
@@ -107,11 +125,18 @@ const handleSubmit = () => {
                     </p>
                   </div>
                 </label>
-                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors">
+                <label className="group cursor-pointer flex items-center gap-4 rounded-lg border border-solid border-border-active bg-white dark:bg-white/5 dark:border-white/10 p-[15px] hover:border-primary transition-colors"
+                onClick={() => {
+                   navigate("/products");
+                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>
                   <input
                     className="h-5 w-5 border-2 border-border-active bg-transparent text-transparent checked:border-primary checked:bg-primary checked:focus:border-primary focus:ring-0 focus:ring-offset-0 radio-checked-bg"
                     name="category"
                     type="radio"
+                    value="fresh"
+                    checked={selectedCategory === "fresh"}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
                   />
                   <div className="flex grow flex-col">
                     <p className="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">
@@ -141,6 +166,7 @@ const handleSubmit = () => {
           {/* <!-- Product Grid Area --> */}
           <main className="flex-1 flex flex-col gap-10">
             {/* <!-- Section 1: Seeds --> */}
+            {(selectedCategory === "all" || selectedCategory === "seeds") && (
             <section>
               <div className="flex items-center justify-between mb-6 border-b border-border-light pb-2">
                 <h2 className="text-text-main dark:text-white text-2xl font-bold leading-tight">
@@ -282,7 +308,9 @@ const handleSubmit = () => {
                 </div>
               </div>
             </section>
+            )}
             {/* <!-- Section 2: Value Added --> */}
+            {(selectedCategory === "all" || selectedCategory === "value") && (
             <section>
               <div className="flex items-center justify-between mb-6 border-b border-border-light pb-2">
                 <h2 className="text-text-main dark:text-white text-2xl font-bold leading-tight">
@@ -380,6 +408,13 @@ const handleSubmit = () => {
                 </div>
               </div>
             </section>
+            )}
+              {/* <!-- Section 3: Fresh --> }
+              {(selectedCategory === "all" || selectedCategory === "value") && (
+              <section>
+                .... Fresh value ke product cards ka code ....
+              </section>
+             )*/}  
           </main>
         </div>
         {/* <!-- Lead Generation / Footer Section --> */}
