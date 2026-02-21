@@ -405,7 +405,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">
+                <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
                 Premium Button Mushrooms
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
@@ -441,7 +441,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">
+                <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
                   Oyster Mushroom Powder
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
@@ -475,7 +475,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">
+                <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
                   Mushroom Pickles
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">

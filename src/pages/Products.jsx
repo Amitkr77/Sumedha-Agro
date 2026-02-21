@@ -196,7 +196,7 @@ const handleSubmit = () => {
                   </div>
                   <div className="p-5 flex flex-col flex-1">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                      <h3 className="text-lg font-bold text-text-main dark:text-black group-hover:text-primary transition-colors">
                         Oyster Mushroom Spawn
                       </h3>
                     </div>
@@ -242,7 +242,7 @@ const handleSubmit = () => {
                     </div>
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className="text-lg dark:text-white text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg dark:text-black text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                       Button Mushroom Spawn
                     </h3>
                     <p className="text-text-side text-sm line-clamp-2 mb-4">
@@ -422,7 +422,7 @@ const handleSubmit = () => {
             <span className="bg-white dark:bg-white/10 text-primary border border-primary/20 rounded-full px-3 py-1 text-xs font-bold tracking-wider uppercase mb-4">
               Partner With Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-main dark:text-White mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">
               Interested in Bulk Orders?
             </h2>
             <p className="text-text-side max-w-lg mb-8 text-lg">

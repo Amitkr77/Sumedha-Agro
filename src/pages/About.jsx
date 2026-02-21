@@ -48,7 +48,7 @@ export default function About() {
                   Sustainable Tech
                 </span>
               </div>
-              <h1 className="text-text-main dark:text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+              <h1 className="text-text-main dark:text-black text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
                 Innovating Agriculture <br className="hidden lg:block" />{" "}
                 through{" "}
                 <span className="text-primary underline decoration-4 underline-offset-4 decoration-primary/30">
@@ -90,7 +90,7 @@ export default function About() {
         <div className="max-w-1280px mx-auto px-4 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 ">
             <div className="max-w-6xl  flex-col text-center mx-auto">
-              <h2 className="text-text-main dark:text-white text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
+              <h2 className="text-text-main dark:text-black text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
                 Why Mushrooms?
               </h2>
 
@@ -174,7 +174,7 @@ export default function About() {
         <div className="max-w-1280px mx-auto px-4 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 ">
             <div className="max-w-6xl  flex-col text-center mx-auto">
-              <h2 className="text-text-main dark:text-white text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
+              <h2 className="text-text-main dark:text-black text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
                 Our Focus Area?
               </h2>
               <p className="text-xl">
@@ -228,7 +228,7 @@ export default function About() {
               </span>
             </div>
             <div>
-              <h2 className="text-text-main dark:text-white text-2xl font-bold leading-tight mb-3">
+              <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Mission
               </h2>
               <p className="text-text-main/80 dark:text-slate-300 text-lg leading-relaxed">
@@ -247,7 +247,7 @@ export default function About() {
               </span>
             </div>
             <div>
-              <h2 className="text-text-main dark:text-white text-2xl font-bold leading-tight mb-3">
+              <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Vision
               </h2>
               <p className="text-text-main/80 dark:text-slate-300 text-lg leading-relaxed">
@@ -263,7 +263,7 @@ export default function About() {
       <section className="w-full bg-slate-50 dark:bg-black/20 py-16 md:py-24">
         <div className="max-w-960px mx-auto px-4 md:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-text-main dark:text-white text-3xl font-bold mb-4">
+            <h2 className="text-text-main dark:text-black text-3xl font-bold mb-4">
               Our Growth Journey
             </h2>
             <p className="text-text-main/70 dark:text-slate-400">
@@ -358,7 +358,7 @@ export default function About() {
           <span className="text-primary font-bold uppercase tracking-widest text-xs mb-2 block">
             Our Leadership
           </span>
-          <h2 className="text-text-main dark:text-white text-3xl font-bold">
+          <h2 className="text-text-main dark:text-black text-3xl font-bold">
             Cultivators of Innovation
           </h2>
         </div>
@@ -376,11 +376,11 @@ export default function About() {
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDF79cuIwmXLA6Q2NoOuufqZdlfKtSM8Cr-46rsy3iU5zWcyMKfjp0ZP-06thn2TjIUtfq4Ak7q8APTr49oq2cVToBo3umvWlMehY1wYbG_1QtFvu8eHoD03b_1WKoT81_2KFZiAECGfDuiSoJOYpYAfpFs0f_6aAXEEXGHKyhnv8ygegbK0Cj4kV0rKaXwlWHApbKSiv23NkP2G_NhTXu1vwQ7C9T8931hzv95fvR1wPlhmTLGnVIdv7m9u48yI8J9rIYAeNxn460");'
               ></div>
             </div>
-            <h3 className="text-lg font-bold text-text-main dark:text-white">
-              Dr. Priya Sharma
+            <h3 className="text-lg font-bold text-text-main dark:text-black">
+              Dr. Enespa Singh
             </h3>
             <p className="text-sm text-primary font-medium mb-3">
-              Chief Mycologist
+              Founder
             </p>
             <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
               Expert in spore genetics with 15 years in agricultural biotech.
@@ -399,11 +399,11 @@ export default function About() {
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS_7DbLu61mAzK0g9CBhEm9XW9XFRzqQZYfDXMt461IC88K3a4DVLrPmLambUGZ9jFUewW7XAMS5plqCTia6pQ87hSzFOkFFWR_OrZz5BUzO2Py2bEZ6T2uH3vlt0QHSySTU9O1Q8LuUN3V6cn2i_JY4LlpSr-KOJTOVSnBEypZ7_bjBlx55vQBRJ3IMJhE7iDqNR5nifLzGjk-VIFhhES9MRvrGUs1NvNfZfzJkPsiSF_panDjpWPRQiM55HhLIRNs2LuUPDy_8M");'
               ></div>
             </div>
-            <h3 className="text-lg font-bold text-text-main dark:text-white">
-              Rajesh Verma
+            <h3 className="text-lg font-bold text-text-main dark:text-black">
+              Dr. Prem Singh
             </h3>
             <p className="text-sm text-primary font-medium mb-3">
-              Head of Operations
+              Co-Founder
             </p>
             <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
               Supply chain wizard optimizing farm-to-table logistics.
@@ -422,11 +422,11 @@ export default function About() {
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzXSMuclTayKwyXZ1eMfJTS34Xq_bVSiiKGg4v_fIUJxCn9cRXNfuGdAiiLvmkgN5iF6KkZrIE4b7B8jqMugYNpCuxZAFiTKNYeVGnBd7fAq4lu8lMXysZZVVvtfhf40gD6fkwCpy97l3PjTdK-6wZnctJ7Os7GcAJtEkObHi-GnFSs0dKnqxTbZUuaNKgBp8x9sk8DMxyRQNmuXF9bsTZDmikJ_0CuwCE3RhefJaDbnA0dnuvs826wO69S4-C6U2MyQoFT7J81-E");'
               ></div>
             </div>
-            <h3 className="text-lg font-bold text-text-main dark:text-white">
-              Sarah Jenkins
+            <h3 className="text-lg font-bold text-text-main dark:text-black">
+              Surjeet Singh
             </h3>
             <p className="text-sm text-primary font-medium mb-3">
-              Sustainability Lead
+              Marketing Head
             </p>
             <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
               Ensuring our zero-waste promise is kept in every process.
@@ -445,11 +445,11 @@ export default function About() {
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW5pf-zUrK7L5mk-Tkjmnj0w4kvdE20e1igcqkbLhO1zLd-5R7Ed6s1ApAHwA-HlgCva2RuHXyuQG6fRVYlBXvwHtbSnaiKYBHVOH-zpMFXZSCYdp6I9CsXHcd63VpLurspqHN6GFBqFg2zcF6G7RMx7GyWbz09vnEA66_kcih43I8p43_c8WnyMNcWkTQ4n1dGlitbFhuIUZPmL2YBom_4CBbC21uDgNOM8-IUlxqEwJzXJXB1IkUPQfD-ea1pV_DeEjWOwIEPas");'
               ></div>
             </div>
-            <h3 className="text-lg font-bold text-text-main dark:text-white">
-              David Chen
+            <h3 className="text-lg font-bold text-text-main dark:text-black">
+              Ayush Kumar
             </h3>
             <p className="text-sm text-primary font-medium mb-3">
-              Tech Director
+              Tech Expert
             </p>
             <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
               Architect of our proprietary AI climate control systems.

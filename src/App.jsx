@@ -23,10 +23,10 @@ export default function App() {
         <Route path='/products/:slug' element={<Products />} />
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/showcase' element={<Showcase/>}/>
-        <Route path='/About' element={<About/>}/>
+        <Route path='/about' element={<About/>}/>
         <Route path='/get-quote' element={<GetQuote/>}/>
-        <Route path='/Privacy' element={<Privacy/>}/>
-        <Route path='/Termsofservices' element={<Termsofservices/>}/>
+        <Route path='/privacy' element={<Privacy/>}/>
+        <Route path='/termsofservices' element={<Termsofservices/>}/>
       </Routes>
       <Footer/>
     </Router>

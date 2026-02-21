@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { IoMdArrowForward } from "react-icons/io";
+import { FaTractor } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { CiShare2 } from "react-icons/ci";
 import logo from "../assets/Logo.png";
@@ -49,7 +50,7 @@ export default function Footer() {
     />
   </div>
 
-  <h2 className="text-text-main dark:text-black text-xl font-bold leading-tight tracking-[-0.015em]">
+  <h2 className="text-text-main dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
     Sumedha Agro
   </h2>
 </div>

@@ -111,7 +111,7 @@ if (!validate()) return;
     */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">
+              <h2 className="text-3xl font-bold mb-6 text-slate-900 dark:text-black">
                 Contact Details
               </h2>
               <p className="text-slate-600 dark:text-slate-400 mb-8">
@@ -129,7 +129,7 @@ if (!validate()) return;
                     </span>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-black">
                       Phone
                     </h3>
                     <a
@@ -154,7 +154,7 @@ if (!validate()) return;
                     </span>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-black">
                       Email
                     </h3>
                     <a
@@ -178,7 +178,7 @@ if (!validate()) return;
                     </span>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-black">
                       Visit HQ
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400">
@@ -199,8 +199,8 @@ if (!validate()) return;
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuByNyAwafsUHsnV4JA7vIgOa6Pj2KJGFNVgKYbWM_TuQXGEgI1kagEvnISfkIBOi3bFe-7EcVs4CFZ84aC0D3eR1epIWNY9p84_q6QcP223XXL_GlCeH5HDaEMAUuis6BVxICStJ9CvqfJsh0Pk3-A1xiF_Bv80nglE9MVeC-mTAiNkJeIZRSq2sLM9leT7bOum70T8ho1dklgs1Gnl_I0oEoyn6s3s6yfCLvAqgh97OvEm_msChfDlPDgtFfhtJ0gjj5yIFqGei5E')",
                 }}
                 className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity"
-                data-alt="Map view showing location in Pune"
-                data-location="Pune, India"
+                data-alt="Map view showing location in Sarojni Nagar Lucknow, Uttar Pradesh, India"
+                data-location="Sarojni Nagar Lucknow, Uttar Pradesh, India"
               ></div>
               <div className="absolute inset-0 bg-slate-900/10 flex items-center justify-center">
                 <div className="bg-white dark:bg-slate-900 p-3 rounded-full shadow-xl animate-bounce">
@@ -220,7 +220,7 @@ if (!validate()) return;
           <div className="lg:col-span-7" id="contact-form">
             <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-white/5 p-8 lg:p-10 shadow-sm">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-black mb-2">
                   Send us a Message
                 </h2>
                 <p className="text-slate-500 dark:text-slate-400">
@@ -235,7 +235,7 @@ if (!validate()) return;
             <!-- Full Name -->
             */}
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                       Full Name
                     </span>
                     
@@ -255,7 +255,7 @@ if (!validate()) return;
             <!-- Company Name -->
             */}
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                       Company Name (Optional)
                     </span>
                     <input 
@@ -273,7 +273,7 @@ if (!validate()) return;
             <!-- Email -->
             */}
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                       Email Address
                     </span>
                     <input
@@ -292,7 +292,7 @@ if (!validate()) return;
             <!-- Phone -->
             */}
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                    <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                       Phone Number
                     </span>
                     <input
@@ -309,7 +309,7 @@ if (!validate()) return;
           <!-- Product Interest -->
           */}
                 <label className="flex flex-col gap-2">
-                  <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                  <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                     What are you interested in?
                   </span>
                   <div className="relative">
@@ -333,7 +333,7 @@ if (!validate()) return;
           <!-- Message -->
           */}
                 <label className="flex flex-col gap-2">
-                  <span className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+                  <span className="text-sm font-semibold text-slate-900 dark:text-black-200">
                     Your Message
                   </span>
                   <textarea
