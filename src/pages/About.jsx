@@ -415,7 +415,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzXSMuclTayKwyXZ1eMfJTS34Xq_bVSiiKGg4v_fIUJxCn9cRXNfuGdAiiLvmkgN5iF6KkZrIE4b7B8jqMugYNpCuxZAFiTKNYeVGnBd7fAq4lu8lMXysZZVVvtfhf40gD6fkwCpy97l3PjTdK-6wZnctJ7Os7GcAJtEkObHi-GnFSs0dKnqxTbZUuaNKgBp8x9sk8DMxyRQNmuXF9bsTZDmikJ_0CuwCE3RhefJaDbnA0dnuvs826wO69S4-C6U2MyQoFT7J81-E')",
+                    "",
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of Sarah Jenkins"
@@ -438,7 +438,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW5pf-zUrK7L5mk-Tkjmnj0w4kvdE20e1igcqkbLhO1zLd-5R7Ed6s1ApAHwA-HlgCva2RuHXyuQG6fRVYlBXvwHtbSnaiKYBHVOH-zpMFXZSCYdp6I9CsXHcd63VpLurspqHN6GFBqFg2zcF6G7RMx7GyWbz09vnEA66_kcih43I8p43_c8WnyMNcWkTQ4n1dGlitbFhuIUZPmL2YBom_4CBbC21uDgNOM8-IUlxqEwJzXJXB1IkUPQfD-ea1pV_DeEjWOwIEPas')",
+                    "",
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of David Chen"
