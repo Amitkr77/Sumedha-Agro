@@ -295,7 +295,7 @@ export default function Home() {
       <section className="py-16 px-4 md:px-20 lg:px-40 bg-background-light dark:bg-surface-dark">
         <div className="max-w[1200px] mx-auto w-full">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <h2 className="text-text-main dark:text-white text-3xl md:text-4xl font-bold leading-tight max-w[500px]">
+            <h2 className="text-text-main dark:text-black text-3xl md:text-4xl font-bold leading-tight max-w[500px]">
               Why We Choose 
               Mushrooms?
             </h2>
