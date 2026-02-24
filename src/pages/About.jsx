@@ -10,7 +10,10 @@ import { PiPottedPlant } from "react-icons/pi";
 import { MdOutlineVisibility } from "react-icons/md";
 import { IoIosTrendingUp } from "react-icons/io";
 import { MdOutlinePublic } from "react-icons/md";
-
+import a1 from "../assets/a1.png";
+import a2 from "../assets/a2.png";
+import a3 from "../assets/a3.png";
+import a4 from "../assets/a4.jpeg";
 const data = [
   {
     icon: <FaRegLightbulb />,
@@ -55,7 +58,7 @@ export default function About() {
                   Fungi
                 </span>
               </h1>
-              <p className="text-text-main/80 dark:text-slate-300 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-text-main/80 dark:text-gray-500 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Cultivating the future of nutrition with sustainable, high-tech
                 mushroom farming that blends nature's wisdom with AI precision.
                 “Edible mushrooms are a gift from nature with therapeutic
@@ -94,7 +97,7 @@ export default function About() {
                 Why Mushrooms?
               </h2>
 
-              <p className="text-text-main/70 dark:text-slate-400 text-xl">
+              <p className="text-text-main/70 dark:text-gray-500 text-xl">
                 Our data-driven approach yields superior nutritional profiles
                 with minimal environmental footprint. For thousands of years,
                 mushrooms—one of nature&#39;s oldest and most varied organisms
@@ -231,7 +234,7 @@ export default function About() {
               <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Mission
               </h2>
-              <p className="text-text-main/80 dark:text-slate-300 text-lg leading-relaxed">
+              <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
                 To revolutionize global nutrition by making sustainable,
                 zero-waste mushroom cultivation accessible, scalable, and highly
                 efficient through technology.
@@ -250,7 +253,7 @@ export default function About() {
               <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Vision
               </h2>
-              <p className="text-text-main/80 dark:text-slate-300 text-lg leading-relaxed">
+              <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
                 To become the undisputed global leader in AI-driven agritech and
                 functional foods, creating a healthier planet one spore at a
                 time.
@@ -369,7 +372,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDF79cuIwmXLA6Q2NoOuufqZdlfKtSM8Cr-46rsy3iU5zWcyMKfjp0ZP-06thn2TjIUtfq4Ak7q8APTr49oq2cVToBo3umvWlMehY1wYbG_1QtFvu8eHoD03b_1WKoT81_2KFZiAECGfDuiSoJOYpYAfpFs0f_6aAXEEXGHKyhnv8ygegbK0Cj4kV0rKaXwlWHApbKSiv23NkP2G_NhTXu1vwQ7C9T8931hzv95fvR1wPlhmTLGnVIdv7m9u48yI8J9rIYAeNxn460')",
+                    `url(${a3})`
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of Dr. Priya Sharma"
@@ -392,7 +395,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAS_7DbLu61mAzK0g9CBhEm9XW9XFRzqQZYfDXMt461IC88K3a4DVLrPmLambUGZ9jFUewW7XAMS5plqCTia6pQ87hSzFOkFFWR_OrZz5BUzO2Py2bEZ6T2uH3vlt0QHSySTU9O1Q8LuUN3V6cn2i_JY4LlpSr-KOJTOVSnBEypZ7_bjBlx55vQBRJ3IMJhE7iDqNR5nifLzGjk-VIFhhES9MRvrGUs1NvNfZfzJkPsiSF_panDjpWPRQiM55HhLIRNs2LuUPDy_8M')",
+                    `url(${a2})`
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of Rajesh Verma"
@@ -415,7 +418,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "",
+                    `url(${a1})`
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of Sarah Jenkins"
@@ -438,7 +441,7 @@ export default function About() {
               <div
                 style={{
                   backgroundImage:
-                    "",
+                    `url(${a4})`,
                 }}
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of David Chen"
