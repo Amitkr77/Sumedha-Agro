@@ -340,7 +340,7 @@ if (!validate()) return;
                   name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full resize-y rounded-lg border border-slate-300 bg-gray-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-white-900/50 dark:text-white dark:placeholder:text-gray"
+                    className="w-full resize-y rounded-lg border border-slate-300 bg-gray-50 px-4 py-3.5 text-slate-900 placeholder:text-slate-400 focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-700 dark:bg-white-900/50 dark:text-grey dark:placeholder:text-gray"
                     placeholder="Tell us more about your requirements..."
                     rows="4"
                   ></textarea>
