@@ -400,7 +400,7 @@ export default function Home() {
                   //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcylxFCLun93Ypr5G-vqE0vPvMDpXZi57GtROMVxxgzwCFudrlTHgb92wwdxQUbprAgVEFgOZefniXRuVsJjRyf6dGaubOvhZTj2IXFqBIEcgLg4ZlO7NKljRIEEEuldceP-qMwtxWhQb5hTWipnFqSq3NYU3kKYfshQ0MtCYHTXXjIi5jN53QbLMx_CoVZEkBsUrOuW3me5Zm27Dm7HC5xJt2HeUM8rgXiXZei2GCIlkBWhXQj4mrdq2PhSZFi6axny9VCg8Smx8');
                   // "
                 ></div>
-                <div className="absolute top-3 right-3 bg-white dark:bg-black/70 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
+                <div className="absolute top-3 right-3 bg-white dark:bg-gray-400 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
                   Fresh
                 </div>
               </div>
@@ -436,7 +436,7 @@ export default function Home() {
                   //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXFaZ2oBmibDzON0bukDba_ld1uQbJPOD-0FX9toxsRahO65yv_nQxBHKz0UUofmLSfQnn0uK4mMwdbd3BO1HK3339mZcGv_oU4NWEIA4rxL7Q6pVWOg1-Np51vn8-uSPfIb4AqZqZ5ET8N8dngLGc__hDv6SiXBDxuhDpkT7UEeLeLMb1UAgeIm1r53US0kkZPwJMjamwvCMYTi4MPWeeNh2Z5pyd4XS7OGrnRw80Lkxfa3WmqM4MBF_04xwxNC4rp_fBOxTg4Yg');
                   // "
                 ></div>
-                <div className="absolute top-3 right-3 bg-white dark:bg-black/70 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
+                <div className="absolute top-3 right-3 bg-white dark:bg-gray-400 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
                   Processed
                 </div>
               </div>
@@ -470,7 +470,7 @@ export default function Home() {
                       "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1tvPdyVotJlkda5KWx01YZNiW9Dq6gNx30fuGPAZk4mOLU-J4XGhRjJjS4Yl_PVNszdCnLDTbwb05ewET8JwuJSmT5gzpjvvJOUomfmXVbLcY65qKRPLfesJRF0TmGOgLHStvJ5lXeoGAngtUxEXPgmemtt4WIZZJER-TvgSA553psdFP_xy6KJym3DttCcjf0FxZfjAz6NfPLSWsSlz3dGSYZNPO-CXSw4QAzhH7VWxraOuS6AnY6I0OZetMQEyBz8mp9zrUCgY')",
                   }}
                 ></div>
-                <div className="absolute top-3 right-3 bg-white dark:bg-black/70 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
+                <div className="absolute top-3 right-3 bg-white dark:bg-gray-400 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
                   Ready to Eat
                 </div>
               </div>
