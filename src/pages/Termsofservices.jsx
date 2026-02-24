@@ -25,7 +25,7 @@ export default function Termsofservices() {
 <h1 class="text-5xl lg:text-6xl font-black tracking-tighter text-primary dark:text-[#4ade80]">Terms of Service</h1>
 <p class="text-[#5b8b5b] font-medium text-lg italic">Version 2.4.1 | Last Updated: October 24, 2023</p>
 </div>
-<button class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-[#1a261a] border border-[#e9f1e9] dark:border-[#2a3a2a] text-sm font-bold rounded-sm hover:bg-[#f0f0f0] dark:hover:bg-[#253525] transition-colors">
+<button class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-white border border-[#e9f1e9] dark:border-[#2a3a2a] text-sm font-bold rounded-sm hover:bg-[#f0f0f0] dark:hover:bg-grey-600 transition-colors">
 <span class="material-symbols-outlined text-lg"><FaDownload /></span>
   DOWNLOAD LEGAL PDF
    </button>
@@ -73,9 +73,9 @@ export default function Termsofservices() {
 </div>
 </aside>
 {/* <!-- Legal Content --> */}
-<article class="flex-1 max-w-3xl space-y-16 pb-24 text-[17px] leading-[1.8] text-[#333c45] dark:text-[#c5d1c5]">
+<article class="flex-1 max-w-3xl space-y-16 pb-24 text-[17px] leading-[1.8] text-[#333c45] dark:text-grey-400">
 <section class="scroll-mt-32" id="general">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">1.0</span> General Terms
       </h2>
 <div class="space-y-4">
@@ -84,7 +84,7 @@ export default function Termsofservices() {
 </div>
 </section>
 <section class="scroll-mt-32" id="usage">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">2.0</span> Product Usage &amp; Bio-Safety
      </h2>
 <div class="space-y-4">
@@ -95,16 +95,16 @@ export default function Termsofservices() {
 <li>Refrain from reverse-engineering proprietary cultivation hardware or genetic spore sequences.</li>
 </ul>
 <div class="mt-6 p-6 bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-100 dark:border-yellow-900/20 rounded-sm">
-<h4 class="font-bold text-[#101910] dark:text-yellow-200 mb-2 flex items-center gap-2">
+<h4 class="font-bold text-[#101910] dark:text-yellow-600 mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined"><IoIosWarning size={30}/></span>
      CRITICAL DISCLAIMER
      </h4>
-<p class="text-sm text-yellow-800 dark:text-yellow-300/80">Sumedha Agro is not responsible for yields affected by external environmental factors, improper storage, or failure to follow precise temperature/humidity protocols provided in the user manual.</p>
+<p class="text-sm text-yellow-800 dark:text-yellow-600/80">Sumedha Agro is not responsible for yields affected by external environmental factors, improper storage, or failure to follow precise temperature/humidity protocols provided in the user manual.</p>
 </div>
 </div>
 </section>
 <section class="scroll-mt-32" id="shipping">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">3.0</span> Shipping &amp; Logistics
      </h2>
 <div class="space-y-4">
@@ -113,7 +113,7 @@ export default function Termsofservices() {
 </div>
 </section>
 <section class="scroll-mt-32" id="user">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">4.0</span> User Obligations
    </h2>
 <div class="space-y-4">
@@ -122,7 +122,7 @@ export default function Termsofservices() {
 </div>
 </section>
 <section class="scroll-mt-32" id="liability">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">5.0</span> Limitation of Liability
    </h2>
 <div class="space-y-4">
@@ -133,7 +133,7 @@ export default function Termsofservices() {
 </div>
 </section>
 <section class="scroll-mt-32 pb-20" id="law">
-<h2 class="text-3xl font-black text-[#101910] dark:text-white mb-6 flex items-center gap-4">
+<h2 class="text-3xl font-black text-[#101910] dark:text-gray-600 mb-6 flex items-center gap-4">
 <span class="text-primary tabular-nums">6.0</span> Governing Law
        </h2>
 <div class="space-y-4">
