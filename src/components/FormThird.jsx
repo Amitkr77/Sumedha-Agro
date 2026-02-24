@@ -197,7 +197,8 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
               for="terms"
             >
               I agree to the{" "}
-              <a className="text-primary font-bold underline" href="#">
+               <a className="text-primary font-bold underline" 
+              onClick={() => navigate("/termsofservices")}>
                 Terms of Service
               </a>{" "}
               and confirm that the information provided above is accurate for
