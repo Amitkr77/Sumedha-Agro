@@ -8,41 +8,9 @@ import { MdLiquor } from "react-icons/md";
 import { MdOutlineTune } from "react-icons/md";
 import { IoMdBusiness } from "react-icons/io";
 
-export default function FormOne({ handleNext, formData, setFormData }) {
-const [errors, setErrors] = useState({});
-const handleChange = (field, value) => {
-  setFormData(prev => ({
-    ...prev,
-    [field]: value
-  }));
-};
-const validate = () => {
-  let newErrors = {};
-
-  if (!formData.product) {
-    newErrors.product = "Please select a product";
-  }
-
-  if (!formData.volume || !/^\d+$/.test(formData.volume)) {
-    newErrors.volume = "Enter valid monthly volume (numbers only)";
-  }
-if (!formData.frequency) {
-  newErrors.frequency = "Please select delivery frequency";
-}
-
-  if (!formData.name?.trim()) {
-    newErrors.name = "Full name required";
-  }
-
-  if (!formData.email?.trim()) {
-    newErrors.email = "Email required";
-  } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-    newErrors.email = "Invalid email format";
-  }
-
-  setErrors(newErrors);
-  return Object.keys(newErrors).length === 0;
-};
+export default function FormOne({ handleNext, defaultEmail }) {
+  const [workEmail, setWorkEmail] = useState(defaultEmail || "");
+  const [selectedProduct, setSelectedProduct] = useState("bulk");
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
       {/* <!-- Header Image & Intro --> */}
@@ -110,10 +78,10 @@ if (!formData.frequency) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* <!-- Product Card 1 --> */}
           <div
-            onClick={() => handleChange("product", "spawn")}
+            onClick={() => setSelectedProduct("spawn")}
             className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
             ${
-              formData.product === "spawn"
+              selectedProduct === "spawn"
                 ? "border-primary shadow-md"
                 : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
             }`}
@@ -121,7 +89,7 @@ if (!formData.frequency) {
             <div
               className={`absolute top-4 right-4 text-primary transition-opacity
               ${
-                formData.product === "spawn"
+                selectedProduct === "spawn"
                   ? "opacity-100"
                   : "opacity-0 group-hover:opacity-100"
               }`}
@@ -143,10 +111,10 @@ if (!formData.frequency) {
           </div>
           {/* <!-- Product Card 2 --> */}
           <div
-            onClick={() => handleChange("product", "bulk")}
+            onClick={() => setSelectedProduct("bulk")}
             className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
             ${
-              formData.product === "bulk"
+              selectedProduct === "bulk"
                 ? "border-primary shadow-md"
                 : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
             }`}
@@ -154,7 +122,7 @@ if (!formData.frequency) {
             <div
               className={`absolute top-4 right-4 text-primary transition-opacity
               ${
-                formData.product === "bulk"
+                selectedProduct === "bulk"
                   ? "opacity-100"
                   : "opacity-0 group-hover:opacity-100"
               }`}
@@ -176,10 +144,10 @@ if (!formData.frequency) {
           </div>
           {/* <!-- Product Card 3 --> */}
           <div
-        onClick={() => handleChange("product", "pickles")}
+        onClick={() => setSelectedProduct("pickles")}
         className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
         ${
-          formData.product === "pickles"
+          selectedProduct === "pickles"
             ? "border-primary shadow-md"
             : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
         }`}
@@ -187,7 +155,7 @@ if (!formData.frequency) {
         <div
           className={`absolute top-4 right-4 text-primary transition-opacity
           ${
-            formData.product === "pickles"
+            selectedProduct === "pickles"
               ? "opacity-100"
               : "opacity-0 group-hover:opacity-100"
           }`}
@@ -206,11 +174,6 @@ if (!formData.frequency) {
           </p>
         </div>
       </div>
-      {errors.product && (
-  <p className="text-red-500 text-sm mt-2">
-    {errors.product}
-  </p>
-)}
       </div>
       </section>
       {/* <!-- Section 2: Order Specifications --> */}
@@ -222,33 +185,21 @@ if (!formData.frequency) {
           2. Order Specifications
         </h3>
         <div className="bg-white dark:bg-[#25302c] p-8 rounded-xl border border-[#e9f1ec] dark:border-gray-800 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-2">
-              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
-                Estimated Monthly Volume
-              </label>
-
-              <div className="relative">
-                <input
-                  type="text"
-                  value={formData.volume}
-                  onChange={(e) => handleChange("volume", e.target.value)}
-                  placeholder="e.g. 500"
-                  className={`w-full dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 pr-16
-                    ${errors.volume ? "border-2 border-red-500" : "border border-gray-200 dark:border-gray-700"}
-                  `}
-                />
-
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-800">
-                  KG
-                </span>
-              </div>
-
-              {errors.volume && (
-                <p className="text-red-500 text-sm">
-                  {errors.volume}
-                </p>
-              )}
+          <div className="space-y-2">
+            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
+              Estimated Monthly Volume
+            </label>
+            <div className="relative">
+              <input
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 pr-16"
+                placeholder="e.g. 500"
+                type="text"
+              />
+              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-800">
+                KG
+              </span>
             </div>
+          </div>
           <div className="space-y-2">
             <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
               Packaging Preference
@@ -266,40 +217,18 @@ if (!formData.frequency) {
             </label>
             <div className="flex gap-4">
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input type="radio"
-                    name="freq"
-                    value="Weekly"
-                    checked={formData.frequency === "Weekly"}
-                    onChange={(e) => handleChange("frequency", e.target.value)}
-                    className="hidden" />
+                <input className="hidden" name="freq" type="radio" />
                 <span className="text-sm font-semibold dark:text-gray-500">Weekly</span>
               </label>
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input type="radio"
-                    name="freq"
-                    value="Bi-Weekly"
-                    checked={formData.frequency === "Bi-Weekly"}
-                    onChange={(e) => handleChange("frequency", e.target.value)}
-                    className="hidden" />
+                <input className="hidden" name="freq" type="radio" />
                 <span className="text-sm font-semibold dark:text-gray-500">Bi-Weekly</span>
               </label>
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input  type="radio"
-                  name="freq"
-                  value="One-time"
-                  checked={formData.frequency === "One-time"}
-                  onChange={(e) => handleChange("frequency", e.target.value)}
-                  className="hidden" />
+                <input className="hidden" name="freq" type="radio" />
                 <span className="text-sm font-semibold dark:text-gray-500">One-time</span>
               </label>
-             
             </div>
-                   {errors.frequency && (
-            <p className="text-red-500 text-sm mt-2">
-              {errors.frequency}
-            </p>
-          )}
-
           </div>
         </div>
       </section>
@@ -345,53 +274,28 @@ if (!formData.frequency) {
                 type="text"
               />
             </div>
-            {/* Full Name */}
-{/* Full Name */}
-<div className="space-y-2">
-  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
-    Full Name
-  </label>
-
-  <input
-    type="text"
-    value={formData.name}
-    onChange={(e) => handleChange("name", e.target.value)}
-    placeholder="John Doe"
-    className={`w-full dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3
-      ${errors.name ? "border-2 border-red-500" : "border border-gray-200 dark:border-gray-700"}
-    `}
-  />
-
-  {errors.name && (
-    <p className="text-red-500 text-sm mt-1">
-      {errors.name}
-    </p>
-  )}
-</div>
-
-
-{/* Work Email */}
-<div className="space-y-2">
-  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
-    Work Email
-  </label>
-
-  <input
-    type="email"
-    value={formData.email}
-    onChange={(e) => handleChange("email", e.target.value)}
-    placeholder="john@company.com"
-    className={`w-full dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3
-      ${errors.email ? "border-2 border-red-500" : "border border-gray-200 dark:border-gray-700"}
-    `}
-  />
-
-  {errors.email && (
-    <p className="text-red-500 text-sm mt-1">
-      {errors.email}
-    </p>
-  )}
-</div>
+            <div className="space-y-2">
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
+                Full Name
+              </label>
+              <input
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                placeholder="John Doe"
+                type="text"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
+                Work Email
+              </label>
+              <input
+                 type="email"
+                 value={workEmail}
+                 onChange={(e) => setWorkEmail(e.target.value)}
+                  className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                   placeholder="john@company.com"
+                    />
+            </div>
           </div>
           <div className="space-y-2">
             <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
@@ -416,11 +320,7 @@ if (!formData.frequency) {
           </span>
         </div>
         <button
-                onClick={() => {
-        if (validate()) {
-          handleNext();
-        }
-      }}
+          onClick={handleNext}
           className="w-full max-w-md bg-primary hover:bg-opacity-95 text-white font-extrabold py-5 rounded-xl shadow-lg transform transition hover:-translate-y-1 active:scale-95 text-lg"
         >
           Next

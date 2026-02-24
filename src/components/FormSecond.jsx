@@ -6,46 +6,8 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { MdAcUnit } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 
-export default function FormSecond({ handlePrev, handleNext, formData, setFormData }) {
-  
-const [errors, setErrors] = useState({});
-
-const handleChange = (field, value) => {
-  setFormData(prev => ({
-    ...prev,
-    [field]: value
-  }));
-};
-const validate = () => {
-  let newErrors = {};
-
-  if (!formData.address?.trim()) {
-    newErrors.address = "Street address required";
-  }
-
-  if (!formData.city?.trim()) {
-    newErrors.city = "City required";
-  }
-
-  if (!formData.state?.trim()) {
-    newErrors.state = "State required";
-  }
-
-  if (!formData.postalCode?.trim()) {
-    newErrors.postalCode = "Postal code required";
-  }
-
-  if (!formData.shippingMethod) {
-    newErrors.shippingMethod = "Select shipping method";
-  }
-
-  if (!formData.deliveryDate) {
-    newErrors.deliveryDate = "Delivery date required";
-  }
-
-  setErrors(newErrors);
-  return Object.keys(newErrors).length === 0;
-};
+export default function FormSecond({ handlePrev, handleNext2 }) {
+  const [shippingMethod, setShippingMethod] = useState("cold");
 
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
@@ -121,80 +83,46 @@ const validate = () => {
                 Street Address
               </label>
               <input
-              type="text"
-              value={formData.address}
-              onChange={(e) => handleChange("address", e.target.value)}
-              placeholder="123 Industrial Park Way"
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                />
-              {errors.address && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.address}
-              </p>
-            )}
+                placeholder="123 Industrial Park Way"
+                type="text"
+              />
             </div>
             <div className="space-y-2">
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
                 City
               </label>
               <input
-              type="text"
-              value={formData.city}
-              onChange={(e) => handleChange("city", e.target.value)}
-              placeholder="Bhubaneswar"
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                
+                placeholder="Bhubaneswar"
+                type="text"
               />
-              {errors.city && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.city}
-              </p>
-            )}
             </div>
             <div className="space-y-2">
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
                 State / Province
               </label>
               <input
-              type="text"
-              value={formData.state}
-              onChange={(e) => handleChange("state", e.target.value)}
-              placeholder="Odisha"
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                
+                placeholder="Odisha"
+                type="text"
               />
-              {errors.state && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.state}
-              </p>
-            )}
             </div>
             <div className="space-y-2">
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
                 Postal / ZIP Code
               </label>
               <input
-              type="text"
-              value={formData.postalCode}
-              onChange={(e) => handleChange("postalCode", e.target.value)}
-              placeholder="751001"
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                
+                placeholder="751001"
+                type="text"
               />
-              {errors.postalCode && (
-              <p className="text-red-500 text-sm mt-1">
-                {errors.postalCode}
-              </p>
-            )}
             </div>
             <div className="space-y-2">
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
                 Country
               </label>
-              <select 
-              value={formData.country}
-              onChange={(e) => handleChange("country", e.target.value)}
-              className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
+              <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
                 <option>India</option>
                 <option>Nepal</option>
                 <option>Bangladesh</option>
@@ -214,10 +142,10 @@ const validate = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Cold Storage */}
           <label
-            onClick={() => handleChange("shippingMethod", "cold")}
+            onClick={() => setShippingMethod("cold")}
             className={`relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-6 flex items-start gap-4
               ${
-                formData.shippingMethod === "cold"
+                shippingMethod === "cold"
                   ? "border-primary shadow-md"
                   : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
               }`}
@@ -225,8 +153,8 @@ const validate = () => {
             <input
               type="radio"
               name="shipping_method"
-              checked={formData.shippingMethod === "cold"}
-              onChange={() => handleChange("shippingMethod", "cold")}
+              checked={shippingMethod === "cold"}
+              onChange={() => setShippingMethod("cold")}
               className="hidden"
             />
 
@@ -240,7 +168,7 @@ const validate = () => {
                   Cold Storage Transit
                 </p>
 
-                {formData.shippingMethod === "cold" && (
+                {shippingMethod === "cold" && (
                   <AiFillCheckCircle className="text-primary text-xl" />
                 )}
               </div>
@@ -254,10 +182,10 @@ const validate = () => {
 
           {/* Standard Shipping */}
           <label
-            onClick={() => handleChange("shippingMethod", "standard")}
+            onClick={() => setShippingMethod("standard")}
             className={`relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-6 flex items-start gap-4
               ${
-                  formData.shippingMethod === "standard"
+                shippingMethod === "standard"
                   ? "border-primary shadow-md"
                   : "border-[#e9f1ec] dark:border-gray-800 hover:border-primary"
               }`}
@@ -265,8 +193,8 @@ const validate = () => {
             <input
               type="radio"
               name="shipping_method"
-              checked={formData.shippingMethod === "standard"}
-              onChange={() => handleChange("shippingMethod", "standard")}
+              checked={shippingMethod === "standard"}
+              onChange={() => setShippingMethod("standard")}
               className="hidden"
             />
 
@@ -280,7 +208,7 @@ const validate = () => {
                   Standard Shipping
                 </p>
 
-                {formData.shippingMethod === "standard" && (
+                {shippingMethod === "standard" && (
                   <AiFillCheckCircle className="text-primary text-xl" />
                 )}
               </div>
@@ -290,11 +218,6 @@ const validate = () => {
               </p>
             </div>
           </label>
-          {errors.shippingMethod && (
-            <p className="text-red-500 text-sm mt-2">
-              {errors.shippingMethod}
-            </p>
-          )}
         </div>
       </section>
       <section className="mb-12">
@@ -311,18 +234,9 @@ const validate = () => {
             </label>
             <div className="relative">
               <input
-               type="date"
-              value={formData.deliveryDate}
-              onChange={(e) => handleChange("deliveryDate", e.target.value)}
-              min={new Date().toISOString().split("T")[0]}
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                
+                type="date"
               />
-              {errors.deliveryDate && (
-              <p className="text-red-500 text-sm mt-2">
-                {errors.deliveryDate}
-              </p>
-            )}
             </div>
             <p className="text-xs text-[#5a8c6f] dark:text-gray-300 mt-3 flex items-center gap-1">
               <span className="material-symbols-outlined text-sm">info : </span>
@@ -339,16 +253,12 @@ const validate = () => {
           >
             Back
           </button>
-          <button onClick={() => {
-              if (validate()) {
-                handleNext();
-              }
-            }}
+          <button onClick={handleNext2}
           className="flex-[2] bg-primary hover:bg-opacity-95 text-white font-extrabold py-4 rounded-xl shadow-lg transform transition hover:-translate-y-1 active:scale-95 text-lg">
             Proceed to Step 3
           </button>
         </div>
-        <p className="text-sm text-gray-800 text-center">
+        <p className="text-sm text-gray-500 text-center">
           Your logistics preferences will help us calculate the most accurate
           shipping rates for your quote.
         </p>
