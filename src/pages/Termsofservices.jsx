@@ -64,7 +64,7 @@ export default function Termsofservices() {
       </a>
 </nav>
 </div>
-<div class="p-4 bg-[#e9f1e9] dark:bg-[#1a261a] border-l-4 border-primary">
+<div class="p-4 bg-[#e9f1e9] dark:bg-[#1a261a] dark:text-white border-l-4 border-primary">
 <p class="text-xs font-bold leading-relaxed">
      Need legal clarification? <br/>
 <a class="text-primary underline" href="mailto:legal@sumedhaagro.com">Contact our legal team</a>
