@@ -57,20 +57,20 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
                 Step 2 of 3
               </span>
             </div>
-            <div className="w-full bg-[#d3e3da] dark:bg-gray-700 h-2.5 rounded-full overflow-hidden">
+            <div className="w-full bg-[#d3e3da] dark:bg-white-700 h-2.5 rounded-full overflow-hidden">
               <div
                 className="bg-primary h-full transition-all duration-500 w-[66%]"
                 // style="width: 66%"
               ></div>
             </div>
-            <p className="text-[#5a8c6f] dark:text-gray-400 text-sm">
+            <p className="text-[#5a8c6f] dark:text-gray-200 text-sm">
               Tell us where and how you'd like your order to be delivered.
             </p>
           </div>
         </div>
       </div>
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-gray mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <IoLocation />
           </span>
@@ -83,7 +83,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
                 Street Address
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="123 Industrial Park Way"
                 type="text"
               />
@@ -93,7 +93,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
                 City
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="Bhubaneswar"
                 type="text"
               />
@@ -103,7 +103,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
                 State / Province
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="Odisha"
                 type="text"
               />
@@ -113,7 +113,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
                 Postal / ZIP Code
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="751001"
                 type="text"
               />
@@ -122,7 +122,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
               <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
                 Country
               </label>
-              <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
+              <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
                 <option>India</option>
                 <option>Nepal</option>
                 <option>Bangladesh</option>
@@ -133,7 +133,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
         </div>
       </section>
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-grey mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <MdLocalShipping />
           </span>
@@ -221,7 +221,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
         </div>
       </section>
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-grey mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <MdOutlineCalendarMonth />
           </span>
@@ -234,12 +234,12 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
             </label>
             <div className="relative">
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 type="date"
               />
             </div>
-            <p className="text-xs text-[#5a8c6f] mt-3 flex items-center gap-1">
-              <span className="material-symbols-outlined text-sm">info</span>
+            <p className="text-xs text-[#5a8c6f] dark:text-gray-300 mt-3 flex items-center gap-1">
+              <span className="material-symbols-outlined text-sm">info : </span>
               We recommend scheduling 7 days in advance for bulk orders.
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
         <div className="flex gap-4 w-full max-w-md">
           <button
             onClick={handlePrev}
-            className="flex-1 border-2 border-[#d3e3da] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-[#101914] dark:text-white font-bold py-4 rounded-xl transition-all"
+            className="flex-[2] bg-primary hover:bg-opacity-95 text-white font-extrabold py-4 rounded-xl shadow-lg transform transition hover:-translate-y-1 active:scale-95 text-lg"
           >
             Back
           </button>
@@ -258,7 +258,7 @@ export default function FormSecond({ handlePrev, handleNext2 }) {
             Proceed to Step 3
           </button>
         </div>
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-sm text-gray-800 text-center">
           Your logistics preferences will help us calculate the most accurate
           shipping rates for your quote.
         </p>

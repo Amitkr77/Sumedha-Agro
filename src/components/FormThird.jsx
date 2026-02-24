@@ -94,7 +94,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                   <p className="font-bold text-[#101914] dark:text-white">
                     Bulk Fresh Mushrooms
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-300">
                     Oyster &amp; Button Varieties
                   </p>
                 </div>
@@ -157,7 +157,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                 <p className="font-bold text-[#101914] dark:text-white text-lg">
                   Organic Foods Ltd
                 </p>
-                <p className="text-sm text-gray-500">GST: AA000000000000</p>
+                <p className="text-sm text-gray-300">GST: AA000000000000</p>
               </div>
             </div>
             <div className="space-y-4">
@@ -168,14 +168,14 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                 <p className="font-bold text-[#101914] dark:text-white">
                   John Doe
                 </p>
-                <p className="text-sm text-gray-500">john@company.com</p>
+                <p className="text-sm text-gray-300">john@company.com</p>
               </div>
             </div>
             <div className="md:col-span-2 pt-4 border-t border-gray-100 dark:border-gray-800">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
                 Additional Requirements
               </p>
-              <p className="text-sm text-[#5a8c6f] dark:text-gray-300 italic">
+              <p className="text-sm text-[#5a8c6f] dark:text-gray-200 italic">
                 "Please ensure temperature-controlled logistics for the Friday
                 deliveries. We are also interested in organic certification
                 documentation."
@@ -193,7 +193,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
               />
             </div>
             <label
-              className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed cursor-pointer"
+              className="text-sm text-gray-600 dark:text-gray-500 leading-relaxed cursor-pointer"
               for="terms"
             >
               I agree to the{" "}
@@ -217,7 +217,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
             <div className="flex flex-col md:flex-row gap-4 w-full">
               <button
                 onClick={handlePrevious}
-                className="flex-1 border-2 border-[#e9f1ec] dark:border-gray-700 text-[#101914] dark:text-white font-bold py-5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all flex items-center justify-center gap-2"
+                className="flex-[2] bg-primary hover:bg-opacity-95 text-white font-extrabold py-5 rounded-xl shadow-lg transform transition hover:-translate-y-1 active:scale-95 text-xl flex items-center justify-center gap-3"
               >
                 <span className="material-symbols-outlined">
                   <BiArrowBack size={20} />
@@ -234,7 +234,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                 </span>
               </button>
             </div>
-            <p className="text-xs text-gray-500 text-center max-w-lg">
+            <p className="text-xs text-gray-600 text-center max-w-lg">
               By clicking "Confirm and Send Request", your inquiry will be
               prioritized. A specialized account manager will contact you with a
               detailed proposal and contract draft within 24 hours.

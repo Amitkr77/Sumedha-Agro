@@ -30,7 +30,7 @@ export default function FormFour() {
           <h1 className="text-[#101914] dark:text-white text-4xl font-extrabold tracking-tight mb-4">
             Request Received!
           </h1>
-          <p className="text-[#101914]/70 dark:text-gray-400 text-lg max-w-[500px] mx-auto leading-relaxed">
+          <p className="text-[#101914]/70 dark:text-gray-700 text-lg max-w-[500px] mx-auto leading-relaxed">
             Thank you for your interest in Sumedha Agro's mushroom-based
             solutions. We've received your inquiry and our team is already on
             it.
@@ -66,7 +66,7 @@ export default function FormFour() {
               <p className="text-lg font-semibold text-[#101914] dark:text-white leading-snug">
                 24-48 Business Hours
               </p>
-              <p className="text-sm text-[#101914]/60 dark:text-gray-400 mt-1">
+              <p className="text-sm text-[#101914]/60 dark:text-gray-300 mt-1">
                 A representative will reach out shortly.
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function FormFour() {
         </div>
         {/* <!-- Secondary Confirmation Detail --> */}
         <div className="text-center mb-10 px-6">
-          <p className="text-[#101914]/60 dark:text-gray-400 text-sm">
+          <p className="text-[#101914]/60 dark:text-gray-600 text-sm">
             A confirmation email has been sent to your registered address.
             Please check your spam folder if you don't see it in your inbox.
           </p>

@@ -30,7 +30,7 @@ export default function Showcase() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-[-0.033em]">
                   Premium Organic Oyster Mushrooms
                 </h1>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
+                <p className="text-base md:text-lg text-gray-600 dark:text-gray-600 leading-relaxed max-w-xl">
                   Cultivated with precision in our sterile, climate-controlled
                   environments for superior texture, savory flavor, and maximum
                   nutritional value.
@@ -59,7 +59,7 @@ export default function Showcase() {
                 className="relative w-full aspect-4/3 bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl bg-cover bg-center"
                 data-alt="High resolution close up of fresh oyster mushrooms with dramatic lighting"
               >
-                <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-bold border border-white/20">
+                <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg text-xs font-bold border border-white/20">
                   Fresh Harvest #402
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function Showcase() {
               <h2 className="text-3xl font-bold leading-tight mb-4">
                 The Science of Spores
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-600 text-lg leading-relaxed">
                 Grown in a controlled, sterile environment, our Oyster mushrooms
                 offer a meaty texture and a delicate, savory flavor profile
                 perfect for gourmet applications. We utilize a proprietary
@@ -154,7 +154,7 @@ export default function Showcase() {
                   nutrition
                 </span>
                 Nutritional Profile
-                <span className="text-xs font-normal text-gray-500 ml-auto">
+                <span className="text-xs font-normal text-gray-800 ml-auto">
                   per 100g
                 </span>
               </h3>
@@ -203,7 +203,7 @@ export default function Showcase() {
         <section className="py-12  bg-slate-50">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-bold mb-3">From Lab to Table</h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600 dark:text-gray-600">
               Our rigorous 4-step organic cultivation process ensures
               consistency and purity.
             </p>
@@ -218,7 +218,7 @@ export default function Showcase() {
                   <span className="material-symbols-outlined"><IoFlaskOutline size={30}/></span>
                 </div>
                 <h4 className="text-lg font-bold mb-2">Substrate Prep</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-600">
                   Sterilized wheat straw and organic supplements.
                 </p>
               </div>
@@ -229,7 +229,7 @@ export default function Showcase() {
                   <MdSpoke size={30}/>
                 </div>
                 <h4 className="text-lg font-bold mb-2">Spawning</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-600">
                   Inoculation with high-yield mother culture.
                 </p>
               </div>
@@ -239,17 +239,17 @@ export default function Showcase() {
                   <span className="material-symbols-outlined"><WiHumidity size={30}/></span>
                 </div>
                 <h4 className="text-lg font-bold mb-2">Incubation</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-600">
                   21 days in dark, humidity-controlled rooms.
                 </p>
               </div>
               {/* <!-- Step 4 --> */}
               <div className="flex flex-col items-center text-center group">
-                <div className="w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center shadow-[0_0_20px_rgba(19,236,19,0.4)] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-full bg-white dark:bg-surface-dark border-2 border-primary text-primary flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span className="material-symbols-outlined"><MdOutlineShoppingBasket size={30} /></span>
                 </div>
                 <h4 className="text-lg font-bold mb-2">Harvest</h4>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-600">
                   Hand-picked at peak nutrient density.
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function Showcase() {
               <h2 className="text-3xl font-bold mb-2">
                 Versatility in the Kitchen
               </h2>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-600">
                 Explore culinary possibilities with Sumedha Agro mushrooms.
               </p>
             </div>
@@ -272,9 +272,20 @@ export default function Showcase() {
               href="#"
             >
               View all recipes
-              <span className="material-symbols-outlined text-sm">
-                arrow_forward
-              </span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 40 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="3" 
+                className="w-8 h-6 text-green-400"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  d="M2 12h28M22 6l10 6-10 6" 
+                />
+              </svg>
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -300,16 +311,27 @@ export default function Showcase() {
                 <div className="absolute inset-0 bg-gradient-tot from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-white font-bold flex items-center gap-2">
                     View Recipe
-                    <span className="material-symbols-outlined text-sm">
-                      arrow_forward
-                    </span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 40 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="3" 
+                      className="w-8 h-6 text-white"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        d="M2 12h28M22 6l10 6-10 6" 
+                      />
+                    </svg>
                   </span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                 Pan-Seared Delight
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-600">
                 Garlic butter glaze with fresh thyme.
               </p>
             </div>
@@ -335,16 +357,27 @@ export default function Showcase() {
                 <div className="absolute inset-0 bg-gradient-tot from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-white font-bold flex items-center gap-2">
                     View Recipe
-                    <span className="material-symbols-outlined text-sm">
-                      arrow_forward
-                    </span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 40 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="3" 
+                      className="w-8 h-6 text-white"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        d="M2 12h28M22 6l10 6-10 6" 
+                      />
+                    </svg>
                   </span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                 Creamy Wild Soup
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-600">
                 Rich umami flavor base for soups.
               </p>
             </div>
@@ -370,16 +403,27 @@ export default function Showcase() {
                 <div className="absolute inset-0 bg-gradient-tot from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <span className="text-white font-bold flex items-center gap-2">
                     View Recipe
-                    <span className="material-symbols-outlined text-sm">
-                      arrow_forward
-                    </span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 40 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="3" 
+                      className="w-8 h-6 text-white"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        d="M2 12h28M22 6l10 6-10 6" 
+                      />
+                    </svg>
                   </span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                 Crispy Tempura
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-600">
                 Light batter, perfectly golden.
               </p>
             </div>
@@ -388,10 +432,10 @@ export default function Showcase() {
         {/* <!-- Bottom CTA --> */}
         <section className="bg-#e7f3e7  bg-slate-50 dark:bg-surface-dark rounded-2xl p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 mb-8 border border-primary/20">
           <div className="flex-1">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[#0d1b0d] dark:text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[#0d1b0d] dark:text-gray">
               Ready to stock premium fungi?
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 max-w-lg">
+            <p className="text-gray-700 dark:text-gray-600 max-w-lg">
               Partner with Sumedha Agro for consistent supply chains and
               top-tier organic quality. We offer flexible bulk pricing.
             </p>

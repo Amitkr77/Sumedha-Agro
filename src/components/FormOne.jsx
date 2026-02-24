@@ -39,7 +39,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
           </div>
         </div>
         {/* <!-- Progress Tracker --> */}
-        <div className="bg-white dark:bg-[#25302c] p-6 rounded-xl border border-[#e9f1ec] dark:border-gray-800 shadow-sm">
+        <div className="bg-white dark:bg-[#25302c] p-6 rounded-xl border border-[#e9f1ec] dark:border-grey-800 shadow-sm">
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -54,7 +54,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
                 Step 1 of 3
               </span>
             </div>
-            <div className="w-full bg-[#d3e3da] dark:bg-gray-700 h-2.5 rounded-full overflow-hidden">
+            <div className="w-full bg-[#d3e3da] dark:bg-white-700 h-2.5 rounded-full overflow-hidden">
               <div
                 className="bg-primary h-full transition-all duration-500 w-[33%]"
                 // style="width: 33%;"
@@ -69,7 +69,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
       </div>
       {/* <!-- Section 1: Product Selection --> */}
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-black mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <RiShoppingBasketFill />
           </span>
@@ -178,7 +178,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
       </section>
       {/* <!-- Section 2: Order Specifications --> */}
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-black mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <MdOutlineTune />
           </span>
@@ -191,11 +191,11 @@ export default function FormOne({ handleNext, defaultEmail }) {
             </label>
             <div className="relative">
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 pr-16"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3 pr-16"
                 placeholder="e.g. 500"
                 type="text"
               />
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">
+              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-800">
                 KG
               </span>
             </div>
@@ -204,7 +204,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
             <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
               Packaging Preference
             </label>
-            <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
+            <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
               <option>Eco-friendly Paper Trays</option>
               <option>Plastic Punnet Crates</option>
               <option>Bulk Sacks (for Spawn)</option>
@@ -212,21 +212,21 @@ export default function FormOne({ handleNext, defaultEmail }) {
             </select>
           </div>
           <div className="space-y-2 md:col-span-2">
-            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
+            <label className="block text-sm font-bold text-gray-00 dark:text-gray-300">
               Delivery Frequency
             </label>
             <div className="flex gap-4">
-              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-700 p-3 rounded-lg cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
+              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
                 <input className="hidden" name="freq" type="radio" />
-                <span className="text-sm font-semibold">Weekly</span>
+                <span className="text-sm font-semibold dark:text-gray-500">Weekly</span>
               </label>
-              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-700 p-3 rounded-lg cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
+              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
                 <input className="hidden" name="freq" type="radio" />
-                <span className="text-sm font-semibold">Bi-Weekly</span>
+                <span className="text-sm font-semibold dark:text-gray-500">Bi-Weekly</span>
               </label>
-              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-700 p-3 rounded-lg cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
+              <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
                 <input className="hidden" name="freq" type="radio" />
-                <span className="text-sm font-semibold">One-time</span>
+                <span className="text-sm font-semibold dark:text-gray-500">One-time</span>
               </label>
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
       </section>
       {/* <!-- Section 3: Business Details --> */}
       <section className="mb-12">
-        <h3 className="text-[22px] font-bold text-[#101914] dark:text-white mb-6 flex items-center gap-2">
+        <h3 className="text-[22px] font-bold text-[#101914] dark:text-black mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <IoMdBusiness />
           </span>
@@ -247,7 +247,19 @@ export default function FormOne({ handleNext, defaultEmail }) {
                 Company Name
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+
+             className="w-full 
+             border-gray-200 
+             dark:border-gray-700 
+             dark:bg-gray-200 
+             rounded-lg 
+             px-4 py-3
+             
+             focus:outline-none
+             focus:ring-2
+             focus:ring-green-500
+             focus:ring-offset-2"
+                // className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="Organic Foods Ltd"
                 type="text"
               />
@@ -257,7 +269,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
                 GST / Tax ID (Optional)
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="AA000000000000"
                 type="text"
               />
@@ -267,7 +279,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
                 Full Name
               </label>
               <input
-                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                 placeholder="John Doe"
                 type="text"
               />
@@ -280,7 +292,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
                  type="email"
                  value={workEmail}
                  onChange={(e) => setWorkEmail(e.target.value)}
-                  className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+                  className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
                    placeholder="john@company.com"
                     />
             </div>
@@ -290,7 +302,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
               Additional Requirements
             </label>
             <textarea
-              className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-800 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
+              className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
               placeholder="Mention any specific quality standards, delivery location details, or mixed order requests..."
               rows="4"
             ></textarea>
@@ -303,7 +315,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
           <span className="material-symbols-outlined text-primary text-sm">
             <MdVerifiedUser />
           </span>
-          <span className="text-xs font-bold text-[#101914] dark:text-gray-300">
+          <span className="text-xs font-bold text-[#101914] dark:text-gray-800">
             Trusted by 50+ Agro Partners in the region
           </span>
         </div>
@@ -313,7 +325,7 @@ export default function FormOne({ handleNext, defaultEmail }) {
         >
           Next
         </button>
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-sm text-gray-600 text-center">
           Our team will review your requirements and respond with a tailored
           pricing plan within 24 business hours.
         </p>
