@@ -403,7 +403,7 @@ export default function About() {
               ></div>
             </div>
             <h3 className="text-lg font-bold text-text-main dark:text-black">
-              Dr. Prem Singh
+              Dr. Prem Chandra
             </h3>
             <p className="text-sm text-primary font-medium mb-3">
               Co-Founder
