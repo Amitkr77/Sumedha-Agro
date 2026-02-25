@@ -3,7 +3,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { FaTractor } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { CiShare2 } from "react-icons/ci";
-import logo from "../assets/Logo.png";
+import logo from "../assets/Logo.webp";
 
 
 export default function Footer() {
