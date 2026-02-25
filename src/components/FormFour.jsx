@@ -4,7 +4,7 @@ import { MdSchedule } from "react-icons/md";
 import { MdHomeFilled } from "react-icons/md";
 import { MdInventory } from "react-icons/md";
 
-export default function FormFour() {
+export default function FormFour({ referenceId, email }) {
   return (
     // <!-- Main Content -->
     <main className="flex-grow flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
@@ -50,7 +50,7 @@ export default function FormFour() {
                 </span>
               </div>
               <p className="text-2xl font-black text-[#101914] dark:text-white tracking-tight">
-                #SAG-88291
+                #{referenceId|| "SAG-XXXXX"}
               </p>
             </div>
             {/* <!-- Timeline Info --> */}
@@ -75,7 +75,7 @@ export default function FormFour() {
         {/* <!-- Secondary Confirmation Detail --> */}
         <div className="text-center mb-10 px-6">
           <p className="text-[#101914]/60 dark:text-gray-600 text-sm">
-            A confirmation email has been sent to your registered address.
+            A confirmation email has been sent to <strong>{email}</strong>.
             Please check your spam folder if you don't see it in your inbox.
           </p>
         </div>

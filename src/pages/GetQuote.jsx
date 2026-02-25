@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 export default function GetQuote() {
 
   const [step, setStep] = useState(0);
+  const [scrollTarget, setScrollTarget] = useState(null);
   const location = useLocation();
   const emailFromProducts = location.state?.email || "";
 
@@ -39,7 +40,10 @@ export default function GetQuote() {
 
   const next = () => setStep(prev => prev + 1);
   const prev = () => setStep(prev => prev - 1);
-  const goToStep = (number) => setStep(number);
+  const goToStep = (number, section = null) => {
+  setStep(number);
+  setScrollTarget(section);
+};
 
 
 const handleSubmit = async () => {
@@ -74,6 +78,7 @@ const handleSubmit = async () => {
           handleNext={next}
           formData={formData}
           setFormData={setFormData}
+          scrollTo={scrollTarget}
         />
       )}
 

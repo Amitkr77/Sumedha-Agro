@@ -6,10 +6,10 @@ import { MdBusinessCenter } from "react-icons/md";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { BiArrowBack } from "react-icons/bi";
 import { IoSend } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
-export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
-      const navigate = useNavigate();
-      const [agreed, setAgreed] = useState(false);
+
+export default function FormThird({ handlePrevious, handleSubmit, goToStep, formData}) {
+
+        const [agreed, setAgreed] = useState(false);
       const [error, setError] = useState("");
 
       const handleFinalSubmit = () => {
@@ -105,11 +105,11 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                 </div>
                 <div>
                   <p className="font-bold text-[#101914] dark:text-white">
-                    Bulk Fresh Mushrooms
+                    {formData.product === "spawn" && "Mushroom Seeds (Spawn)"}
+                    {formData.product === "bulk" && "Bulk Fresh Mushrooms"}
+                    {formData.product === "pickles" && "Mushroom Pickles"}
                   </p>
-                  <p className="text-sm text-gray-300">
-                    Oyster &amp; Button Varieties
-                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                   Volume
                 </p>
                 <p className="font-bold text-[#101914] dark:text-white">
-                  500 KG / Month
+                  {formData.volume} KG / Month
                 </p>
               </div>
               <div>
@@ -127,7 +127,7 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                   Frequency
                 </p>
                 <p className="font-bold text-[#101914] dark:text-white">
-                  Weekly
+                  {formData.frequency}
                 </p>
               </div>
               <div>
@@ -135,7 +135,7 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                   Packaging
                 </p>
                 <p className="font-bold text-[#101914] dark:text-white">
-                  Eco-friendly Paper Trays
+                  {formData.packaging}
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
               </h3>
             </div>
             <button
-              onClick={() => goToStep(1)}   // 🔥 go directly to FormSecond
+              onClick={() => goToStep(0, "business")}   // 🔥 go directly to Formone
               className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
             >
               <span className="material-symbols-outlined text-sm">
@@ -168,9 +168,13 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                   Company
                 </p>
                 <p className="font-bold text-[#101914] dark:text-white text-lg">
-                  Organic Foods Ltd
+                  {formData.company || "Not Provided"}
                 </p>
-                <p className="text-sm text-gray-300">GST: AA000000000000</p>
+
+                <p className="text-sm text-gray-500">
+                  GST: {formData.gst || "N/A"}
+                </p>
+
               </div>
             </div>
             <div className="space-y-4">
@@ -179,9 +183,12 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
                   Primary Contact
                 </p>
                 <p className="font-bold text-[#101914] dark:text-white">
-                  John Doe
-                </p>
-                <p className="text-sm text-gray-300">john@company.com</p>
+                {formData.name || "Not Provided"}
+              </p>
+
+              <p className="text-sm text-gray-500">
+                {formData.email || "No Email"}
+              </p>
               </div>
             </div>
             <div className="md:col-span-2 pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -217,8 +224,7 @@ export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
               for="terms"
             >
               I agree to the{" "}
-              <a className="text-primary font-bold underline" 
-              onClick={() => navigate("/termsofservices")}>
+              <a className="text-primary font-bold underline" href="..\src\pages\Termsofservices.jsx">
                 Terms of Service
               </a>{" "}
               and confirm that the information provided above is accurate for

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import { MdVerifiedUser } from "react-icons/md";
 import { RiShoppingBasketFill } from "react-icons/ri";
 import { FaCheckCircle } from "react-icons/fa";
@@ -8,8 +9,9 @@ import { MdLiquor } from "react-icons/md";
 import { MdOutlineTune } from "react-icons/md";
 import { IoMdBusiness } from "react-icons/io";
 
-export default function FormOne({ handleNext, formData, setFormData }) {
-const [errors, setErrors] = useState({});
+export default function FormOne({ handleNext, formData, setFormData, scrollTo }) {
+const businessRef = useRef(null);
+  const [errors, setErrors] = useState({});
 const handleChange = (field, value) => {
   setFormData(prev => ({
     ...prev,
@@ -43,6 +45,13 @@ if (!formData.frequency) {
   setErrors(newErrors);
   return Object.keys(newErrors).length === 0;
 };
+
+useEffect(() => {
+  if (scrollTo === "business" && businessRef.current) {
+    businessRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+}, [scrollTo]);
+
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
       {/* <!-- Header Image & Intro --> */}
@@ -253,7 +262,9 @@ if (!formData.frequency) {
             <label className="block text-sm font-bold text-gray-700 dark:text-gray-300">
               Packaging Preference
             </label>
-            <select className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
+            <select value={formData.packaging}
+                    onChange={(e) => handleChange("packaging", e.target.value)}
+            className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3">
               <option>Eco-friendly Paper Trays</option>
               <option>Plastic Punnet Crates</option>
               <option>Bulk Sacks (for Spawn)</option>
@@ -304,7 +315,7 @@ if (!formData.frequency) {
         </div>
       </section>
       {/* <!-- Section 3: Business Details --> */}
-      <section className="mb-12">
+      <section ref={businessRef} className="mb-12">
         <h3 className="text-[22px] font-bold text-[#101914] dark:text-black mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-primary">
             <IoMdBusiness />
@@ -331,8 +342,10 @@ if (!formData.frequency) {
              focus:ring-green-500
              focus:ring-offset-2"
                 // className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                placeholder="Organic Foods Ltd"
                 type="text"
+              value={formData.company}
+              onChange={(e) => handleChange("company", e.target.value)}
+              placeholder="Organic Foods Ltd"
               />
             </div>
             <div className="space-y-2">
@@ -341,8 +354,10 @@ if (!formData.frequency) {
               </label>
               <input
                 className="w-full border-gray-200 dark:border-gray-700 dark:bg-gray-200 rounded-lg focus:ring-primary focus:border-primary px-4 py-3"
-                placeholder="AA000000000000"
                 type="text"
+                value={formData.gst}
+                onChange={(e) => handleChange("gst", e.target.value)}
+                placeholder="AA000000000000"
               />
             </div>
             {/* Full Name */}
