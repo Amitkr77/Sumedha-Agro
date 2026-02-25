@@ -58,9 +58,7 @@ export default function Header() {
         </button>
        </a>
       </div>
-      <div className="md:hidden">
-        <button className="text-text-main dark:text-white"></button>
-      </div>
+      
     </header>
   );
 }
