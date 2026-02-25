@@ -1,6 +1,9 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/((?!robots.txt|sitemap.xml|favicon.ico).*)",
+      "destination": "/"
+    }
   ],
   "headers": [
     {
@@ -13,7 +16,7 @@
       ]
     },
     {
-      "source": "/(.*).(js|css|png|jpg|jpeg|gif|svg|woff|woff2)",
+      "source": "/(.*).(js|css|png|jpg|jpeg|gif|svg|woff|woff2|webp)",
       "headers": [
         {
           "key": "Cache-Control",
