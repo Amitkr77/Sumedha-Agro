@@ -47,6 +47,8 @@ export default function Footer() {
       src={logo} 
       alt="Sumedha Agro Logo"
       className="h-10 w-auto object-contain"
+      width="70"
+      height="70"
     />
   </div>
 

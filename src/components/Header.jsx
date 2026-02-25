@@ -10,6 +10,8 @@ export default function Header() {
             src={logo}
             alt="Sumedha Agro Logo"
             className="h-10 w-auto object-contain"
+            width="70"
+            height="70"
           />
         </div>
         <h2 className="text-text-main dark:text-black text-xl font-bold leading-tight tracking-[-0.015em]">
