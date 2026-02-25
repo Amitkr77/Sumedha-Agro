@@ -4,44 +4,104 @@ import FormSecond from "../components/FormSecond";
 import FormThird from "../components/FormThird";
 import FormFour from "../components/FormFour";
 import { useLocation } from "react-router-dom";
+
 export default function GetQuote() {
-  const [section, setsection] = useState(0);
+
+  const [step, setStep] = useState(0);
   const location = useLocation();
   const emailFromProducts = location.state?.email || "";
-  const next = () => {
-    setsection((prev) => Math.min(prev + 1, 3));
+
+  // 🔥 Central Form State
+  const initialFormState = {
+    // Step 1
+    product: "",
+    volume: "",
+    packaging: "",
+    frequency: "",
+    company: "",
+    gst: "",
+    name: "",
+    email: emailFromProducts,
+    notes: "",
+
+    // Step 2
+    address: "",
+    city: "",
+    state: "",
+    postalCode: "",
+    country: "India",
+    shippingMethod: "",
+    deliveryDate: ""
   };
 
-  const prev = () => {
-    setsection((prev) => Math.max(prev - 1, 0));
-  };
+  const [formData, setFormData] = useState(initialFormState);
+  const [referenceId, setReferenceId] = useState(null);
 
-  // 🔥 Add this
-  const goToStep = (stepNumber) => {
-    setsection(stepNumber);
-  };
+  const next = () => setStep(prev => prev + 1);
+  const prev = () => setStep(prev => prev - 1);
+  const goToStep = (number) => setStep(number);
+
+
+const handleSubmit = async () => {
+  try {
+    const res = await fetch("http://localhost:5000/api/quote", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      setReferenceId(data.referenceId);
+      setStep(3); // ✅ correct
+    } else {
+      alert(data.message || "Something went wrong");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Server error");
+  }
+};
 
   return (
     <section>
-      {section === 0 && <FormOne handleNext={next} defaultEmail={emailFromProducts} />}
 
-      {section === 1 && (
+      {step === 0 && (
+        <FormOne
+          handleNext={next}
+          formData={formData}
+          setFormData={setFormData}
+        />
+      )}
+
+      {step === 1 && (
         <FormSecond
           handlePrev={prev}
-          handleNext2={next}
+          handleNext={next}
+          formData={formData}
+          setFormData={setFormData}
         />
       )}
 
-      {section === 2 && (
+      {step === 2 && (
         <FormThird
           handlePrevious={prev}
-          handleNext={next}
-          goToStep={goToStep}   // 🔥 pass this
+          handleSubmit={handleSubmit}
+          goToStep={goToStep}
+          formData={formData}
         />
       )}
 
-      {section === 3 && <FormFour />}
+      {step === 3 && (
+        <FormFour
+          referenceId={referenceId}
+          email={formData.email}
+        />
+      )}
+
     </section>
   );
 }
-

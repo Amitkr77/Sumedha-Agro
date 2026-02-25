@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdInventory } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { MdEco } from "react-icons/md";
@@ -6,8 +6,21 @@ import { MdBusinessCenter } from "react-icons/md";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { BiArrowBack } from "react-icons/bi";
 import { IoSend } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+export default function FormThird({ handlePrevious, handleSubmit, goToStep }) {
+      const navigate = useNavigate();
+      const [agreed, setAgreed] = useState(false);
+      const [error, setError] = useState("");
 
-export default function FormThird({handlePrevious, handleNext, goToStep}) {
+      const handleFinalSubmit = () => {
+  if (!agreed) {
+    setError("You must accept the terms before submitting.");
+    return;
+  }
+
+  setError("");
+  handleSubmit();
+};
 
   return (
     <main className="max-w-[960px] mx-auto px-6 py-12">
@@ -190,14 +203,21 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                 className="size-5 rounded border-gray-300 text-primary focus:ring-primary cursor-pointer"
                 id="terms"
                 type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
               />
+              {error && (
+              <p className="text-red-500 text-sm mt-2">
+                {error}
+              </p>
+            )}
             </div>
             <label
               className="text-sm text-gray-600 dark:text-gray-500 leading-relaxed cursor-pointer"
               for="terms"
             >
               I agree to the{" "}
-               <a className="text-primary font-bold underline" 
+              <a className="text-primary font-bold underline" 
               onClick={() => navigate("/termsofservices")}>
                 Terms of Service
               </a>{" "}
@@ -226,7 +246,7 @@ export default function FormThird({handlePrevious, handleNext, goToStep}) {
                 Previous Step
               </button>
               <button
-                onClick={handleNext}
+                onClick={handleFinalSubmit}
                 className="flex-[2] bg-primary hover:bg-opacity-95 text-white font-extrabold py-5 rounded-xl shadow-lg transform transition hover:-translate-y-1 active:scale-95 text-xl flex items-center justify-center gap-3"
               >
                 Confirm and Send Request from 3

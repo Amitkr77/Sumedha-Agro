@@ -368,14 +368,14 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* <!-- Team Member 1 --> */}
           <div className="group flex flex-col items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
+            <div className="w-40 h-50 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
               <div
                 style={{
                   backgroundImage:
                     `url(${a3})`
                 }}
                 className="w-full h-full bg-cover bg-center"
-                data-alt="Portrait of Dr. Priya Sharma"
+                data-alt="Portrait of Dr. Enespa Singh"
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDF79cuIwmXLA6Q2NoOuufqZdlfKtSM8Cr-46rsy3iU5zWcyMKfjp0ZP-06thn2TjIUtfq4Ak7q8APTr49oq2cVToBo3umvWlMehY1wYbG_1QtFvu8eHoD03b_1WKoT81_2KFZiAECGfDuiSoJOYpYAfpFs0f_6aAXEEXGHKyhnv8ygegbK0Cj4kV0rKaXwlWHApbKSiv23NkP2G_NhTXu1vwQ7C9T8931hzv95fvR1wPlhmTLGnVIdv7m9u48yI8J9rIYAeNxn460");'
               ></div>
             </div>
@@ -391,14 +391,14 @@ export default function About() {
           </div>
           {/* <!-- Team Member 2 --> */}
           <div className="group flex flex-col items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
+            <div className="w-40 h-50 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
               <div
                 style={{
                   backgroundImage:
                     `url(${a2})`
                 }}
                 className="w-full h-full bg-cover bg-center"
-                data-alt="Portrait of Rajesh Verma"
+                data-alt="Portrait of Dr. Prem Singh"
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS_7DbLu61mAzK0g9CBhEm9XW9XFRzqQZYfDXMt461IC88K3a4DVLrPmLambUGZ9jFUewW7XAMS5plqCTia6pQ87hSzFOkFFWR_OrZz5BUzO2Py2bEZ6T2uH3vlt0QHSySTU9O1Q8LuUN3V6cn2i_JY4LlpSr-KOJTOVSnBEypZ7_bjBlx55vQBRJ3IMJhE7iDqNR5nifLzGjk-VIFhhES9MRvrGUs1NvNfZfzJkPsiSF_panDjpWPRQiM55HhLIRNs2LuUPDy_8M");'
               ></div>
             </div>
@@ -414,14 +414,14 @@ export default function About() {
           </div>
           {/* <!-- Team Member 3 --> */}
           <div className="group flex flex-col items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
+            <div className="w-40 h-50 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
               <div
                 style={{
                   backgroundImage:
                     `url(${a1})`
                 }}
                 className="w-full h-full bg-cover bg-center"
-                data-alt="Portrait of Sarah Jenkins"
+                data-alt="Portrait of Surjeet Singh"
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzXSMuclTayKwyXZ1eMfJTS34Xq_bVSiiKGg4v_fIUJxCn9cRXNfuGdAiiLvmkgN5iF6KkZrIE4b7B8jqMugYNpCuxZAFiTKNYeVGnBd7fAq4lu8lMXysZZVVvtfhf40gD6fkwCpy97l3PjTdK-6wZnctJ7Os7GcAJtEkObHi-GnFSs0dKnqxTbZUuaNKgBp8x9sk8DMxyRQNmuXF9bsTZDmikJ_0CuwCE3RhefJaDbnA0dnuvs826wO69S4-C6U2MyQoFT7J81-E");'
               ></div>
             </div>
@@ -437,14 +437,14 @@ export default function About() {
           </div>
           {/* <!-- Team Member 4 --> */}
           <div className="group flex flex-col items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
+            <div className="w-40 h-50 rounded-full overflow-hidden border-4 border-white dark:border-surface-dark shadow-lg mb-6 relative group-hover:border-primary transition-colors duration-300">
               <div
                 style={{
                   backgroundImage:
                     `url(${a4})`,
                 }}
                 className="w-full h-full bg-cover bg-center"
-                data-alt="Portrait of David Chen"
+                data-alt="Portrait of Ayush Kumar"
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW5pf-zUrK7L5mk-Tkjmnj0w4kvdE20e1igcqkbLhO1zLd-5R7Ed6s1ApAHwA-HlgCva2RuHXyuQG6fRVYlBXvwHtbSnaiKYBHVOH-zpMFXZSCYdp6I9CsXHcd63VpLurspqHN6GFBqFg2zcF6G7RMx7GyWbz09vnEA66_kcih43I8p43_c8WnyMNcWkTQ4n1dGlitbFhuIUZPmL2YBom_4CBbC21uDgNOM8-IUlxqEwJzXJXB1IkUPQfD-ea1pV_DeEjWOwIEPas");'
               ></div>
             </div>
