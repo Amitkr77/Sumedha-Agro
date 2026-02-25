@@ -290,6 +290,11 @@ const validate = () => {
               </p>
             </div>
           </label>
+          {errors.shippingMethod && (
+            <p className="text-red-500 text-sm mt-2">
+              {errors.shippingMethod}
+            </p>
+          )}
         </div>
       </section>
       <section className="mb-12">

@@ -26,6 +26,9 @@ const validate = () => {
   if (!formData.volume || !/^\d+$/.test(formData.volume)) {
     newErrors.volume = "Enter valid monthly volume (numbers only)";
   }
+if (!formData.frequency) {
+  newErrors.frequency = "Please select delivery frequency";
+}
 
   if (!formData.name?.trim()) {
     newErrors.name = "Full name required";
@@ -203,6 +206,11 @@ const validate = () => {
           </p>
         </div>
       </div>
+      {errors.product && (
+  <p className="text-red-500 text-sm mt-2">
+    {errors.product}
+  </p>
+)}
       </div>
       </section>
       {/* <!-- Section 2: Order Specifications --> */}
@@ -258,18 +266,40 @@ const validate = () => {
             </label>
             <div className="flex gap-4">
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input className="hidden" name="freq" type="radio" />
+                <input type="radio"
+                    name="freq"
+                    value="Weekly"
+                    checked={formData.frequency === "Weekly"}
+                    onChange={(e) => handleChange("frequency", e.target.value)}
+                    className="hidden" />
                 <span className="text-sm font-semibold dark:text-gray-500">Weekly</span>
               </label>
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input className="hidden" name="freq" type="radio" />
+                <input type="radio"
+                    name="freq"
+                    value="Bi-Weekly"
+                    checked={formData.frequency === "Bi-Weekly"}
+                    onChange={(e) => handleChange("frequency", e.target.value)}
+                    className="hidden" />
                 <span className="text-sm font-semibold dark:text-gray-500">Bi-Weekly</span>
               </label>
               <label className="flex-1 flex items-center justify-center border-2 border-[#e9f1ec] dark:border-gray-200 p-3 rounded-lg dark:bg-gray-200 cursor-pointer hover:border-primary has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
-                <input className="hidden" name="freq" type="radio" />
+                <input  type="radio"
+                  name="freq"
+                  value="One-time"
+                  checked={formData.frequency === "One-time"}
+                  onChange={(e) => handleChange("frequency", e.target.value)}
+                  className="hidden" />
                 <span className="text-sm font-semibold dark:text-gray-500">One-time</span>
               </label>
+             
             </div>
+                   {errors.frequency && (
+            <p className="text-red-500 text-sm mt-2">
+              {errors.frequency}
+            </p>
+          )}
+
           </div>
         </div>
       </section>
