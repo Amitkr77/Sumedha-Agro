@@ -67,7 +67,7 @@ router.post("/", async (req, res) => {
     // 📩 CONFIRMATION TO USER
     // ============================
     await transporter.sendMail({
-      from: `"Sumedha Agro" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro" <${process.env.BREVO_USER}>`,
       to: data.email,
       subject: `Quote Request Received - ${referenceId}`,
       html: `
