@@ -94,6 +94,7 @@ export default function Footer() {
   />
   <button
     type="submit"
+    aria-label="Submit form"
     className="bg-primary text-[#0d1b0d] p-2 rounded-lg hover:bg-primary/90 transition-colors"
   >
     <IoMdArrowForward />

@@ -131,7 +131,7 @@ try {
                 className="hover:opacity-75 transition-opacity font-bold text-xl"
                 href=" "
                 target="_blank"
-                rel="noopener noreferrer"
+                aria-label="Visit our LinkedIn page"
               >
               <FaLinkedinIn />
               </a>
@@ -139,7 +139,7 @@ try {
                 className="hover:opacity-75 transition-opacity font-bold text-xl"
                 href=" "
                 target="_blank"
-                rel="noopener noreferrer"
+                aria-label="Visit our Twitter page"
               >
               <FaXTwitter />
               </a>
@@ -147,7 +147,7 @@ try {
                 className="hover:opacity-75 transition-opacity font-bold text-xl"
                 href=" "
                 target="_blank"
-                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page"
               >
               <FaInstagram />
               </a>
