@@ -90,7 +90,7 @@ export default function FormFour() {
           </a>
           <a
             className="flex-1 border-2 border-primary/20 text-primary dark:text-primary dark:border-primary/40 font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary/5 transition-all"
-            href="#"
+            href="/get-quote"
           >
             <span className="material-symbols-outlined text-lg">
               <MdInventory size={20} />
