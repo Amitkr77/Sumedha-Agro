@@ -60,8 +60,8 @@ export default function Footer() {
  Pioneering the future of fungal agronomy with sustainable practices and cutting-edge technology.
  </p>
 <div className="flex gap-4">
-<a className="text-text-main/60 dark:text-slate-400 hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined"><MdEmail size={30}/></span></a>
-<a className="text-text-main/60 dark:text-slate-400 hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined"><CiShare2 size={30} /></span></a>
+<a className="text-text-main/60 dark:text-slate-400 hover:text-primary transition-colors" href="/contact"><span className="material-symbols-outlined"><MdEmail size={30}/></span></a>
+<a className="text-text-main/60 dark:text-slate-400 hover:text-primary transition-colors" href="/about"><span className="material-symbols-outlined"><CiShare2 size={30} /></span></a>
 </div>
 </div>
 <div>
@@ -95,7 +95,7 @@ export default function Footer() {
   <button
     type="submit"
     aria-label="Submit form"
-    className="bg-primary text-[#0d1b0d] p-2 rounded-lg hover:bg-primary/90 transition-colors"
+    className="bg-primary text-[#0d1b0d] p-2 rounded-lg hover:bg-primary/100 transition-colors"
   >
     <IoMdArrowForward />
   </button>
