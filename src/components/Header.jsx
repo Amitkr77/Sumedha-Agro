@@ -28,31 +28,31 @@ export default function Header() {
       <div className="hidden md:flex flex-1 justify-end gap-8">
         <div className="flex items-center gap-9">
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/"
           >
             Home
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/About"
           >
             About Us
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/products"
           >
             Products
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/contact"
           >
             Contact us
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/Showcase"
           >
             News & Announcements
@@ -78,37 +78,37 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-surface-light dark:bg-surface-dark shadow-md md:hidden flex flex-col items-start px-6 py-4 gap-4">
+        <div className="absolute top-full right-0 w-full bg-white dark:bg-surface-dark shadow-md md:hidden flex flex-col items-start px-6 py-4 gap-4">
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/"
             onClick={() => setIsOpen(false)}
           >
             Home
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/About"
             onClick={() => setIsOpen(false)}
           >
             About Us
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/products"
             onClick={() => setIsOpen(false)}
           >
             Products
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/contact"
             onClick={() => setIsOpen(false)}
           >
             Contact us
           </a>
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/Showcase"
             onClick={() => setIsOpen(false)}
           >
