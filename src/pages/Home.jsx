@@ -15,7 +15,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosWater } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-
+import m1 from "../assets/m1.png";
+import m2 from "../assets/m2.png";
+import m3 from "../assets/m3.png";
+import m4 from "../assets/m4.png";
 import CTA from "../components/CTA";
 export default function Home() {
   const navigate = useNavigate();
@@ -73,7 +76,7 @@ export default function Home() {
           <img
             alt="Mushroom farm environment"
             className="w-full h-full object-cover opacity-50 dark:opacity-40"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-5YHGCsAag0gt_fkB-7SofmhSwjo2G_ZL92exxm8vjmoWsnX-cG0AaOfwQNfdL7-fO0UXTaJ6UfjSj-tCOLtpMNLxqxfuk4hcumkSGkNB7SYoD6u_5FMXsJmfwttZRyj-e9zoRfRpiBYyg3Uz51NrB0qo2Fhycvq63brhndNO1n_CHlmL5vAMiyNyvKHSDKgKk4h8Z4yseohErbDs-n-TXALWZsCBqzcFLg_mApONFM_04SK0_dbUIdUQcFNTnJciWIKisKLRrbE"
+            src={m1}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40"></div>
         </div>
@@ -392,7 +395,7 @@ export default function Home() {
                 <div
                   style={{
                     backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcylxFCLun93Ypr5G-vqE0vPvMDpXZi57GtROMVxxgzwCFudrlTHgb92wwdxQUbprAgVEFgOZefniXRuVsJjRyf6dGaubOvhZTj2IXFqBIEcgLg4ZlO7NKljRIEEEuldceP-qMwtxWhQb5hTWipnFqSq3NYU3kKYfshQ0MtCYHTXXjIi5jN53QbLMx_CoVZEkBsUrOuW3me5Zm27Dm7HC5xJt2HeUM8rgXiXZei2GCIlkBWhXQj4mrdq2PhSZFi6axny9VCg8Smx8')",
+                      `url(${m2})`,
                   }}
                   className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                   data-alt="Fresh white button mushrooms in a wooden basket"
@@ -431,7 +434,7 @@ export default function Home() {
                   data-alt="Close up of dried oyster mushrooms texture"
                   style={{
                     backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXFaZ2oBmibDzON0bukDba_ld1uQbJPOD-0FX9toxsRahO65yv_nQxBHKz0UUofmLSfQnn0uK4mMwdbd3BO1HK3339mZcGv_oU4NWEIA4rxL7Q6pVWOg1-Np51vn8-uSPfIb4AqZqZ5ET8N8dngLGc__hDv6SiXBDxuhDpkT7UEeLeLMb1UAgeIm1r53US0kkZPwJMjamwvCMYTi4MPWeeNh2Z5pyd4XS7OGrnRw80Lkxfa3WmqM4MBF_04xwxNC4rp_fBOxTg4Yg')",
+                      `url(${m3})`,
                   }}
                   //   background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXFaZ2oBmibDzON0bukDba_ld1uQbJPOD-0FX9toxsRahO65yv_nQxBHKz0UUofmLSfQnn0uK4mMwdbd3BO1HK3339mZcGv_oU4NWEIA4rxL7Q6pVWOg1-Np51vn8-uSPfIb4AqZqZ5ET8N8dngLGc__hDv6SiXBDxuhDpkT7UEeLeLMb1UAgeIm1r53US0kkZPwJMjamwvCMYTi4MPWeeNh2Z5pyd4XS7OGrnRw80Lkxfa3WmqM4MBF_04xwxNC4rp_fBOxTg4Yg');
                   // "
@@ -467,7 +470,7 @@ export default function Home() {
                   data-alt="Jar of pickled mushrooms on a rustic table"
                   style={{
                     backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1tvPdyVotJlkda5KWx01YZNiW9Dq6gNx30fuGPAZk4mOLU-J4XGhRjJjS4Yl_PVNszdCnLDTbwb05ewET8JwuJSmT5gzpjvvJOUomfmXVbLcY65qKRPLfesJRF0TmGOgLHStvJ5lXeoGAngtUxEXPgmemtt4WIZZJER-TvgSA553psdFP_xy6KJym3DttCcjf0FxZfjAz6NfPLSWsSlz3dGSYZNPO-CXSw4QAzhH7VWxraOuS6AnY6I0OZetMQEyBz8mp9zrUCgY')",
+                      `url(${m4})`,
                   }}
                 ></div>
                 <div className="absolute top-3 right-3 bg-white dark:bg-gray-400 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
