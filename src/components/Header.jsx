@@ -71,7 +71,7 @@ export default function Header() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-text-main dark:text-black "
-          aria-label=""
+          aria-label="a"
         >
           {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
