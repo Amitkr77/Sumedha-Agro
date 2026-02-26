@@ -64,7 +64,7 @@ export default function Header() {
             <span className="truncate">Spawn Booking</span>
           </button>
         </a>
-      </div>aria-labelledby="labeldiv"
+      </div>
 
       {/* Mobile Hamburger Button */}
       <div className="md:hidden">
