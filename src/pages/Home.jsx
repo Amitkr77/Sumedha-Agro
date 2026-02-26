@@ -15,10 +15,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosWater } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import m1 from "../assets/m1.png";
-import m2 from "../assets/m2.png";
-import m3 from "../assets/m3.png";
-import m4 from "../assets/m4.png";
+import m1 from "../assets/m1.jpg";
+import m2 from "../assets/m2.jpg";
+import m3 from "../assets/m3.webp";
+import m4 from "../assets/m4.webp";
 import CTA from "../components/CTA";
 export default function Home() {
   const navigate = useNavigate();
