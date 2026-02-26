@@ -1,6 +1,10 @@
 {
-  "cleanUrls": true,
-
+  "rewrites": [
+    {
+      "source": "/((?!robots.txt|sitemap.xml|favicon.ico).*)",
+      "destination": "/"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
