@@ -78,7 +78,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full right-0 w-full bg-white dark:bg-surface-dark shadow-md md:hidden flex flex-col items-start px-6 py-4 gap-4">
+        <div className="absolute top-full right-0 w-full bg-white dark:bg-surface-dark shadow-md md:hidden flex flex-col items-center text-center px-6 py-4 gap-4">
           <a
             className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
             href="/"
