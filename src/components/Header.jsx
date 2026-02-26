@@ -64,13 +64,14 @@ export default function Header() {
             <span className="truncate">Spawn Booking</span>
           </button>
         </a>
-      </div>
+      </div>aria-labelledby="labeldiv"
 
       {/* Mobile Hamburger Button */}
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-text-main dark:text-black"
+          className="text-text-main dark:text-black "
+          aria-label="Toggle navigation menu"
         >
           {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
