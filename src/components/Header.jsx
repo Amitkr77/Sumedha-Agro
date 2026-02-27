@@ -70,7 +70,7 @@ export default function Header() {
       <div className="md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-text-main dark:text-black "
+          className="text-text-main dark:text-black"
           aria-label="a"
         >
           {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
@@ -79,48 +79,68 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full right-0 w-full bg-white dark:bg-surface-dark shadow-md md:hidden flex flex-col items-right text-center px-6 py-4 gap-4">
+        <div className="absolute top-full left-0 w-full 
+          bg-white shadow-lg 
+          md:hidden 
+          flex flex-col 
+          text-left 
+          px-6 py-3">
+
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
             href="/"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            <span>Home</span>
+            
           </a>
+
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
             href="/About"
             onClick={() => setIsOpen(false)}
           >
-            About Us
+            <span>About Us</span>
+            
           </a>
+
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
             href="/products"
             onClick={() => setIsOpen(false)}
           >
-            Products
+            <span>Products</span>
+            
           </a>
+
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
             href="/contact"
             onClick={() => setIsOpen(false)}
           >
-            Contact us
+            <span>Contact us</span>
+            
           </a>
+
           <a
-            className="text-text-main dark:text-black text-sm font-medium hover:text-grey-500 transition-colors"
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
             href="/Showcase"
             onClick={() => setIsOpen(false)}
           >
-            News & Announcements
+            <span>News & Announcements</span>
+            
           </a>
 
-          <a href="/get-quote" onClick={() => setIsOpen(false)}>
-            <button className="px-6 py-2 rounded-full font-semisolid text-black bg-green-400 shadow-md hover:scale-105 transition-transform duration-200">
+          <a
+            href="/get-quote"
+            onClick={() => setIsOpen(false)}
+            className="py-4"
+          >
+            <button className="w-full px-6 py-2 rounded-full font-semisolid text-black bg-green-400 shadow-md hover:scale-105 transition-transform duration-200">
               Spawn Booking
             </button>
           </a>
+
         </div>
       )}
     </header>
