@@ -83,7 +83,7 @@ export default function Header() {
           bg-white shadow-lg border border-gray-200
           md:hidden 
           flex flex-col
-          items-center 
+          items-right 
           text-center 
           backdrop-blur-md
           px-6 py-3
