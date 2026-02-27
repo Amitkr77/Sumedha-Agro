@@ -1,9 +1,6 @@
 {
   "rewrites": [
-    {
-      "source": "/((?!robots.txt|sitemap.xml|favicon.ico).*)",
-      "destination": "/"
-    }
+    { "source": "/(.*)", "destination": "/" }
   ],
   "headers": [
     {
