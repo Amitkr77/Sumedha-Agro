@@ -193,15 +193,25 @@ if (!validate()) return;
       <!-- Map Placeholder -->
       */}
             <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-800 h-64 relative group cursor-pointer">
-              <div
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuByNyAwafsUHsnV4JA7vIgOa6Pj2KJGFNVgKYbWM_TuQXGEgI1kagEvnISfkIBOi3bFe-7EcVs4CFZ84aC0D3eR1epIWNY9p84_q6QcP223XXL_GlCeH5HDaEMAUuis6BVxICStJ9CvqfJsh0Pk3-A1xiF_Bv80nglE9MVeC-mTAiNkJeIZRSq2sLM9leT7bOum70T8ho1dklgs1Gnl_I0oEoyn6s3s6yfCLvAqgh97OvEm_msChfDlPDgtFfhtJ0gjj5yIFqGei5E')",
-                }}
-                className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity"
-                data-alt="Map view showing location in Sarojni Nagar Lucknow, Uttar Pradesh, India"
-                data-location="Sarojni Nagar Lucknow, Uttar Pradesh, India"
-              ></div>
+              <div className="relative w-full h-[450px] group rounded-xl overflow-hidden shadow-lg">
+                {/* Google Map Iframe */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7299095.795159699!2d71.05873562500003!3d26.71207580000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bf9ed1fb228ab%3A0x78ecca2da48580d!2sSumedha%20Agro!5e0!3m2!1sen!2sin!4v1772191810070!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sumedha Agro Location"
+                ></iframe>
+
+                {/* Optional Overlay Effect */}
+                <div
+                  className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300 pointer-events-none"
+                ></div>
+
+              </div>
               <div className="absolute inset-0 bg-slate-900/10 flex items-center justify-center">
                 <div className="bg-white dark:bg-slate-900 p-3 rounded-full shadow-xl animate-bounce">
                   <span className="material-symbols-outlined text-red-500 text-3xl">
@@ -209,9 +219,14 @@ if (!validate()) return;
                   </span>
                 </div>
               </div>
-              <div className="absolute bottom-3 right-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-medium text-slate-900 dark:text-white">
+              <a
+                href="https://www.google.com/maps?q=Sumedha%20Agro%20Lucknow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 right-3 bg-white/90 dark:bg-black/80 px-3 py-2 rounded-md text-xs font-medium text-slate-900 dark:text-white shadow-md hover:scale-105 hover:bg-green-600 hover:text-white transition-all duration-300"
+              >
                 Google Maps
-              </div>
+              </a>
             </div>
           </div>
           {/*
