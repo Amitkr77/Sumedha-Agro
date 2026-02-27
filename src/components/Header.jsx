@@ -79,12 +79,15 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full 
-          bg-white shadow-lg 
+        <div className="absolute top-full right-0 w-60  
+          bg-white shadow-lg border border-gray-200
           md:hidden 
-          flex flex-col 
-          text-left 
-          px-6 py-3">
+          flex flex-col
+          items-center 
+          text-center 
+          backdrop-blur-md
+          px-6 py-3
+          rounded-lg">
 
           <a
             className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
