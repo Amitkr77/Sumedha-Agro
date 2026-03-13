@@ -9,8 +9,10 @@ import { IoFlaskOutline } from "react-icons/io5";
 import { MdSpoke } from "react-icons/md";
 import { WiHumidity } from "react-icons/wi";
 import { MdOutlineShoppingBasket } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export default function Showcase() {
+  const navigate = useNavigate();
   return (
     <main>
       <div className="flex flex-col min-h-screen w-full max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-8 gap-12">
@@ -44,9 +46,12 @@ export default function Showcase() {
                   </span>
                   Download Brochure
                 </button>
-                <button className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary text-current h-12 px-8 rounded-lg text-base font-bold transition-all flex items-center gap-2">
-                  Inquire Bulk Order
-                </button>
+                <button
+                      onClick={() => navigate("/get-quote")}
+                      className="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary text-current h-12 px-8 rounded-lg text-base font-bold transition-all flex items-center gap-2"
+                    >
+                      Inquire Bulk Order
+                    </button>
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative group">
