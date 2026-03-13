@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoSend } from "react-icons/io5";
 import { MdOutlineExpandMore } from "react-icons/md";
+import heroImage from "../assets/hero.jpg";
 
 export default function Contact() {
   const [errors, setErrors] = useState({});
@@ -87,8 +88,7 @@ if (!validate()) return;
           <div className="lg:w-1/2">
             <div
               style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8QJ8Y5YwPYBrLIffDh8CLPsd6PDKPhDZ8rWN3jlmO1OuqSjjhMooAG-t1dVRcGD5KbwgF6jywRqimHxcwlmGf_akKObYLWlk-PL6lZDBpC91EVtsFmZReZixrPaZCWpWQ33Deh5pYyljkCNiMe1NP7hXNaY-k6WDffixeTdxQxBHqsvrZeSo64a-GhGO0AuAzvRoCQIGcDPlTvXq7GxVnS25NtuY5TkvQooYzUGMg5_3g7Hstfami4jciKzOUgvMSVd1JvLXYU6E')",
+                backgroundImage: `url(${heroImage})`,
               }}
               className="aspect-4/3 w-full rounded-2xl bg-cover bg-center shadow-2xl relative overflow-hidden group"
               data-alt="Close up of fresh organic mushrooms growing in a farm environment"
@@ -96,9 +96,9 @@ if (!validate()) return;
               <div className="absolute inset-0 bg-gradient-tot from-black/50 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
                 <p className="text-sm font-bold uppercase tracking-wider mb-1 text-primary">
-                  Our Farm
+                  Our Lab
                 </p>
-                <p className="text-xl font-bold">Pune, Maharashtra</p>
+                <p className="text-xl font-bold">Lucknow,Uttar Pradesh </p>
               </div>
             </div>
           </div>

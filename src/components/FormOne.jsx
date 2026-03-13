@@ -8,6 +8,9 @@ import { MdEco } from "react-icons/md";
 import { MdLiquor } from "react-icons/md";
 import { MdOutlineTune } from "react-icons/md";
 import { IoMdBusiness } from "react-icons/io";
+import Seeds from "../assets/Seeds.jpg";
+import Bulk from "../assets/Bulk.jpg";
+import Pickles from "../assets/Pickles.jpg";
 
 export default function FormOne({ handleNext, formData, setFormData, scrollTo }) {
 const businessRef = useRef(null);
@@ -119,6 +122,9 @@ useEffect(() => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* <!-- Product Card 1 --> */}
           <div
+          style={{
+           backgroundImage: `url(${Seeds})`,
+          }}
             onClick={() => handleChange("product", "spawn")}
             className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
             ${
@@ -141,17 +147,20 @@ useEffect(() => {
               <MdOutlinePsychologyAlt className="text-3xl" />
             </div>
 
-            <div>
-              <p className="text-lg font-bold text-[#101914] dark:text-white leading-tight">
+           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-lg font-bold text-white">
                 Mushroom Seeds (Spawn)
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <p className="text-sm text-gray-200">
                 High-yield spores for commercial growers.
               </p>
-            </div> 
+            </div>
           </div>
           {/* <!-- Product Card 2 --> */}
           <div
+          style={{
+           backgroundImage: `url(${Bulk})`,
+          }}
             onClick={() => handleChange("product", "bulk")}
             className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
             ${
@@ -174,17 +183,22 @@ useEffect(() => {
               <MdEco className="text-3xl" />
             </div>
 
-            <div>
-              <p className="text-lg font-bold text-[#101914] dark:text-white leading-tight">
-                Bulk Fresh Mushrooms
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                Daily harvested Oyster, Button & Milky varieties.
-              </p>
-            </div>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <p className="text-lg font-bold text-white">
+              Bulk Fresh Mushrooms
+            </p>
+
+            <p className="text-sm text-gray-200">
+              Daily harvested Oyster, Button & Milky varieties.
+            </p>
+          </div>
           </div>
           {/* <!-- Product Card 3 --> */}
           <div
+
+          style={{
+           backgroundImage: `url(${Pickles})`,
+          }}
         onClick={() => handleChange("product", "pickles")}
         className={`group relative bg-white dark:bg-[#25302c] border-2 rounded-xl overflow-hidden transition-all cursor-pointer p-4 aspect-square flex flex-col justify-between
         ${
@@ -206,14 +220,15 @@ useEffect(() => {
         <div className="bg-primary/10 rounded-lg p-3 w-fit text-primary">
           <MdLiquor className="text-3xl" />
         </div>
-        <div>
-          <p className="text-lg font-bold text-[#101914] dark:text-white leading-tight">
-            Mushroom Pickles
-          </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            Premium value-added jars for retail outlet chains.
-          </p>
-        </div>
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <p className="text-lg font-bold text-white">
+              Mushroom Pickles
+            </p>
+
+            <p className="text-sm text-gray-200">
+              Premium value-added jars for retail outlet chains.
+            </p>
+          </div>
       </div>
       {errors.product && (
   <p className="text-red-500 text-sm mt-2">

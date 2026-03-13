@@ -8,18 +8,18 @@ router.post("/contact", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp-relay.brevo.com",
+      host: "smtp.zoho.in",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.BREVO_USER,
-        pass: process.env.BREVO_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // 1️⃣ Email to YOU (admin)
     await transporter.sendMail({
-      from: `"Sumedha Agro Website" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro Website" <${process.env.EMAIL_USER}>`,
       to: "hrishabhadarsh24@gmail.com",
       replyTo: email,
       subject: "New Website Inquiry",
@@ -35,7 +35,7 @@ router.post("/contact", async (req, res) => {
 
     // 2️⃣ Thank You Email to USER
     await transporter.sendMail({
-      from: `"Sumedha Agro" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro Website" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Thank You for Contacting Sumedha Agro 🌱",
       html: `
@@ -61,18 +61,18 @@ router.post("/subscribe", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp-relay.brevo.com",
+      host: "smtp.zoho.in",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.BREVO_USER,
-        pass: process.env.BREVO_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     // 1️⃣ Notify you
     await transporter.sendMail({
-      from: `"Sumedha Agro Newsletter" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro Website" <${process.env.EMAIL_USER}>`,
       to: "hrishabhadarsh24@gmail.com",
       subject: "New Newsletter Subscription",
       html: `
@@ -83,7 +83,7 @@ router.post("/subscribe", async (req, res) => {
 
     // 2️⃣ Thank user
     await transporter.sendMail({
-      from: `"Sumedha Agro" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro Website" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Welcome to Sumedha Agro Newsletter 🌱",
       html: `

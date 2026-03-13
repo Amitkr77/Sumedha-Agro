@@ -15,22 +15,22 @@ router.post("/", async (req, res) => {
     // 🔹 Generate Reference ID
     const referenceId = "SAG-" + Math.floor(10000 + Math.random() * 90000);
 
-    // 🔹 Create Brevo transporter
-    const transporter = nodemailer.createTransport({
-      host: "smtp-relay.brevo.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.BREVO_USER,
-        pass: process.env.BREVO_PASS,
-      },
-    });
+    // 🔹 Create Zoho transporter
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: process.env.SMTP_PORT,
+          secure: false,
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+          },
+        });
 
     // ============================
     // 📩 EMAIL TO COMPANY
     // ============================
     await transporter.sendMail({
-      from: `"Sumedha Agro" <hrishabhadarsh24@gmail.com>`,
+      from: `"Sumedha Agro" <${process.env.EMAIL_USER}>`,
       to: process.env.COMPANY_EMAIL,
       subject: `New Quote Request - ${referenceId}`,
       html: `
@@ -67,7 +67,7 @@ router.post("/", async (req, res) => {
     // 📩 CONFIRMATION TO USER
     // ============================
     await transporter.sendMail({
-      from: `"Sumedha Agro" <${process.env.BREVO_USER}>`,
+      from: `"Sumedha Agro" <${process.env.EMAIL_USER}>`,
       to: data.email,
       subject: `Quote Request Received - ${referenceId}`,
       html: `
