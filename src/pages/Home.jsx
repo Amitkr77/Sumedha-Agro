@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { SiTripadvisor } from "react-icons/si";
 
 import { MdEmail } from "react-icons/md";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaUtensils } from "react-icons/fa";
 import { FaLeaf } from "react-icons/fa";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { LuFlaskConical } from "react-icons/lu";
@@ -19,9 +20,34 @@ import m1 from "../assets/m1.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";
 import m4 from "../assets/m4.webp";
+import m5 from "../assets/Seeds.jpg";
 import CTA from "../components/CTA";
 export default function Home() {
   const navigate = useNavigate();
+
+  const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1], // premium easing curve
+    },
+  },
+};
+
   return (
     <main className="flex-grow flex flex-col">
       {/* <section className="relative w-full py-12 md:py-24 px-4 md:px-10 lg:px-20 flex justify-center bg-background-dark overflow-hidden min-h-[700px] items-center">
@@ -85,7 +111,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit backdrop-blur-md mx-auto lg:mx-0">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#13ec13]"></span>
               <span className="text-xs font-bold uppercase tracking-widest text-primary">
-                Agritech Innovation
+                Integrated Mushroom Enterprise
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
@@ -93,22 +119,22 @@ export default function Home() {
               <span className="text-primary">Future of Food</span>
             </h1>
             <p className="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Sumedha Agro is a pioneer in high-tech mushroom farming. We
-              deliver premium organic produce and sustainable agricultural
-              solutions to businesses worldwide.
+              Sumedha Agro delivers premium spawn, fresh mushrooms, 
+              processed foods, training, and sustainable farming solutions 
+              for farmers, businesses, and homes.
             </p>
             <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
               <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                <span className="material-symbols-outlined text-primary">
+                {/* <span className="material-symbols-outlined text-primary">
                   <MdOutlineVerified />
-                </span>
-                <span className="font-medium text-sm">Certified Organic</span>
+                </span> */}
+                <span className="font-medium text-sm">Explore Products</span>
               </div>
               <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                <span className="material-symbols-outlined text-primary">
+                {/* <span className="material-symbols-outlined text-primary">
                   <IoIosWater />
-                </span>
-                <span className="font-medium text-sm">Hydroponic Tech</span>
+                </span> */}
+                <span className="font-medium text-sm">Partner With Us</span>
               </div>
             </div>
           </div>
@@ -209,22 +235,22 @@ export default function Home() {
           {/* <!-- Placeholders for partner logos/certifications --> */}
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span> <FaLeaf />
-            USDA Organic
+            Quality Spawn Production
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>{" "}
             <IoIosCheckmarkCircleOutline />
-            ISO Certified
+            Sustainable Farming Solutions
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>{" "}
             <LuFlaskConical />
-            BioTech Labs
+            Training & Support
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>
             <MdWaterDrop />
-            HydroSafe
+            Trusted Supply Network
           </span>
         </div>
       </div>
@@ -245,53 +271,55 @@ export default function Home() {
           </p>
         </div>
       </section> */}
-   <section
-  id="story"
-  className="relative py-24 px-4 md:px-20 lg:px-40 
-             bg-gradient-to-b from-[#f4fbf4] via-white to-white
-             dark:from-[#0b130b] dark:via-background-dark dark:to-background-dark
-             overflow-hidden"
->
-  {/* Ambient glow blobs */}
-  <div className="absolute -top-32 -right-32 w-[420px] h-[420px] bg-[#13ec13]/20 blur-[140px] rounded-full"></div>
-  <div className="absolute -bottom-32 -left-32 w-[420px] h-[420px] bg-[#13ec13]/10 blur-[140px] rounded-full"></div>
-
-  <div className="relative max-w-4xl mx-auto text-center">
-    {/* Section badge */}
-    <div
-      className="inline-flex items-center px-4 py-1 mb-6 rounded-full
-                 bg-[#13ec13]/10 dark:bg-[#13ec13]/15
-                 text-[#0d1b0d] dark:text-[#13ec13]
-                 text-xs font-bold tracking-widest uppercase"
+      <section
+      id="story"
+      className="relative py-24 px-4 md:px-20 lg:px-40 
+                bg-gradient-to-b from-[#f4fbf4] via-white to-white
+                dark:from-[#0b130b] dark:via-background-dark dark:to-background-dark
+                overflow-hidden"
     >
-      Our Vision
-    </div>
+      {/* Ambient glow blobs */}
+      <div className="absolute -top-32 -right-32 w-[420px] h-[420px] bg-[#13ec13]/20 blur-[140px] rounded-full"></div>
+      <div className="absolute -bottom-32 -left-32 w-[420px] h-[420px] bg-[#13ec13]/10 blur-[140px] rounded-full"></div>
 
-    <h2
-      className="text-3xl md:text-4xl lg:text-5xl font-extrabold
-                 leading-tight tracking-tight
-                 text-[#0d1b0d] dark:text-white mb-6"
-    >
-      Bridging Technology and Farming
-    </h2>
+      <div className="relative max-w-4xl mx-auto text-center">
+        {/* Section badge */}
+        <div
+          className="inline-flex items-center px-4 py-1 mb-6 rounded-full
+                    bg-[#13ec13]/10 dark:bg-[#13ec13]/15
+                    text-[#0d1b0d] dark:text-[#13ec13]
+                    text-xs font-bold tracking-widest uppercase"
+        >
+          About Sumedha Agro
+        </div>
 
-    <p
-      className="text-lg md:text-xl leading-relaxed
-                 text-[#3f5f3f] dark:text-gray-300
-                 max-w-3xl mx-auto"
-    >
-      Sumedha Agro is dedicated to sustainable farming practices,
-      leveraging modern technology to produce high-quality organic
-      mushrooms and derived products. We believe that the future of food
-      lies in the intelligent application of nature's resources.
-    </p>
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold
+                    leading-tight tracking-tight
+                    text-[#0d1b0d] dark:text-white mb-6"
+        >
+          Bridging Technology and Farming
+        </h2>
 
-    {/* Brand divider */}
-    <div className="mt-12 flex justify-center">
-      <span className="h-[3px] w-28 rounded-full bg-gradient-to-r from-transparent via-[#13ec13] to-transparent"></span>
-    </div>
-  </div>
-</section>
+        <p
+          className="text-lg md:text-xl leading-relaxed
+                    text-[#3f5f3f] dark:text-gray-300
+                    max-w-3xl mx-auto"
+        >
+          {/* Sumedha Agro is dedicated to sustainable farming practices,
+          leveraging modern technology to produce high-quality organic
+          mushrooms and derived products. We believe that the future of food
+          lies in the intelligent application of nature's resources. */}
+          Sumedha Agro combines modern techniques with practical expertise
+          to promote mushroom farming, nutrition, entrepreneurship, and sustainable growth.
+        </p>
+
+        {/* Brand divider */}
+        <div className="mt-12 flex justify-center">
+          <span className="h-[3px] w-28 rounded-full bg-gradient-to-r from-transparent via-[#13ec13] to-transparent"></span>
+        </div>
+      </div>
+    </section>
 
 
       {/* <!-- Features Grid --> */}
@@ -307,7 +335,7 @@ export default function Home() {
               for nutrition and wellness.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* <!-- Feature 1 --> */}
             <div className="group flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 hover:shadow-xl transition-all hover:-translate-y-1">
               <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-dark dark:text-primary mb-2 group-hover:bg-primary group-hover:text-black transition-colors">
@@ -321,8 +349,9 @@ export default function Home() {
                 Health Benefits
               </h3>
               <p className="text-text-side dark:text-gray-400 text-sm leading-relaxed">
-                Rich in essential nutrients, proteins, and antioxidants designed
-                for a balanced and immune-boosting diet.
+                {/* Rich in essential nutrients, proteins, and antioxidants designed
+                for a balanced and immune-boosting diet. */}
+                Rich in protein, fiber, and essential nutrients for a healthier lifestyle.
               </p>
             </div>
             {/* <!-- Feature 2 --> */}
@@ -339,8 +368,9 @@ export default function Home() {
                 Sustainability
               </h3>
               <p className="text-text-side dark:text-gray-400 text-sm leading-relaxed">
-                Our vertical farming techniques use 90% less water and land
-                compared to traditional agriculture.
+                {/* Our vertical farming techniques use 90% less water and land
+                compared to traditional agriculture. */}
+                Uses less land and agricultural waste to create nutritious food.            
               </p>
             </div>
             {/* <!-- Feature 3 --> */}
@@ -357,8 +387,27 @@ export default function Home() {
                 Innovation
               </h3>
               <p className="text-text-side dark:text-gray-400 text-sm leading-relaxed">
-                Advanced IoT monitoring ensures consistent quality, higher
-                yields, and pure organic output year-round.
+                {/* Advanced IoT monitoring ensures consistent quality, higher
+                yields, and pure organic output year-round. */}
+                Supports farming income, training, and new business opportunities.
+              </p>
+            </div>
+            {/* <!-- Feature 4 --> */}
+            <div className="group flex flex-col gap-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary-dark dark:text-primary mb-2 group-hover:bg-primary group-hover:text-black transition-colors">
+                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
+                  <span className="material-symbols-outlined">
+                    <FaUtensils className="text-text-icon" size={30} />
+                  </span>
+                </div>
+              </div>
+
+              <h3 className="text-text-main dark:text-white text-xl font-bold">
+                Versatility
+              </h3>
+
+              <p className="text-text-side dark:text-gray-400 text-sm leading-relaxed">
+                Used in fresh foods, powders, pickles, snacks, and many value-added products.
               </p>
             </div>
           </div>
@@ -388,7 +437,7 @@ export default function Home() {
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* <!-- Product Card 1 --> */}
             <div className="group rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-surface-dark hover:shadow-lg transition-all">
               <div className="h-64 overflow-hidden relative">
@@ -409,11 +458,12 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
-                Premium Button Mushrooms
+                 Fresh Mushrooms
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
-                 Farm-fresh, chemical-free white button mushrooms harvested
-                 daily for maximum flavor.
+                 {/* Farm-fresh, chemical-free white button mushrooms harvested
+                 daily for maximum flavor. */}
+                 Premium quality mushrooms for homes, retail, and bulk buyers.
                 </p>
                 <button
                    onClick={() => {
@@ -423,6 +473,42 @@ export default function Home() {
                    className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors"
                   >
                    View Details
+                </button>
+              </div>
+            </div>
+            {/* <!-- Product Card 4 --> */}
+            <div className="group rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-surface-dark hover:shadow-lg transition-all">
+              <div className="h-64 overflow-hidden relative">
+                <div
+                  className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                  data-alt="Mushroom spawn seeds in cultivation trays"
+                  style={{
+                    backgroundImage: `url(${m5})`, // add your image variable
+                  }}
+                ></div>
+
+                <div className="absolute top-3 right-3 bg-white dark:bg-gray-400 px-2 py-1 text-xs font-bold rounded uppercase tracking-wide">
+                  Farming
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
+                  Mushroom Seed (Spawn)
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
+                  High-quality mushroom seed for better yield, faster growth, and successful cultivation.
+                </p>
+
+                <button
+                  onClick={() => {
+                    navigate("/products");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  className="w-full py-2 rounded border border-gray-400 dark:border-gray-600 text-sm font-medium hover:bg-primary hover:border-primary hover:text-black transition-colors"
+                >
+                  View Details
                 </button>
               </div>
             </div>
@@ -445,11 +531,12 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-text-main dark:text-black mb-2">
-                  Oyster Mushroom Powder
+                  Mushroom Powder
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
-                  A nutrient-dense superfood powder perfect for soups,
-                  smoothies, and baking.
+                  {/* A nutrient-dense superfood powder perfect for soups,
+                  smoothies, and baking. */}
+                  Ideal for soups, health blends, and food products.
                 </p>
                 <button
                   onClick={() => {
@@ -482,8 +569,9 @@ export default function Home() {
                   Mushroom Pickles
                 </h3>
                 <p className="text-sm text-text-side dark:text-gray-400 mb-4 line-clamp-2">
-                  Spicy and tangy mushroom pickles made with traditional recipes
-                  and organic oil.
+                  {/* Spicy and tangy mushroom pickles made with traditional recipes
+                  and organic oil. */}
+                  Tasty value-added mushroom foods for daily use.
                 </p>
                 <button
                   onClick={() => {
@@ -510,6 +598,243 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* <!-- Services Section -->
+      <section className="py-20 px-4 md:px-20 lg:px-40 bg-gradient-to-b from-white to-[#f4fbf4] dark:from-background-dark dark:to-[#0b130b]">
+        <div className="max-w-[1200px] mx-auto">
+
+          {/* Heading 
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center px-4 py-1 mb-4 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase">
+              Our Services
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-extrabold text-text-main dark:text-white mb-4">
+              Complete Mushroom Ecosystem
+            </h2>
+
+            <p className="text-text-side dark:text-gray-400 max-w-2xl mx-auto">
+              From training to production, we provide end-to-end solutions for farmers,
+              entrepreneurs, and businesses.
+            </p>
+          </div>
+
+          {/* Grid 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Service 1 
+            <div className="group relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition">
+                  <FaLeaf size={26} className="text-text-icon group-hover:text-black" />
+                </div>
+
+                <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  Spawn Supply
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400">
+                  Premium quality spawn ensuring high yield, faster growth, and reliable cultivation.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 2 
+            <div className="group relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition">
+                  <RiMicroscopeFill size={26} className="text-text-icon group-hover:text-black" />
+                </div>
+
+                <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  Mushroom Training
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400">
+                  Hands-on training programs covering cultivation, business setup, and scaling.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 3 
+            <div className="group relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition">
+                  <FaUtensils size={26} className="text-text-icon group-hover:text-black" />
+                </div>
+
+                <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  Growing Kits
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400">
+                  Easy-to-use kits for beginners and home growers to start mushroom farming instantly.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 4 
+            <div className="group relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition">
+                  <MdWaterDrop size={26} className="text-text-icon group-hover:text-black" />
+                </div>
+
+                <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  Compost
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400">
+                  High-quality compost designed for optimal mushroom growth and sustainable farming.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 5 
+            <div className="group relative rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-8 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition">
+                  <FaCheckCircle size={26} className="text-text-icon group-hover:text-black" />
+                </div>
+
+                <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  Bulk Supply
+                </h3>
+
+                <p className="text-sm text-text-side dark:text-gray-400">
+                  Reliable bulk supply for retailers, distributors, and food businesses.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section> */}
+
+      {/* <!-- Services Section --> */}
+      <section className="relative py-24 px-4 md:px-20 lg:px-40 overflow-hidden">
+
+        {/* 🔥 Background Glow */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-primary/20 blur-[140px] rounded-full"></div>
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-green-400/10 blur-[140px] rounded-full"></div>
+
+        <div className="relative max-w-[1200px] mx-auto">
+
+          {/* Heading Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex px-4 py-1 mb-4 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase">
+              Our Services
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-extrabold text-text-main dark:text-white mb-4">
+              Complete Mushroom Ecosystem
+            </h2>
+
+            <p className="text-text-side dark:text-gray-400 max-w-2xl mx-auto">
+              From training to production, we provide end-to-end solutions.
+            </p>
+          </motion.div>
+
+          {/* Cards */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+
+            {/* CARD TEMPLATE */}
+            {[
+              {
+                title: "Spawn Supply",
+                icon: <FaLeaf size={26} />,
+                desc: "Premium spawn ensuring high yield and faster growth.",
+              },
+              {
+                title: "Mushroom Training",
+                icon: <RiMicroscopeFill size={26} />,
+                desc: "Hands-on training for farming and business setup.",
+              },
+              {
+                title: "Growing Kits",
+                icon: <FaUtensils size={26} />,
+                desc: "Ready-to-use kits for beginners and home growers.",
+              },
+              {
+                title: "Compost",
+                icon: <MdWaterDrop size={26} />,
+                desc: "Nutrient-rich compost for optimal cultivation.",
+              },
+              {
+                title: "Bulk Supply",
+                icon: <FaCheckCircle size={26} />,
+                desc: "Reliable supply chain for businesses and retailers.",
+              },
+            ].map((service, i) => (
+              
+              <motion.div
+                key={i}
+                variants={cardVariants}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative rounded-2xl border border-white/10 
+                          bg-white/10 dark:bg-white/5 backdrop-blur-xl
+                          border border-white/20 dark:border-white/10 
+                          p-8 overflow-hidden 
+                          shadow-[0_8px_32px_rgba(0,0,0,0.12)] 
+                          hover:shadow-[0_20px_60px_rgba(19,236,19,0.15)] 
+                          transition-all duration-300"
+              >
+
+                {/* Glow Border Effect */}
+                <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-primary/30 transition"></div>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                {/* Content */}
+                <div className="relative z-10">
+
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center 
+                                  bg-white/20 backdrop-blur-md 
+                                  group-hover:bg-primary transition mb-5">
+                    <span className="text-text-icon group-hover:text-black">
+                      {service.icon}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-sm text-text-side dark:text-gray-400 leading-relaxed">
+                    {service.desc}
+                  </p>
+
+                </div>
+              </motion.div>
+            ))}
+
+          </motion.div>
+        </div>
+      </section>
+
       {/* <!-- CTA / Lead Gen Section --> */}
 
       <CTA />
