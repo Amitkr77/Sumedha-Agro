@@ -48,7 +48,7 @@ export default function About() {
                   <MdEco />
                 </span>
                 <span className="text-xs font-bold text-primary uppercase tracking-wide">
-                  Sustainable Tech
+                  Who We Are
                 </span>
               </div>
               <h1 className="text-text-main dark:text-black text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
@@ -59,11 +59,9 @@ export default function About() {
                 </span>
               </h1>
               <p className="text-text-main/80 dark:text-gray-500 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
-                Cultivating the future of nutrition with sustainable, high-tech
-                mushroom farming that blends nature's wisdom with AI precision.
-                “Edible mushrooms are a gift from nature with therapeutic
-                properties; don&#39;t ruin this gift by using chemicals. Growing
-                edible mushrooms protects both the environment and human health”
+                Sumedha Agro is an integrated mushroom enterprise focused on quality spawn production,
+                 sustainable cultivation, processed foods, farmer training, and future-ready 
+                 agricultural solutions. We are building a healthier and more profitable mushroom ecosystem.
               </p>
             </div>
             <div className="w-full md:w-1/2 aspect-4/3 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 relative group">
