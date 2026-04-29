@@ -642,18 +642,20 @@ export default function About() {
                 className="w-full h-full bg-cover bg-center"
                 data-alt="Portrait of Ayush Kumar"
                 // style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW5pf-zUrK7L5mk-Tkjmnj0w4kvdE20e1igcqkbLhO1zLd-5R7Ed6s1ApAHwA-HlgCva2RuHXyuQG6fRVYlBXvwHtbSnaiKYBHVOH-zpMFXZSCYdp6I9CsXHcd63VpLurspqHN6GFBqFg2zcF6G7RMx7GyWbz09vnEA66_kcih43I8p43_c8WnyMNcWkTQ4n1dGlitbFhuIUZPmL2YBom_4CBbC21uDgNOM8-IUlxqEwJzXJXB1IkUPQfD-ea1pV_DeEjWOwIEPas");'
-              ></div>
+              >
             </div>
-            <h3 className="text-lg font-bold text-text-main dark:text-black">
-              Ayush Kumar
-            </h3>
-            <p className="text-sm text-primary font-medium mb-3">
-              Tech Expert
-            </p>
-            <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
-              Architect of our proprietary AI climate control systems.
-            </p>
-          </div>
+            </div>
+              <h3 className="text-lg font-bold text-text-main dark:text-black">
+                Ayush Kumar
+              </h3>
+              <p className="text-sm text-primary font-medium mb-3">
+                Tech Expert
+              </p>
+              <p className="text-sm text-text-main/60 dark:text-slate-400 text-center px-4">
+                {/* Architect of our proprietary AI climate control systems. */}
+                Built and manages the company’s website and digital infrastructure.
+              </p>
+            </div>
         </div>
       </section>
       {/* <!-- CTA Section --> */}
