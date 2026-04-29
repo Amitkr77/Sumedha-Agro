@@ -2,16 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SiTripadvisor } from "react-icons/si";
 
-import { MdEmail } from "react-icons/md";
-import { FaCheckCircle, FaShoppingBasket, FaUtensils, FaHandshake } from "react-icons/fa";
+import { MdEmail, MdOutlineRecycling } from "react-icons/md";
+import { FaCheckCircle, FaShoppingBasket, FaUtensils, FaHandshake, FaGraduationCap } from "react-icons/fa";
 import { FaLeaf } from "react-icons/fa";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { LuFlaskConical } from "react-icons/lu";
 import { MdWaterDrop } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
 import { RiMicroscopeFill } from "react-icons/ri";
+import { GiMushroom, GiPlantSeed } from "react-icons/gi";
 import { IoMdCall } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaTruck } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineVerified } from "react-icons/md";
 import { IoIosWater } from "react-icons/io";
@@ -124,13 +125,13 @@ const cardVariants = {
               for farmers, businesses, and homes.
             </p>
             <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
-              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
+              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary hover:scale-105 transition cursor-pointer Duration-300">
                 <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
                   <FaShoppingBasket />
                 </span>
                 <span className="font-medium text-sm">Explore Products</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
+              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary hover:scale-105 transition cursor-pointer Duration-300">
                 <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
                   <FaHandshake />
                 </span>
@@ -234,22 +235,22 @@ const cardVariants = {
         <div className="max-w[1200px] mx-auto px-4 flex justify-around flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
           {/* <!-- Placeholders for partner logos/certifications --> */}
           <span className="text-xl font-bold flex items-center gap-2">
-            <span className="material-symbols-outlined"></span> <FaLeaf />
+            <span className="material-symbols-outlined"></span> <GiMushroom />
             Quality Spawn Production
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>{" "}
-            <IoIosCheckmarkCircleOutline />
+            <MdOutlineRecycling />
             Sustainable Farming Solutions
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>{" "}
-            <LuFlaskConical />
+            <FaGraduationCap />
             Training & Support
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>
-            <MdWaterDrop />
+            <FaTruck />
             Trusted Supply Network
           </span>
         </div>
