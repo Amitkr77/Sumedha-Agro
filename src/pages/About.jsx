@@ -340,7 +340,7 @@ export default function About() {
             {/* <!-- Vertical Line --> */}
             <div className="absolute left-4 md:left-1/2 top-6 bottom-6 w-0.5 bg-slate-200 dark:bg-slate-700 md:-translate-x-1/2"></div>
             {/* <!-- Timeline Item 1 --> */}
-            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full group">
               <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
                   {/* Inception*/}Foundation &amp; Research
@@ -353,18 +353,18 @@ export default function About() {
                   through science and training.
                 </p>
               </div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white bg-white dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-primary text-[14px] font-bold">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white group-hover:border-primary bg-white group-hover:bg-primary dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-lg transition-colors duration-300">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-[14px] font-bold transition-colors duration-300">
                   <FaRegLightbulb size={30} />
                 </span>
               </div>
               <div className="md:w-1/2 md:pl-12 hidden md:block"></div>
             </div>
             {/* <!-- Timeline Item 2 --> */}
-            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full group">
               <div className="md:w-1/2 md:pr-12 hidden md:block"></div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border borderwhite dark:border-background-dark bg-white bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
-                <span className="material-symbols-outlined text-primary text-[16px]">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border border-white group-hover:border-primary bg-white group-hover:bg-primary dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-lg transition-colors duration-300 border-slate-200 dark:border-slate-700">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-[16px] transition-colors duration-300">
                   <PiPottedPlant size={30} />
                 </span>
               </div>
@@ -382,7 +382,7 @@ export default function About() {
               </div>
             </div>
             {/* <!-- Timeline Item 3 --> */}
-            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full group">
               <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
                   {/* Market Expansion */}
@@ -395,18 +395,18 @@ export default function About() {
                   Empowered farmers, youth, and women through mushroom training programs.
                 </p>
               </div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-background-dark bg-white bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
-                <span className="material-symbols-outlined text-primary text-[16px]">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white group-hover:border-primary bg-white group-hover:bg-primary dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-[16px] transition-colors duration-300">
                   <IoIosTrendingUp size={30} />
                 </span>
               </div>
               <div className="md:w-1/2 md:pl-12 hidden md:block"></div>
             </div>
             {/* <!-- Timeline Item 4 --> */}
-            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center w-full group">
               <div className="md:w-1/2 md:pr-12 hidden md:block"></div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-background-dark bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
-                <span className="material-symbols-outlined text-primary text-[16px]">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white group-hover:border-primary bg-white group-hover:bg-primary dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-[16px] transition-colors duration-300">
                   <MdOutlinePublic size={30} />
                 </span>
               </div>
@@ -424,7 +424,7 @@ export default function About() {
               </div>
             </div>
             {/* <!-- Timeline Item 5 --> */}
-            <div className="relative z-10 mt-12 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="relative z-10 mt-12 flex flex-col md:flex-row items-start md:items-center w-full group">
               
               {/* LEFT CONTENT (same as Item 1 & 3 pattern) */}
               <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
@@ -443,13 +443,15 @@ export default function About() {
 
               {/* ICON (center line) */}
               <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 
-                              w-8 h-8 rounded-full border-4 border-white 
+                              w-8 h-8 rounded-full border-4 border-white
+                              group-hover:border-primary 
                               dark:border-background-dark 
                               bg-white dark:bg-surface-dark 
+                              group-hover:bg-primary 
                               md:-translate-x-1/2 md:-translate-y-1/2 
                               flex items-center justify-center shadow-md 
                               border-slate-200 dark:border-slate-700">
-                <span className="material-symbols-outlined text-primary text-[16px]">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-[16px] transition-colors duration-300">
                   <FaChartLine size={24} />
                 </span>
               </div>

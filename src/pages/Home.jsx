@@ -787,6 +787,11 @@ const cardVariants = {
                 icon: <FaCheckCircle size={26} />,
                 desc: "Reliable supply chain for businesses and retailers.",
               },
+              {
+                title: "Research & Development",
+                icon: <LuFlaskConical size={26} />,
+                desc: "Advanced research in mushroom cultivation, nutrition, and sustainable farming technologies.",
+              },
             ].map((service, i) => (
               
               <motion.div
@@ -814,7 +819,7 @@ const cardVariants = {
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center 
                                   bg-white/20 backdrop-blur-md 
                                   group-hover:bg-primary transition mb-5">
-                    <span className="text-text-icon group-hover:text-black">
+                    <span className="text-text-icon group-hover:text-white">
                       {service.icon}
                     </span>
                   </div>
