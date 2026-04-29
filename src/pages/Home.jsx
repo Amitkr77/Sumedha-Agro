@@ -130,7 +130,7 @@ const cardVariants = {
                 </span>
                 <span className="font-medium text-sm">Explore Products</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
+              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
                 <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
                   <FaHandshake />
                 </span>
