@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SiTripadvisor } from "react-icons/si";
 
 import { MdEmail } from "react-icons/md";
-import { FaCheckCircle, FaUtensils } from "react-icons/fa";
+import { FaCheckCircle, FaShoppingBasket, FaUtensils, FaHandshake } from "react-icons/fa";
 import { FaLeaf } from "react-icons/fa";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { LuFlaskConical } from "react-icons/lu";
@@ -118,22 +118,22 @@ const cardVariants = {
               Cultivating the <br />
               <span className="text-primary">Future of Food</span>
             </h1>
-            <p className="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-gray-300 text-sm md:text-sm font-normal leading-relaxed max-w-lg mx-auto lg:mx-0">
               Sumedha Agro delivers premium spawn, fresh mushrooms, 
               processed foods, training, and sustainable farming solutions 
               for farmers, businesses, and homes.
             </p>
             <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
-              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                {/* <span className="material-symbols-outlined text-primary">
-                  <MdOutlineVerified />
-                </span> */}
+              <div className="flex items-center gap-3 bg-white/5 hover:bg-primary px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
+                <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
+                  <FaShoppingBasket />
+                </span>
                 <span className="font-medium text-sm">Explore Products</span>
               </div>
-              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm">
-                {/* <span className="material-symbols-outlined text-primary">
-                  <IoIosWater />
-                </span> */}
+              <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-sm group group-hover:bg-primary transition-colors cursor-pointer Duration-300">
+                <span className="material-symbols-outlined text-primary group-hover:text-white transition-colors duration-300">
+                  <FaHandshake />
+                </span>
                 <span className="font-medium text-sm">Partner With Us</span>
               </div>
             </div>
