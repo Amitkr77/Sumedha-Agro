@@ -107,7 +107,7 @@ const cardVariants = {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40"></div>
         </div>
-        <div className="relative z-10 max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="relative z-10 max-w-[1280px] w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-20 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 text-white order-2 lg:order-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 w-fit backdrop-blur-md mx-auto lg:mx-0">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_#13ec13]"></span>
@@ -115,11 +115,11 @@ const cardVariants = {
                 Integrated Mushroom Enterprise
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-8xl font-bold leading-[1.1] tracking-tight">
               Cultivating the <br />
               <span className="text-primary">Future of Food</span>
             </h1>
-            <p className="text-gray-300 text-sm md:text-sm font-normal leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-gray-300 text-sm md:text-lg font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Sumedha Agro delivers premium spawn, fresh mushrooms, 
               processed foods, training, and sustainable farming solutions 
               for farmers, businesses, and homes.
@@ -137,6 +137,17 @@ const cardVariants = {
                 </span>
                 <span className="font-medium text-sm">Partner With Us</span>
               </div>
+            </div>
+          </div>
+          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[600px]">
+              <img
+                src={m2} // image variable
+                alt="Mushroom Product"
+                className="w-full h-auto object-contain rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+              />
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-3xl opacity-30 -z-10"></div>
             </div>
           </div>
           {/* <div
