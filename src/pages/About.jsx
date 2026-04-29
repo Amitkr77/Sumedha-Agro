@@ -135,7 +135,7 @@ export default function About() {
                 <p className="text-white text-sm font-medium bg-black/40 backdrop-blur-md px-3 py-1 rounded-full inline-block mb-1">
                   Live from Lab
                 </p>
-                <p className="text-white font-bold">Smart Hydroponic Unit 04</p>
+                {/* <p className="text-white font-bold">Smart Hydroponic Unit 04</p> */}
               </div>
             </div>
           </div>
