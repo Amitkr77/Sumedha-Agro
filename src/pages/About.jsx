@@ -14,6 +14,33 @@ import a1 from "../assets/a1.png";
 import a2 from "../assets/a2.png";
 import a3 from "../assets/a3.png";
 import a4 from "../assets/a4.jpeg";
+// import { FaLeaf, FaUtensils, FaCheckCircle } from "react-icons/fa";
+// import { RiMicroscopeFill } from "react-icons/ri";
+// import { MdWaterDrop } from "react-icons/md";
+import { FaChartLine } from "react-icons/fa";
+
+// const container = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.12,
+//       delayChildren: 0.1,
+//     },
+//   },
+// };
+
+// const item = {
+//   hidden: { opacity: 0, y: 40, scale: 0.95 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 0.5,
+//       ease: [0.22, 1, 0.36, 1],
+//     },
+//   },
+// };
 const data = [
   {
     icon: <FaRegLightbulb />,
@@ -36,6 +63,34 @@ const data = [
 ];
 
 export default function About() {
+  //  const services = [
+  //   {
+  //     title: "Spawn Supply",
+  //     icon: <FaLeaf />,
+  //     desc: "Premium quality spawn ensuring high yield, faster growth, and reliable cultivation.",
+  //   },
+  //   {
+  //     title: "Mushroom Training",
+  //     icon: <RiMicroscopeFill />,
+  //     desc: "Hands-on training programs covering cultivation, business setup, and scaling.",
+  //   },
+  //   {
+  //     title: "Growing Kits",
+  //     icon: <FaUtensils />,
+  //     desc: "Easy-to-use kits for beginners and home growers to start mushroom farming instantly.",
+  //   },
+  //   {
+  //     title: "Compost",
+  //     icon: <MdWaterDrop />,
+  //     desc: "High-quality compost designed for optimal mushroom growth and sustainable farming.",
+  //   },
+  //   {
+  //     title: "Future Growth",
+  //     icon: <FaChartLine />,
+  //     desc: "Building a stronger national brand for nutrition, sustainability, and agri entrepreneurship.",
+  //   },
+  // ];
+
   return (
     <main>
       {/* <!-- Hero Section --> */}
@@ -60,8 +115,8 @@ export default function About() {
               </h1>
               <p className="text-text-main/80 dark:text-gray-500 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Sumedha Agro is an integrated mushroom enterprise focused on quality spawn production,
-                 sustainable cultivation, processed foods, farmer training, and future-ready 
-                 agricultural solutions. We are building a healthier and more profitable mushroom ecosystem.
+                sustainable cultivation, processed foods, farmer training, and future-ready 
+                agricultural solutions. We are building a healthier and more profitable mushroom ecosystem.
               </p>
             </div>
             <div className="w-full md:w-1/2 aspect-4/3 rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 relative group">
@@ -96,7 +151,7 @@ export default function About() {
               </h2>
 
               <p className="text-text-main/70 dark:text-gray-500 text-xl">
-                Our data-driven approach yields superior nutritional profiles
+                {/* Our data-driven approach yields superior nutritional profiles
                 with minimal environmental footprint. For thousands of years,
                 mushrooms—one of nature&#39;s oldest and most varied organisms
                 have been valued for their gastronomic, medicinal, and even
@@ -106,7 +161,10 @@ export default function About() {
                 community-based training, and knowledge-sharing programs. This
                 guarantees that they can make a significant contribution to
                 grassroots entrepreneurship as well as national and nutritional
-                goals.
+                goals. */}
+                Mushrooms are nutritious, sustainable, and high-potential crops.
+                They require fewer resources, support rural income, and create 
+                opportunities in fresh food, health products, and value-added industries.
               </p>
             </div>
           </div>
@@ -179,9 +237,11 @@ export default function About() {
                 Our Focus Area?
               </h2>
               <p className="text-xl">
-                We focus on research; spawn production, training, conservation,
+                {/* We focus on research; spawn production, training, conservation,
                 and sustainable technologies to promote mushrooms as a delicious
-                and nutritious food, income source and ecofriendly solution.
+                and nutritious food, income source and ecofriendly solution. */}
+                We work across the complete mushroom value chain to create income, 
+                nutrition, and scalable agricultural growth.
               </p>
             </div>
             </div>
@@ -212,7 +272,7 @@ export default function About() {
                     {d.content}
                   </p>
                 </div>
-              </div>;
+              </div>
             })}
           </div>
         </div>
@@ -233,9 +293,11 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
-                To revolutionize global nutrition by making sustainable,
+                {/* To revolutionize global nutrition by making sustainable,
                 zero-waste mushroom cultivation accessible, scalable, and highly
-                efficient through technology.
+                efficient through technology. */}
+                To make mushroom cultivation accessible, profitable, and 
+                sustainable through innovation, training, and quality products.
               </p>
             </div>
           </div>
@@ -252,14 +314,17 @@ export default function About() {
                 Our Vision
               </h2>
               <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
-                To become the undisputed global leader in AI-driven agritech and
+                {/* To become the undisputed global leader in AI-driven agritech and
                 functional foods, creating a healthier planet one spore at a
-                time.
+                time. */}
+                To become a trusted leader in mushroom farming, functional foods, 
+                and farmer-led rural transformation.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       {/* <!-- Timeline Section --> */}
       <section className="w-full bg-slate-50 dark:bg-black/20 py-16 md:py-24">
         <div className="max-w-960px mx-auto px-4 md:px-10">
@@ -273,21 +338,23 @@ export default function About() {
           </div>
           <div className="relative">
             {/* <!-- Vertical Line --> */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700 md:-translate-x-1/2"></div>
+            <div className="absolute left-4 md:left-1/2 top-6 bottom-6 w-0.5 bg-slate-200 dark:bg-slate-700 md:-translate-x-1/2"></div>
             {/* <!-- Timeline Item 1 --> */}
             <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
               <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
-                  Inception &amp; Research
+                  {/* Inception*/}Foundation &amp; Research
                 </h3>
                 <p className="text-primary font-bold text-sm mb-2">2018</p>
                 <p className="text-text-main/70 dark:text-slate-400">
-                  Started with a small team of biologists researching high-yield
-                  spore strains.
+                  {/* Started with a small team of biologists researching high-yield
+                  spore strains. */}
+                  Started a vision to build reliable mushroom farming solutions 
+                  through science and training.
                 </p>
               </div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-background-dark bg-primary md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-black text-[14px] font-bold">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white bg-white dark:border-background-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-lg">
+                <span className="material-symbols-outlined text-primary text-[14px] font-bold">
                   <FaRegLightbulb size={30} />
                 </span>
               </div>
@@ -296,19 +363,21 @@ export default function About() {
             {/* <!-- Timeline Item 2 --> */}
             <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
               <div className="md:w-1/2 md:pr-12 hidden md:block"></div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 borderwhite dark:border-background-dark bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border borderwhite dark:border-background-dark bg-white bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
                 <span className="material-symbols-outlined text-primary text-[16px]">
                   <PiPottedPlant size={30} />
                 </span>
               </div>
               <div className="md:w-1/2 md:pl-12 pl-12">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
-                  First Smart Farm
+                  {/* First Smart Farm */}
+                  Spawn & Cultivation Expansion
                 </h3>
                 <p className="text-primary font-bold text-sm mb-2">2020</p>
                 <p className="text-text-main/70 dark:text-slate-400">
-                  Launched our pilot IoT-enabled farm, achieving 40% higher
-                  yield than traditional methods.
+                  {/* Launched our pilot IoT-enabled farm, achieving 40% higher
+                  yield than traditional methods. */}
+                  Expanded into quality spawn production and modern cultivation systems.
                 </p>
               </div>
             </div>
@@ -316,15 +385,17 @@ export default function About() {
             <div className="relative z-10 mb-12 flex flex-col md:flex-row items-start md:items-center w-full">
               <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
-                  Market Expansion
+                  {/* Market Expansion */}
+                  Training & Farmer Support
                 </h3>
                 <p className="text-primary font-bold text-sm mb-2">2022</p>
                 <p className="text-text-main/70 dark:text-slate-400">
-                  Partnered with 50+ local grocery chains and launched our
-                  direct-to-consumer line.
+                  {/* Partnered with 50+ local grocery chains and launched our
+                  direct-to-consumer line. */}
+                  Empowered farmers, youth, and women through mushroom training programs.
                 </p>
               </div>
-              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-background-dark bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-background-dark bg-white bg-surface-light dark:bg-surface-dark md:-translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center shadow-md border-slate-200 dark:border-slate-700">
                 <span className="material-symbols-outlined text-primary text-[16px]">
                   <IoIosTrendingUp size={30} />
                 </span>
@@ -341,27 +412,152 @@ export default function About() {
               </div>
               <div className="md:w-1/2 md:pl-12 pl-12">
                 <h3 className="text-xl font-bold text-text-main dark:text-white">
-                  Global Export
+                  {/* Global Export */}
+                  Processed Foods & Markets
                 </h3>
                 <p className="text-primary font-bold text-sm mb-2">2024</p>
                 <p className="text-text-main/70 dark:text-slate-400">
-                  Shipping freeze-dried functional mushroom powders to Europe
-                  and North America.
+                  {/* Shipping freeze-dried functional mushroom powders to Europe
+                  and North America. */}
+                  Launched value-added mushroom products and expanded commercial partnerships.
                 </p>
               </div>
+            </div>
+            {/* <!-- Timeline Item 5 --> */}
+            <div className="relative z-10 mt-12 flex flex-col md:flex-row items-start md:items-center w-full">
+              
+              {/* LEFT CONTENT (same as Item 1 & 3 pattern) */}
+              <div className="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                <h3 className="text-xl font-bold text-text-main dark:text-white">
+                  Future Growth
+                </h3>
+
+                <p className="text-primary font-bold text-sm mb-2">2026</p>
+
+                <p className="text-text-main/70 dark:text-slate-400">
+                  {/* Expanding into national markets, strengthening brand presence,
+                  and scaling sustainable mushroom-based products and entrepreneurship. */}
+                  Building a stronger national brand for nutrition, sustainability, and agri entrepreneurship
+                </p>
+              </div>
+
+              {/* ICON (center line) */}
+              <div className="absolute left-0 md:left-1/2 top-0 md:top-1/2 
+                              w-8 h-8 rounded-full border-4 border-white 
+                              dark:border-background-dark 
+                              bg-white dark:bg-surface-dark 
+                              md:-translate-x-1/2 md:-translate-y-1/2 
+                              flex items-center justify-center shadow-md 
+                              border-slate-200 dark:border-slate-700">
+                <span className="material-symbols-outlined text-primary text-[16px]">
+                  <FaChartLine size={24} />
+                </span>
+              </div>
+
+              {/* EMPTY RIGHT SIDE */}
+              <div className="md:w-1/2 md:pl-12 hidden md:block"></div>
+
             </div>
           </div>
         </div>
       </section>
+
+      {/* <section className="relative py-28 px-4 md:px-20 lg:px-40 bg-gradient-to-b from-[#f8fff8] to-[#eaffea] dark:from-[#0b130b] dark:to-[#071007] overflow-hidden">
+        {/* Background glow 
+        <div className="absolute -top-40 left-0 w-[500px] h-[500px] bg-green-400/20 blur-[140px] rounded-full"></div>
+        <div className="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-green-600/20 blur-[140px] rounded-full"></div>
+
+        <div className="relative max-w-6xl mx-auto text-center">
+
+          {/* Badge 
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-green-200 bg-white/70 backdrop-blur-md text-green-700 text-xs font-bold uppercase tracking-widest mb-6">
+            🌿 Our Vision
+          </div>
+
+          {/* Heading 
+          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900 dark:text-white">
+            Shaping a Sustainable <br />
+            <span className="text-green-600">Future</span> Together
+          </h2>
+
+          {/* Subtitle 
+          <p className="mt-6 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+            We are committed to empowering farmers, promoting healthy living,
+            and driving innovation in the mushroom industry.
+          </p>
+
+          {/* Cards 
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8"
+          >
+            {services.map((s, i) => (
+              <motion.div
+                key={i}
+                variants={item}
+                whileHover={{ y: -10, scale: 1.03 }}
+                className={`
+                  group relative rounded-2xl p-8 
+                  bg-white/40 dark:bg-white/5 
+                  backdrop-blur-xl 
+                  border border-white/30 dark:border-white/10
+                  shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+                  hover:shadow-[0_25px_80px_rgba(0,128,0,0.15)]
+                  transition-all duration-300
+                  
+                  col-span-1 sm:col-span-2
+                  ${i === 3 ? "lg:col-start-2 lg:col-span-2" : ""}
+                  ${i === 4 ? "lg:col-start-4 lg:col-span-2" : ""}
+                `}
+              >
+
+                {/* Hover glow 
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+
+                {/* Icon 
+                <div className="w-16 h-16 mx-auto mb-5 rounded-full 
+                    bg-white/80 backdrop-blur-md shadow-md 
+                    flex items-center justify-center 
+                    text-green-600 text-2xl 
+                    group-hover:bg-green-500 group-hover:text-white transition">
+                  {s.icon}
+                </div>
+
+                {/* Title 
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                  {s.title}
+                </h3>
+
+                {/* Divider 
+                <div className="w-10 h-[2px] bg-green-500 mx-auto my-3"></div>
+
+                {/* Desc 
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {s.desc}
+                </p>
+
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section> */}
+
       {/* <!-- Team Section --> */}
       <section className="w-full  bg-slate-100 max-w-1280px px-4 md:px-10 py-16 md:py-24">
         <div className="text-center mb-12">
           <span className="text-primary font-bold uppercase tracking-widest text-xs mb-2 block">
             Our Leadership
           </span>
-          <h2 className="text-text-main dark:text-black text-3xl font-bold">
+          <h2 className="text-text-main dark:text-black text-3xl font-bold mb-2">
             Cultivators of Innovation
           </h2>
+          <p className="text-text-main/70 dark:text-slate-400">
+              A dedicated team combining research, business, agriculture, and 
+              execution to shape the future of mushroom farming.
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* <!-- Team Member 1 --> */}
@@ -477,8 +673,11 @@ export default function About() {
                 Ready to grow with us?
               </h2>
               <p className="text-slate-300 text-lg">
-                Whether you're a retailer looking for premium produce or an
-                investor seeking sustainable opportunities, we'd love to talk.
+                {/* Whether you're a retailer looking for premium produce or an
+                investor seeking sustainable opportunities, we'd love to talk. */}
+                Whether you are looking for premium products, mushroom training, 
+                dealership opportunities, or sustainable farming partnerships, we 
+                would love to connect.
               </p>
             </div>
             <div className="flex gap-4 shrink-0">
