@@ -17,7 +17,7 @@ export default function Showcase() {
 
   const productData = {
   oyster: {
-    title: "The Science of Spores",
+    title: "The Science of Oysters",
     description:
       "Grown in sterile, climate-controlled environments, Oyster mushrooms offer a meaty texture and umami-rich flavor. Known for rapid growth and high nutritional density.",
     moisture: "88–90%",
