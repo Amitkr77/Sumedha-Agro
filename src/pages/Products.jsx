@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import { IoFilter } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import m1 from "../assets/m1.jpg";
+import m2 from "../assets/m2.jpg";
+import m3 from "../assets/m3.webp";
 export default function Products() {
   const navigate = useNavigate();
 
@@ -216,11 +219,9 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         1kg Pack
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto">
                         Details
-                        <span className="material-symbols-outlined text-lg">
                           <FaArrowRightLong />
-                        </span>
                       </button>
                       <a href="./products/${product.slug}"></a>
                     </div>
@@ -408,12 +409,188 @@ const handleSubmit = () => {
               </div>
             </section>
             )}
-              {/* <!-- Section 3: Fresh --> }
-              {(selectedCategory === "all" || selectedCategory === "value") && (
+              {/* <!-- Section 3: Fresh --> */}
+              {(selectedCategory === "all" || selectedCategory === "fresh") && (
               <section>
-                .... Fresh value ke product cards ka code ....
+                {/* .... Fresh value ke product cards ka code .... */}
+                  <div className="flex items-center justify-between mb-6 border-b border-border-light pb-2">
+                    <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight">
+                      Fresh Farm Produce
+                    </h2>
+                    <a
+                      className="text-sm font-bold text-primary hover:underline hidden sm:block"
+                      href="#"
+                    >
+                      View All Fresh
+                    </a>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                    {/* CARD 6 */}
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+
+                      {/* IMAGE */}
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <div
+                          style={{
+                            backgroundImage: `url(${m1})`,
+                          }}
+                          className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                        />
+
+                        {/* overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
+
+                        {/* badge */}
+                        <span className="absolute top-3 left-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full shadow">
+                          Fresh Today
+                        </span>
+
+                        {/* availability */}
+                        <span className="absolute top-3 right-3 bg-white/90 text-green-600 text-xs font-bold px-3 py-1 rounded-full">
+                          In Stock
+                        </span>
+                      </div>
+
+                      {/* CONTENT */}
+                      <div className="p-5 flex flex-col flex-1">
+                        <h3 className="text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                          Fresh Oyster Mushrooms
+                        </h3>
+
+                        <p className="text-text-side text-sm mt-2 mb-4">
+                          Harvested within 24 hours. Naturally grown, chemical-free, and rich in nutrients.
+                        </p>
+
+                        {/* tags */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-primary/10 text-text-main text-[10px] uppercase font-bold px-3 py-1 rounded">
+                            Organic
+                          </span>
+                          <span className="bg-primary/10 text-text-main text-[10px] uppercase font-bold px-3 py-1 rounded">
+                            Farm Fresh
+                          </span>
+                        </div>
+
+                        {/* footer */}
+                        <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
+                          <span className="text-sm font-semibold text-text-main dark:text-gray-300">
+                            ₹180 / 500g
+                          </span>
+
+                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Details
+                            <FaArrowRightLong />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* CARD 2 */}
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <div
+                          style={{
+                            backgroundImage:
+                              `url(${m2})`,
+                          }}
+                          className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
+
+                        <span className="absolute top-3 left-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full">
+                          Premium
+                        </span>
+
+                        <span className="absolute top-3 right-3 bg-white/90 text-yellow-600 text-xs font-bold px-3 py-1 rounded-full">
+                          Limited
+                        </span>
+                      </div>
+
+                      <div className="p-5 flex flex-col flex-1">
+                        <h3 className="text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                          Fresh Button Mushrooms
+                        </h3>
+
+                        <p className="text-text-side text-sm mt-2 mb-4">
+                          Clean, white, and firm mushrooms ideal for cooking, salads, and commercial kitchens.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-primary/10 text-text-main text-[10px] uppercase font-bold px-3 py-1 rounded">
+                            High Quality
+                          </span>
+                        </div>
+
+                        <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
+                          <span className="text-sm font-semibold text-text-main dark:text-gray-300">
+                            ₹150 / 500g
+                          </span>
+
+                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Details
+                            <FaArrowRightLong />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* CARD 3 */}
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <div
+                          style={{
+                            backgroundImage:
+                              `url(${m3})`,
+                          }}
+                          className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
+
+                        <span className="absolute top-3 left-3 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full">
+                          Tropical
+                        </span>
+                        <span className="absolute top-3 right-3 bg-white/90 text-green-600 text-xs font-bold px-3 py-1 rounded-full">
+                          In Stock
+                        </span>
+                      </div>
+
+                      <div className="p-5 flex flex-col flex-1">
+                        <h3 className="text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                          Fresh Milky Mushrooms
+                        </h3>
+
+                        <p className="text-text-side text-sm mt-2 mb-4">
+                          Thick, juicy mushrooms perfect for Indian climate and long shelf life.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-primary/10 text-text-main text-[10px] uppercase font-bold px-3 py-1 rounded">
+                            Heat Resistant
+                          </span>
+                        </div>
+
+                        <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
+                          <span className="text-sm font-semibold text-text-main dark:text-gray-300">
+                            ₹200 / 500g
+                          </span>
+
+                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Details
+                            <FaArrowRightLong />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
               </section>
-             )*/}  
+             )}  
           </main>
         </div>
         {/* <!-- Lead Generation / Footer Section --> */}
