@@ -229,9 +229,9 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-white dark:bg-surface-dark py-16 border-y border-slate-100 dark:border-slate-800">
+      <section className="w-full bg-white dark:bg-surface-dark py-10 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-1280px mx-auto px-4 md:px-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4 ">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-6 gap-4 ">
             <div className="max-w-6xl  flex-col text-center mx-auto">
               <h2 className="text-text-main dark:text-black text-5xl font-bold leading-tight mb-3 flex flex-col text-center">
                 Our Focus Area?
@@ -278,7 +278,7 @@ export default function About() {
         </div>
       </section>
       {/* <!-- Mission & Vision --> */}
-      <section className="w-full max-w-1280px px-4 md:px-10 py-16 md:py-24">
+      <section className="w-full max-w-1280px px-4 md:px-10 py-12 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* <!-- Mission Card --> */}
           <div className="flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark p-8 md:p-10 shadow-sm relative overflow-hidden">
@@ -292,12 +292,15 @@ export default function About() {
               <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Mission
               </h2>
-              <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
+              <p className="text-text-main/80 dark:text-gray-500 text-sm leading-relaxed">
                 {/* To revolutionize global nutrition by making sustainable,
                 zero-waste mushroom cultivation accessible, scalable, and highly
                 efficient through technology. */}
-                To make mushroom cultivation accessible, profitable, and 
-                sustainable through innovation, training, and quality products.
+                {/* To make mushroom cultivation accessible, profitable, and 
+                sustainable through innovation, training, and quality products. */}
+                To make mushroom cultivation accessible, profitable, and sustainable through innovation, training, and quality products.
+We empower farmers, youth, and women with practical mushroom farming skills, reliable mushroom seed, and modern growing solutions.
+Our mission is to create better livelihoods, healthier food choices, and long-term agricultural growth through mushrooms.
               </p>
             </div>
           </div>
@@ -313,12 +316,15 @@ export default function About() {
               <h2 className="text-text-main dark:text-black text-2xl font-bold leading-tight mb-3">
                 Our Vision
               </h2>
-              <p className="text-text-main/80 dark:text-gray-500 text-lg leading-relaxed">
+              <p className="text-text-main/80 dark:text-gray-500 text-sm leading-relaxed">
                 {/* To become the undisputed global leader in AI-driven agritech and
                 functional foods, creating a healthier planet one spore at a
                 time. */}
-                To become a trusted leader in mushroom farming, functional foods, 
-                and farmer-led rural transformation.
+                {/* To become a trusted leader in mushroom farming, functional foods, 
+                and farmer-led rural transformation. */}
+                To become a trusted leader in mushroom farming, functional foods, and farmer-led rural transformation.
+We envision a future where mushroom cultivation drives nutrition, entrepreneurship, and sustainable income across rural and urban communities.
+Our goal is to build one of India’s most respected mushroom brands known for quality, impact, and innovation.
               </p>
             </div>
           </div>

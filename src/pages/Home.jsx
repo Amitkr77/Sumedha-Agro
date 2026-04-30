@@ -257,7 +257,7 @@ const cardVariants = {
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>{" "}
             <FaGraduationCap />
-            Training & Support
+            Expert-Led Instructions
           </span>
           <span className="text-xl font-bold flex items-center gap-2">
             <span className="material-symbols-outlined"></span>
