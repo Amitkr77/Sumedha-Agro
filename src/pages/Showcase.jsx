@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdVerified } from "react-icons/md";
 import { FiDownload } from "react-icons/fi";
 import { FaDotCircle } from "react-icons/fa";
@@ -12,7 +12,50 @@ import { MdOutlineShoppingBasket } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 export default function Showcase() {
+  const [activeTab, setActiveTab] = useState("oyster");
   const navigate = useNavigate();
+
+  const productData = {
+  oyster: {
+    title: "The Science of Spores",
+    description:
+      "Grown in sterile, climate-controlled environments, Oyster mushrooms offer a meaty texture and umami-rich flavor. Known for rapid growth and high nutritional density.",
+    moisture: "88–90%",
+    temp: "2°C - 4°C",
+    nutrition: [
+      { name: "Protein", value: "3.3g", width: "45%" },
+      { name: "Dietary Fiber", value: "2.3g", width: "35%" },
+      { name: "Potassium", value: "420mg", width: "65%" },
+    ],
+  },
+
+  button: {
+    title: "Precision Cultivated Buttons",
+    description:
+      "Button mushrooms (Agaricus bisporus) are cultivated in controlled compost environments. They offer a mild taste, firm texture, and excellent shelf life for commercial use.",
+    moisture: "85–88%",
+    temp: "0°C - 2°C",
+    nutrition: [
+      { name: "Protein", value: "3.1g", width: "40%" },
+      { name: "Dietary Fiber", value: "1.2g", width: "25%" },
+      { name: "Potassium", value: "318mg", width: "50%" },
+    ],
+  },
+
+  milky: {
+    title: "Tropical Milky Mushrooms",
+    description:
+      "Milky mushrooms thrive in warm climates and are highly resistant to heat. They have thick flesh, longer shelf life, and are ideal for Indian farming conditions.",
+    moisture: "80–85%",
+    temp: "4°C - 6°C",
+    nutrition: [
+      { name: "Protein", value: "3.5g", width: "48%" },
+      { name: "Dietary Fiber", value: "2.0g", width: "32%" },
+      { name: "Potassium", value: "390mg", width: "60%" },
+    ],
+  },
+};
+  const data = productData[activeTab];
   return (
     <main>
       <div className="flex flex-col min-h-screen w-full max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-8 gap-12">
@@ -71,47 +114,184 @@ export default function Showcase() {
             </div>
           </div>
         </section>
-        {/* <!-- Product Selector / Tabs --> */}
-        <section className="border-b  bg-slate-50 border-#cfe7cf dark:border-[#2a442a] sticky top-73px bg-background-light dark:bg-background-dark z-40 pt-4">
-          <div className="flex overflow-x-auto no-scrollbar gap-8 pb-px">
-            <a
-              className="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#0d1b0d] dark:text-white min-w-max pb-3 px-2 transition-colors cursor-pointer group"
-              href="#"
+      {/* <!-- Product Selector / Tabs --> */}
+      <section className="border-b bg-slate-50 border-[#cfe7cf] dark:border-[#2a442a] top-[73px] z-40 pt-4">
+        <div className="flex overflow-x-auto gap-8 pb-px">
+          {/* OYSTER */}
+          <button
+            onClick={() => setActiveTab("oyster")}
+            className={`flex flex-col items-center justify-center min-w-max pb-3 px-2 border-b-[3px] transition-all group ${
+              activeTab === "oyster"
+                ? "border-primary text-[#0d1b0d] dark:text-white"
+                : "border-transparent text-gray-500 dark:text-gray-400 hover:text-primary"
+            }`}
+          >
+            <div
+              className={`p-2 rounded-full mb-2 transition-colors ${
+                activeTab === "oyster"
+                  ? "bg-primary/10"
+                  : "bg-gray-100 dark:bg-surface-dark group-hover:bg-primary/10"
+              }`}
             >
-              <div className="bg-primary/10 p-2 rounded-full mb-2 group-hover:bg-primary/20 transition-colors">
-                <span className="material-symbols-outlined text-primary fill-current">
-                  <BsStars size={30}/>
-                </span>
-              </div>
-              <p className="text-sm font-bold tracking-wide">Oyster Mushroom</p>
-            </a>
-            <a
-              className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary min-w-max pb-3 px-2 transition-colors cursor-pointer group"
-              href="#"
+              <BsStars
+                size={30}
+                className={activeTab === "oyster" ? "text-primary" : ""}
+              />
+            </div>
+            <p className="text-sm font-bold tracking-wide">
+              Oyster Mushroom
+            </p>
+          </button>
+          {/* BUTTON */}
+          <button
+            onClick={() => setActiveTab("button")}
+            className={`flex flex-col items-center justify-center min-w-max pb-3 px-2 border-b-[3px] transition-all group ${
+              activeTab === "button"
+                ? "border-primary text-[#0d1b0d] dark:text-white"
+                : "border-transparent text-gray-500 dark:text-gray-400 hover:text-primary"
+            }`}
+          >
+            <div
+              className={`p-2 rounded-full mb-2 transition-colors ${
+                activeTab === "button"
+                  ? "bg-primary/10"
+                  : "bg-gray-100 dark:bg-surface-dark group-hover:bg-primary/10"
+              }`}
             >
-              <div className="bg-gray-100 dark:bg-surface-dark p-2 rounded-full mb-2 group-hover:bg-primary/10 transition-colors">
-                <span className="material-symbols-outlined group-hover:text-primary">
-                  <FaDotCircle size={20} />
-                </span>
-              </div>
-              <p className="text-sm font-bold tracking-wide">Button Mushroom</p>
-            </a>
-            <a
-              className="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary min-w-max pb-3 px-2 transition-colors cursor-pointer group"
-              href="#"
+              <FaDotCircle
+                size={20}
+                className={activeTab === "button" ? "text-primary" : ""}
+              />
+            </div>
+            <p className="text-sm font-bold tracking-wide">
+              Button Mushroom
+            </p>
+          </button>
+          {/* MILKY */}
+          <button
+            onClick={() => setActiveTab("milky")}
+            className={`flex flex-col items-center justify-center min-w-max pb-3 px-2 border-b-[3px] transition-all group ${
+              activeTab === "milky"
+                ? "border-primary text-[#0d1b0d] dark:text-white"
+                : "border-transparent text-gray-500 dark:text-gray-400 hover:text-primary"
+            }`}
+          >
+            <div
+              className={`p-2 rounded-full mb-2 transition-colors ${
+                activeTab === "milky"
+                  ? "bg-primary/10"
+                  : "bg-gray-100 dark:bg-surface-dark group-hover:bg-primary/10"
+              }`}
             >
-              <div className="bg-gray-100 dark:bg-surface-dark p-2 rounded-full mb-2 group-hover:bg-primary/10 transition-colors">
-                <span className="material-symbols-outlined group-hover:text-primary">
-                  <FaDotCircle size={20} />
-                </span>
+              <FaDotCircle
+                size={20}
+                className={activeTab === "milky" ? "text-primary" : ""}
+              />
+            </div>
+            <p className="text-sm font-bold tracking-wide">
+              Milky Mushroom
+            </p>
+          </button>
+        </div>
+        {/* 🔥 CONTENT SWITCH */}
+        <div className="mt-8">
+          {activeTab === "oyster" && (
+            <p className="text-center text-lg font-semibold">
+              Oyster Mushroom Content
+            </p>
+          )}
+          {activeTab === "button" && (
+            <p className="text-center text-lg font-semibold">
+              Button Mushroom Content
+            </p>
+          )}
+          {activeTab === "milky" && (
+            <p className="text-center text-lg font-semibold">
+              Milky Mushroom Content
+            </p>
+          )}
+      </div>
+    </section>
+
+    {/* <!-- About & Stats Grid --> */}
+    <section className="grid bg-slate-50 grid-cols-1 lg:grid-cols-12 gap-10 py-8">
+          {/* LEFT CONTENT */}
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            <div>
+              <h2 className="text-3xl font-bold leading-tight mb-4">
+                {data.title}
+              </h2>
+
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {data.description}
+              </p>
+            </div>
+
+            {/* STATS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+
+              {/* Moisture */}
+              <div className="flex items-start gap-3 p-4 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <IoWater size={30} className="text-primary mt-1" />
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-wide text-gray-500">
+                    Moisture
+                  </h4>
+                  <p className="text-xl font-bold">{data.moisture}</p>
+                </div>
               </div>
-              <p className="text-sm font-bold tracking-wide">Milky Mushroom</p>
-            </a>
+
+              {/* Temp */}
+              <div className="flex items-start gap-3 p-4 bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+                <TbTemperature size={30} className="text-primary mt-1" />
+                <div>
+                  <h4 className="font-bold text-sm uppercase tracking-wide text-gray-500">
+                    Storage Temp
+                  </h4>
+                  <p className="text-xl font-bold">{data.temp}</p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+          {/* RIGHT SIDE - NUTRITION */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-lg relative overflow-hidden">
+
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+
+              <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
+                Nutritional Profile
+                <span className="text-xs font-normal ml-auto">per 100g</span>
+              </h3>
+
+              <div className="space-y-6">
+
+                {data.nutrition.map((item, i) => (
+                  <div key={i}>
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{item.name}</span>
+                      <span className="font-bold">{item.value}</span>
+                    </div>
+
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div
+                        className="bg-primary h-2 rounded-full"
+                        style={{ width: item.width }}
+                      />
+                    </div>
+                  </div>
+                ))}
+
+              </div>
+            </div>
+          </div>
+
         </section>
-        {/* <!-- About & Stats Grid --> */}
+        {/* <!-- About & Stats Grid --> 
         <section className="grid  bg-slate-50 grid-cols-1 lg:grid-cols-12 gap-10 py-8">
-          {/* <!-- Text Content --> */}
+          {/* <!-- Text Content --> 
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div>
               <h2 className="text-3xl font-bold leading-tight mb-4">
@@ -150,7 +330,7 @@ export default function Showcase() {
               </div>
             </div>
           </div>
-          {/* <!-- Nutritional Data Cards --> */}
+          {/* <!-- Nutritional Data Cards --> 
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
@@ -203,7 +383,7 @@ export default function Showcase() {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
         {/* <!-- Cultivation Timeline --> */}
         <section className="py-12  bg-slate-50">
           <div className="text-center max-w-2xl mx-auto mb-16">
