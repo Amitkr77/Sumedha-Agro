@@ -45,6 +45,12 @@ export default function Header() {
           >
             Products
           </a>
+          {/* <a
+            className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
+            href="/Shop"
+          >
+            Shop now
+          </a> */}
           <a
             className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/contact"
@@ -115,6 +121,15 @@ export default function Header() {
             <span>Products</span>
             
           </a>
+
+          {/* <a
+            className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"
+            href="/Shop"
+            onClick={() => setIsOpen(false)}
+          >
+            <span>Shop now</span>
+            
+          </a> */}
 
           <a
             className="flex justify-between items-center py-4 border-b border-gray-200 text-base font-medium text-gray-800"

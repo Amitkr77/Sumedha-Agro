@@ -176,7 +176,9 @@ const handleSubmit = () => {
                 </h2>
                 <a
                   className="text-sm font-bold text-primary hover:underline hidden sm:block"
-                  href="#"
+                  onClick={() =>
+                    navigate("/shop", { state: { category: "Spawn" } })
+                  }
                 >
                   View All Seeds
                 </a>
@@ -325,9 +327,11 @@ const handleSubmit = () => {
                 </h2>
                 <a
                   className="text-sm font-bold text-primary hover:underline hidden sm:block"
-                  href="#"
+                  onClick={() =>
+                    navigate("/shop", { state: { category: "Value Added" } })
+                  }
                 >
-                  View All Products
+                  View All Value-Added
                 </a>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -432,7 +436,9 @@ const handleSubmit = () => {
                     </h2>
                     <a
                       className="text-sm font-bold text-primary hover:underline hidden sm:block"
-                      href="#"
+                      onClick={() =>
+                        navigate("/shop", { state: { category: "Fresh" } })
+                      }
                     >
                       View All Fresh
                     </a>

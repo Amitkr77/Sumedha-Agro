@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Showcase from './pages/Showcase';
 import ProductDetails from './pages/ProductDetails';
+import Shop from './pages/Shop';
 import About from './pages/About';
 import GetQuote from './pages/GetQuote';
 import Privacy from './pages/Privacy';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/products/:slug' element={<ProductDetails />} />
+        <Route path='/shop' element={<Shop />} />
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/showcase' element={<Showcase/>}/>
         <Route path='/about' element={<About/>}/>

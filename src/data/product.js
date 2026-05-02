@@ -1,4 +1,3 @@
-import React from "react";
 import m1 from "../assets/m1.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";  
@@ -83,5 +82,84 @@ export const products = [
     image: m3,
     description:
       "Thick and juicy milky mushrooms ideal for Indian climate.",
+  },
+  {
+    id: "9",
+    slug: "milky-mushroom-calocybe",
+    name: "Milky Mushroom Spawn – (Calocybe indica)",
+    price: 100,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/CQ7WRchoXwpS6Ac1iomr_GB-M_j6uFOuYAVYR9HkwPYsa5rF11ne_lTsOoLMBnDdfiLNx4ZuwU3ZQDVhYq1tUui87GayWKfJY986ED40afXu-E80fEEygvipU1KrkaWrfve1-OyY36KI4RgB7RMQfk7xmxlh1uh_suvcbAhcBSM?purpose=inline",
+    description: "High-quality milky mushroom spawn suitable for tropical climates.",
+  },
+
+  {
+    id: "10",
+    slug: "pleurotus-ostreatus",
+    name: "Pleurotus ostreatus Spawn",
+    price: 100,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/6jodHqUyxYtp_MPUEjffNQCjSUlae4OcWEvIwQIgLrRjiFySMLDyINSe_L81o5Tzvgy3j1PDxCCABRcehssyE3lScTsMJHpCSvqU0Eu81vcIhBjb7DYRlGyLpacBihHhCxMpr90CjSc6nDCeiCHJnS5_Y3LeYCL7W_SXRMx7jufbw1-Xx61ZZcXHMpz_PPF9?purpose=inline",
+    description: "Grey oyster mushroom spawn with fast colonization and high yield.",
+  },
+
+  {
+    id: "11",
+    slug: "white-oyster-florida",
+    name: "White Oyster Spawn  (Pleurotus florida)",
+    price: 100,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/4J8bmuUyTzEYCvO71k-1Zw2MNSpnO6LSCSW25Vl9OHJv_VWbllS979KNxwRk6PjNoXFb7NvGiPwIEoOd7o4BBTaCb9AVV-eIp425rmMlSGKLYklS16YvDkIAEreLr0Thn619ecBMrO5G5hMahFSaCxEgs6_9vp2NFMkfpGKmnKQ17odypG4D_sa4tF20HwfS?purpose=inline",
+    description: "Popular white oyster variety with excellent growth and taste.",
+  },
+
+  {
+    id: "12",
+    slug: "king-oyster-eryngii",
+    name: "King Oyster Spawn  (Pleurotus eryngii)",
+    price: 110,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/oJgnHgPS22h4TDc71dxqPg4DDZIFtHy8SYm4FhDm27hq0-6CEP7tMmlaTVmRDXyHQICvzUmg-0jEaWFCYswaMD7Cdm5bq3AcViEmGaug7k-cGo_fFiQTOlUeS8G41s435dLuR7xhWBKLTMlyDLhWcFqI7X0R5rLYTmfOdCi2eNwy9O77qgqozjJs2ncgaYjc?purpose=inline",
+    description: "Premium king oyster mushroom with thick stems and rich flavor.",
+  },
+
+  {
+    id: "13",
+    slug: "pink-oyster-djamor",
+    name: "Pink Oyster Spawn  (Pleurotus djamor)",
+    price: 100,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/dh4l9I56p5Qh9yQT1kH81Jkps-fNEZhDaJ7AX5_AvtBBkIzSbmzKmw_-OQPtVe4KaHbtmPo0NeESIZeaB4_P_VEtqGWoIuWcVXOLzOo2tTqlgwyzKf2-34Rl2H25Q17kO4oJbkGNjKtYR6UkPjZyt4YLr8OGt2NIJKPcHVXMmZRqqwNbOuRONzyK7kTVPPjP?purpose=inline",
+    description: "Bright pink oyster mushrooms known for fast growth and unique color.",
+  },
+
+  {
+    id: "14",
+    slug: "elm-oyster-ulmarius",
+    name: "Elm Oyster Spawn  (Hypsizygus ulmarius)",
+    price: 100,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/vzkY7NsV-TEMuvcMtbdJwXrYfsAQP_Xd44ZM-yaYfwJdguLubZorpd2YSdyZrh2Q6KAkHmp23TarIt6tEOEiVstWpSG1cC19ap5OPO9Ckyx2ixqIclg-SpHitrHzF4wlvDxSqCSD6qL6SbceuuBRxE-vaKhFeNzfx8p9GsNjjNm4_z9z57GsOX8ceLj0XZFI?purpose=fullsize",
+    description: "Elm oyster mushroom with firm texture and good shelf life.",
+  },
+
+  {
+    id: "15",
+    slug: "lions-mane-hericium",
+    name: "Lion’s Mane Spawn  (Hericium erinaceus)",
+    price: 110,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/LneUg7zRAFHJrRWWcIwNNfr2PsL5NagNlK07to1eWuBaqhoNhDmBjjfg8bZDfg3EomJVhMegtTcXmPXRlxJepbaL9uNRbPfYGinmXMqtgaCfxefXXalEQyEH-AS4pxg1qc6di-r8ljaj7x0990I_RdzTGqk1lw-p34lxnW5-a8r4XXJjrr7H6_jtrTkMxX3_?purpose=inline",
+    description: "Medicinal mushroom known for brain health and unique texture.",
+  },
+
+  {
+    id: "16",
+    slug: "shiitake-edodes",
+    name: "Shiitake Mushroom Spawn  (Lentinula edodes)",
+    price: 110,
+    category: "Spawn",
+    image: "https://images.openai.com/static-rsc-4/ib33axatm1Ep0iLOPhGgGaESgBToFmhy_Q0C7q8XUbwusRhU8DpN3V76pLadFOsPEBuneNnrxgrHWYmjyfm3N_0E44kpC89zUNpa_23E3z6I9TfHR8UaF1IFdQWfKlFrlyA12FmwT2noqk5WQf0Ldst__nNUcPyMBS5PC23--45_fUAj-7wue6dJJQ7qu4Se?purpose=fullsize",
+    description: "Popular gourmet mushroom with strong flavor and health benefits.",
   },
 ];
