@@ -100,9 +100,9 @@ export default function Shop() {
             </p>
 
             <div className="flex justify-between items-center">
-              <span className="font-semibold text-primary">
+              {/* <span className="font-semibold text-primary">
                 ₹{product.price}
-              </span>
+              </span> */}
 
               <button className="px-4 py-2 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded hover:bg-primary hover:text-black hover:border-primary transition-colors">
                 View Details

@@ -60,9 +60,9 @@ export default function ProductDetails() {
             {product.description}
           </p>
 
-          <div className="text-2xl font-bold text-primary">
+          {/* <div className="text-2xl font-bold text-primary">
             ₹{product.price}
-          </div>
+          </div> */}
 
           <button
             onClick={() => navigate("/get-quote")}
