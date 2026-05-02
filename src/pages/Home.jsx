@@ -22,7 +22,7 @@ import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";
 import m4 from "../assets/m4.webp";
 import m6 from "../assets/m6.png";
-import m7 from "../assets/m7.jpg";
+// import m7 from "../assets/m7.jpg";
 import m5 from "../assets/Seeds.jpg";
 import CTA from "../components/CTA";
 export default function Home() {
@@ -144,7 +144,7 @@ const cardVariants = {
           <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[600px]">
               <img
-                src={m7} // image variable
+                src={m6} // image variable
                 alt="Mushroom Product"
                 className="w-full h-auto object-contain rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
               />
