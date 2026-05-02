@@ -141,8 +141,20 @@ export default function Shop() {
             ? "All Products"
             : `${selectedCategory} Products`}
         </h2>
+          {selectedCategory === "All" ? (
+            <>
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Spawn Products</h2>
+              {renderProducts(products.filter(p => p.category === "Spawn"))}
 
-        {renderProducts(filteredProducts)}
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Value Added Products</h2>
+              {renderProducts(products.filter(p => p.category === "Value Added"))}
+
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Fresh Products</h2>
+              {renderProducts(products.filter(p => p.category === "Fresh"))}
+            </>
+          ) : (
+            renderProducts(filteredProducts)
+          )}
       </div>
     </div>
   );
