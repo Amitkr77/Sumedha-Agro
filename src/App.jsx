@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { AiFillAccountBook } from "react-icons/ai";
 import Contact from './pages/Contact';
 import Showcase from './pages/Showcase';
+// import PDetails from './pages/ProductDetails';
 import About from './pages/About';
 import GetQuote from './pages/GetQuote';
 import Privacy from './pages/Privacy';
