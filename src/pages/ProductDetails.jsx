@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { products } from "./Shop"; // adjust path if needed
+import { products } from "../data/product"; // adjust path if needed
 
 export default function ProductDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
 
-  const product = products.find((item) => item.slug === slug);
+  const product = products.find(item => item.slug === slug);
 
   if (!product) {
     return (
@@ -42,7 +42,7 @@ export default function ProductDetails() {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full rounded-xl shadow-lg object-cover"
+            className="aspect-4/3 rounded-xl shadow-lg object-cover"
           />
         </div>
 

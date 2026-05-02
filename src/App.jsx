@@ -4,10 +4,9 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { AiFillAccountBook } from "react-icons/ai";
 import Contact from './pages/Contact';
 import Showcase from './pages/Showcase';
-// import PDetails from './pages/ProductDetails';
+import ProductDetails from './pages/ProductDetails';
 import About from './pages/About';
 import GetQuote from './pages/GetQuote';
 import Privacy from './pages/Privacy';
@@ -21,7 +20,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
-        <Route path='/products/:slug' element={<Products />} />
+        <Route path='/products/:slug' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/showcase' element={<Showcase/>}/>
         <Route path='/about' element={<About/>}/>

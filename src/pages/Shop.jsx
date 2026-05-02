@@ -1,58 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const products = [
-  {
-    id: "1",
-    slug: "oyster-mushroom-spawn",
-    name: "Oyster Mushroom Spawn",
-    price: 180,
-    category: "Spawn",
-    image: "https://via.placeholder.com/300x300?text=Oyster+Spawn",
-    description:
-      "Lab-certified high-yield oyster mushroom spawn suitable for all seasons.",
-  },
-  {
-    id: "2",
-    slug: "button-mushroom-spawn",
-    name: "Button Mushroom Spawn",
-    price: 220,
-    category: "Spawn",
-    image: "https://via.placeholder.com/300x300?text=Button+Spawn",
-    description:
-      "Premium Agaricus bisporus spawn for commercial cultivation.",
-  },
-  {
-    id: "3",
-    slug: "milky-mushroom-spawn",
-    name: "Milky Mushroom Spawn",
-    price: 200,
-    category: "Spawn",
-    image: "https://via.placeholder.com/300x300?text=Milky+Spawn",
-    description:
-      "Ideal for tropical climates with strong resistance and large fruiting bodies.",
-  },
-  {
-    id: "4",
-    slug: "spicy-mushroom-pickle",
-    name: "Spicy Mushroom Pickle",
-    price: 150,
-    category: "Value Added",
-    image: "https://via.placeholder.com/300x300?text=Mushroom+Pickle",
-    description:
-      "Traditional spicy mushroom pickle made with organic ingredients.",
-  },
-  {
-    id: "5",
-    slug: "mushroom-protein-powder",
-    name: "Mushroom Protein Powder",
-    price: 450,
-    category: "Value Added",
-    image: "https://via.placeholder.com/300x300?text=Protein+Powder",
-    description:
-      "100% natural vegan protein powder made from dried mushrooms.",
-  },
-];
+import { products } from "../data/product";
 
 export default function Shop() {
   const navigate = useNavigate();

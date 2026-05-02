@@ -219,11 +219,12 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         1kg Pack
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto">
+                      <button 
+                        onClick={() => navigate("/products/oyster-mushroom-spawn")}
+                        className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto">
                         Details
                           <FaArrowRightLong />
                       </button>
-                      <a href="./products/${product.slug}"></a>
                     </div>
                   </div>
                 </div>
@@ -259,7 +260,10 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         Bulk Only
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                      <button 
+                        onClick={() => navigate("/products/button-mushroom-spawn")}
+                        className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Details
                         <span className="material-symbols-outlined text-lg">
                           <FaArrowRightLong />
@@ -297,7 +301,10 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         500g Pack
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                      <button 
+                        onClick={() => navigate("/products/milky-mushroom-spawn")}
+                        className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Details
                         <span className="material-symbols-outlined text-lg">
                           <FaArrowRightLong />
@@ -356,7 +363,10 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         250g Jar
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                      <button 
+                        onClick={() => navigate("/products/spicy-mushroom-pickle")}
+                        className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Details
                         <span className="material-symbols-outlined text-lg">
                           <FaArrowRightLong />
@@ -397,7 +407,10 @@ const handleSubmit = () => {
                       <span className="text-sm font-medium text-text-main dark:text-gray-300">
                         500g Pack
                       </span>
-                      <button className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
+                      <button 
+                        onClick={() => navigate("/products/mushroom-protein-powder")}
+                        className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         Details
                         <span className="material-symbols-outlined text-lg">
                           <FaArrowRightLong />
@@ -479,7 +492,10 @@ const handleSubmit = () => {
                             ₹180 / 500g
                           </span>
 
-                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                          <button
+                            onClick={() => navigate("/products/fresh-oyster-mushroom")}
+                            className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto"
+                          >
                             Details
                             <FaArrowRightLong />
                           </button>
@@ -530,7 +546,10 @@ const handleSubmit = () => {
                             ₹150 / 500g
                           </span>
 
-                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                          <button
+                            onClick={() => navigate("/products/fresh-button-mushroom")}
+                            className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto"
+                          >
                             Details
                             <FaArrowRightLong />
                           </button>
@@ -580,7 +599,10 @@ const handleSubmit = () => {
                             ₹200 / 500g
                           </span>
 
-                          <button className="text-sm font-bold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+                          <button
+                            onClick={() => navigate("/products/fresh-milky-mushrooms")}
+                            className="text-sm font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all ml-auto"
+                          >
                             Details
                             <FaArrowRightLong />
                           </button>
