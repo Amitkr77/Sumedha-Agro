@@ -144,9 +144,9 @@ const cardVariants = {
           <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[600px]">
               <img
-                src={m6} // image variable
+                src="https://rvrvalley.com/cdn/shop/products/image_2c2c7fbe-b57e-45f1-a0e5-5f2bde7135df.jpg?v=1604110003" // image variable
                 alt="Mushroom Product"
-                className="w-full h-auto object-contain rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+                className="w-full h-full object-contain rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
               />
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-3xl opacity-30 -z-10"></div>
