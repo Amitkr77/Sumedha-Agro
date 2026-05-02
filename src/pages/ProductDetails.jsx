@@ -52,7 +52,7 @@ export default function ProductDetails() {
 
         {/* Product Details */}
         <div className="flex flex-col gap-6">
-          <h1 className="text-3xl font-black text-text-main dark:text-white">
+          <h1 className="text-3xl font-black text-text-main dark:text-green-500">
             {product.name}
           </h1>
 

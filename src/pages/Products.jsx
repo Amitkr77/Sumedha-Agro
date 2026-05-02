@@ -185,7 +185,7 @@ const handleSubmit = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {/* <!-- Product Card 1 --> */}
-                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                   <div className="aspect-4/3 w-full bg-gray-100 relative overflow-hidden">
                     <div
                       style={{
@@ -231,7 +231,7 @@ const handleSubmit = () => {
                   </div>
                 </div>
                 {/* <!-- Product Card 2 --> */}
-                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                   <div className="aspect-4/3 w-full bg-gray-100 relative overflow-hidden">
                     <div
                       style={{
@@ -275,7 +275,7 @@ const handleSubmit = () => {
                   </div>
                 </div>
                 {/* <!-- Product Card 3 --> */}
-                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                   <div className="aspect-4/3 w-full bg-gray-100 relative overflow-hidden">
                     <div
                       style={{
@@ -336,7 +336,7 @@ const handleSubmit = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {/* <!-- Product Card 4 --> */}
-                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                   <div className="aspect-4/3 w-full bg-gray-100 relative overflow-hidden">
                     <div
                       style={{
@@ -380,7 +380,7 @@ const handleSubmit = () => {
                   </div>
                 </div>
                 {/* <!-- Product Card 5 --> */}
-                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-white/10 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+                <div className="group flex flex-col bg-white dark:bg-white/5 rounded-xl border border-border-light dark:border-gray-200 overflow-hidden hover:shadow-lg hover:border-primary/50 transition-all duration-300">
                   <div className="aspect-4/3 w-full bg-gray-100 relative overflow-hidden">
                     <div
                       style={{
@@ -447,7 +447,7 @@ const handleSubmit = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 
                     {/* CARD 6 */}
-                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-gray-200 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
 
                       {/* IMAGE */}
                       <div className="relative aspect-[4/3] overflow-hidden">
@@ -510,7 +510,7 @@ const handleSubmit = () => {
                     </div>
 
                     {/* CARD 2 */}
-                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-gray-200 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
 
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <div
@@ -564,7 +564,7 @@ const handleSubmit = () => {
                     </div>
 
                     {/* CARD 3 */}
-                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-white/10 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
+                    <div className="group relative flex flex-col rounded-2xl overflow-hidden border border-border-light dark:border-gray-200 bg-white/80 dark:bg-white/5 backdrop-blur-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500">
 
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <div
@@ -634,7 +634,7 @@ const handleSubmit = () => {
               Get a customized quote for commercial farming spawn or wholesale
               product distribution.
             </p>
-            <form className="w-full max-w-lg bg-white dark:bg-white/5 p-2 rounded-xl shadow-lg border border-border-light dark:border-white/10 flex flex-col sm:flex-row gap-2">
+            <form className="w-full max-w-lg bg-white dark:bg-white/5 p-2 rounded-xl shadow-lg border border-border-light dark:border-gray-200 flex flex-col sm:flex-row gap-2">
               <input
               type="email"
                value={email}

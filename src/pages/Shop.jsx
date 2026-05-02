@@ -82,7 +82,7 @@ export default function Shop() {
             navigate(`/products/${product.slug}`);
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="cursor-pointer bg-white dark:bg-white/5 border border-border-light dark:border-white/10 rounded-xl overflow-hidden hover:shadow-lg hover:border-primary transition-all duration-300"
+          className="cursor-pointer bg-white dark:bg-white/5 border border-border-light dark:border-gray/20 rounded-xl overflow-hidden hover:shadow-lg hover:border-primary transition-all duration-300"
         >
           <img
             src={product.image}
@@ -91,7 +91,7 @@ export default function Shop() {
           />
 
           <div className="p-6">
-            <h3 className="text-lg font-bold text-text-main dark:text-white mb-2">
+            <h3 className="text-lg font-bold text-text-main dark:text-green-500 mb-2">
               {product.name}
             </h3>
 
@@ -116,7 +116,7 @@ export default function Shop() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      <h1 className="text-3xl font-black text-text-main dark:text-white mb-10">
+      <h1 className="text-3xl font-black text-text-main dark:text-green-600 mb-10">
         Mushroom Product Catalog
       </h1>
       <div className="flex gap-4 mb-8 flex-wrap">
@@ -136,20 +136,20 @@ export default function Shop() {
       </div>
 
       <div className="mb-14">
-        <h2 className="text-2xl font-bold mb-6 text-text-main dark:text-white">
+        <h2 className="text-2xl font-bold mb-6 text-text-main dark:text-green-500">
           {selectedCategory === "All"
             ? "All Products"
             : `${selectedCategory} Products`}
         </h2>
           {selectedCategory === "All" ? (
             <>
-              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Spawn Products</h2>
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-green-500">Spawn Products</h2>
               {renderProducts(products.filter(p => p.category === "Spawn"))}
 
-              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Value Added Products</h2>
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-green-500">Value Added Products</h2>
               {renderProducts(products.filter(p => p.category === "Value Added"))}
 
-              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-white">Fresh Products</h2>
+              <h2 className="text-xl font-bold mb-4 text-text-main dark:text-green-500">Fresh Products</h2>
               {renderProducts(products.filter(p => p.category === "Fresh"))}
             </>
           ) : (

@@ -21,7 +21,8 @@ import m1 from "../assets/m1.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";
 import m4 from "../assets/m4.webp";
-import m6 from "../assets/m6.png";
+// import m6 from "../assets/m6.png";
+import m7 from "../assets/m7.jpg";
 import m5 from "../assets/Seeds.jpg";
 import CTA from "../components/CTA";
 export default function Home() {
@@ -143,7 +144,7 @@ const cardVariants = {
           <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[600px]">
               <img
-                src={m6} // image variable
+                src={m7} // image variable
                 alt="Mushroom Product"
                 className="w-full h-auto object-contain rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
               />
@@ -755,7 +756,7 @@ const cardVariants = {
               Our Services
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-text-main dark:text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-text-main dark:text-black mb-4">
               Complete Mushroom Ecosystem
             </h2>
 
@@ -837,7 +838,7 @@ const cardVariants = {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-text-main dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-text-main dark:text-gray-700 mb-2">
                     {service.title}
                   </h3>
 
