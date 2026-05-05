@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { IoFilter } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import m1 from "../assets/m1.jpg";
+import m7 from "../assets/m7.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";
 export default function Products() {
@@ -453,7 +453,7 @@ const handleSubmit = () => {
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <div
                           style={{
-                            backgroundImage: `url(${m1})`,
+                            backgroundImage: `url(${m7})`,
                           }}
                           className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                         />
