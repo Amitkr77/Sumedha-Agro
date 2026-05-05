@@ -61,7 +61,7 @@ export default function Header() {
             className="text-text-main text-gray-400 dark:text-black text-sm font-medium hover:text-primary transition-colors"
             href="/Showcase"
           >
-            News & Announcements
+            Blog
           </a>
         </div>
 
@@ -145,7 +145,7 @@ export default function Header() {
             href="/Showcase"
             onClick={() => setIsOpen(false)}
           >
-            <span>News & Announcements</span>
+            <span>Blog</span>
             
           </a>
 

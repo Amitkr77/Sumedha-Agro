@@ -21,7 +21,7 @@ import m1 from "../assets/m1.jpg";
 import m2 from "../assets/m2.jpg";
 import m3 from "../assets/m3.webp";
 import m4 from "../assets/m4.webp";
-import m6 from "../assets/m6.png";
+// import m6 from "../assets/m6.png";
 // import m7 from "../assets/m7.jpg";
 import m5 from "../assets/Seeds.jpg";
 import CTA from "../components/CTA";
