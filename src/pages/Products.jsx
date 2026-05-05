@@ -495,7 +495,7 @@ const handleSubmit = () => {
                         {/* footer */}
                         <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
                           <span className="text-sm font-semibold text-text-main dark:text-gray-300">
-                            ₹180 / 500g
+                             500g
                           </span>
 
                           <button
@@ -549,7 +549,7 @@ const handleSubmit = () => {
 
                         <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
                           <span className="text-sm font-semibold text-text-main dark:text-gray-300">
-                            ₹150 / 500g
+                             500g
                           </span>
 
                           <button
@@ -602,7 +602,7 @@ const handleSubmit = () => {
 
                         <div className="mt-auto flex items-center justify-between border-t pt-4 border-border-light dark:border-white/10">
                           <span className="text-sm font-semibold text-text-main dark:text-gray-300">
-                            ₹200 / 500g
+                             500g
                           </span>
 
                           <button
